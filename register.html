@@ -21,25 +21,37 @@
 </head>
 <body>
     <div class="container">
-        <form action="/register.html" method="post" enctype="multipart/form-data" >
+        <form action="/register.html" method="post" enctype="multipart/form-data" class="form-group row">
             <h1>Registration</h1>
-            <label for="username">Email Address:</label><br>
-            <input type="email" name="email" id="email"  placeholder="Enter email address"><br>
-            <label for="fname">First Name:</label><br>
-            <input type="text" name="fname" id="fname" placeholder="Enter first name"><br>
-            <label for="lname">Last Name:</label><br>
-            <input type="text" name="lname" id="lname" placeholder="Enter last name"><br>
-            <label for="username">Username:</label><br>
-            <input type="text" name="username" id="username" placeholder="Enter username"><br>
-            <label for="password">Password:</label><br>
-            <input type="password" name="password" id="password" placeholder="Enter password"><br>
-            <label for="password">Retype Password:</label><br>
-            <input type="password" name="retype-password" id="retype-password" placeholder="Enter password"><br>
-            <input type="submit" value="Submit">
-            <input type="reset" value="Reset">
+            <div class="form-group">
+                <label for="username" class="col-sm-2 col-form-label">Email Address:</label><br>
+                <input type="email" name="email" id="email"  placeholder="Enter email address"><br>
+            </div>
+            <div class="form-group">
+                <label for="fname">First Name:</label><br>
+                <input type="text" name="fname" id="fname" placeholder="Enter first name"><br>
+            </div>
+            <div class="form-group">
+                <label for="lname">Last Name:</label><br>
+                <input type="text" name="lname" id="lname" placeholder="Enter last name"><br>
+            </div>
+            <div class="form-group">
+                <label for="username">Username:</label><br>
+                <input type="text" name="username" id="username" placeholder="Enter username"><br>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label><br>
+                <input type="password" name="password" id="password" placeholder="Enter password"><br>
+            </div>
+            <div class="form-group">
+                <label for="password">Retype Password:</label><br>
+                <input type="password" name="retype-password" id="retype-password" placeholder="Enter password"><br>
+            </div>
+            <input type="submit" value="Submit" class="btn btn-primary">
+            <input type="reset" value="Reset" class="btn btn-primary">
         </form>
     </div>
-    <footer>
+    <footer class="text-muted">
         Copyright&copy;2022 All Rights Reserved
     </footer>
 </body>
