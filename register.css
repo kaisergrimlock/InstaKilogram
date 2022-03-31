@@ -1,0 +1,17 @@
+.container{
+    width: 920px;
+    display: flex;
+    align-items: center;
+}
+
+.buttons{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+footer{
+    margin-top: 20px;
+}
