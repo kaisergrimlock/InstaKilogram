@@ -5,10 +5,6 @@ var retype = document.getElementById('retype-password')
 var email = document.getElementById('email')
 
 function validateForm(){
-    if (password.value == '' || retype.value == ''){
-        alert('please fill all fields')
-    }
-
     if(password.value.length < 8 || password.value.length > 20){
         alert('please enter password between 8 and 20')
     }
