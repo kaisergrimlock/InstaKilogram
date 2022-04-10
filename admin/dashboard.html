@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="register.js"></script>
-    <link rel="stylesheet" href="/user/style.css">
+    <link rel="stylesheet" href="/admin/style.css">
     <script defer src="../header.js"></script>
     <title>Dashboard</title>
 </head>
@@ -14,28 +13,103 @@
         <h1>Dashboard</h1>
     </div>
     <section class="content">
-        <div class="info-section" class="card text-white bg-primary mb-3">
-            <div class="info-box" id="user-registration">
-                <h3>User Registrations</h3>
-                <p>150</p>
-            </div>
-            <div class="info-box" id="current-users" class="card text-white bg-primary mb-3">
-                <h3>Current Users</h3>
-                <p>2300</p>
-            </div>
-            <div class="info-box" id="user-login" class="card text-white bg-primary mb-3">
-                <h3>Daily Login</h3>
-                <p>40</p>
-            </div>
-            <div class="info-box" id="unique-visitors" class="card text-white bg-primary mb-3">
-                <h3>Unique Visitors</h3>
-                <p>65</p>
-            </div>
+        <div class="info-section">
+            <h2>Weekly Summary</h2>
+            <div class="row">
+                <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+                    <div class="card-header">Weekly users</div>
+                    <div class="card-body">
+                      <h4 class="card-title">150</h4>
+                      <p class="card-text">6% increase</p>
+                    </div>
+                </div>
+
+                <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+                    <div class="card-header">Weekly registers</div>
+                    <div class="card-body">
+                      <h4 class="card-title">100</h4>
+                      <p class="card-text">5% increase</p>
+                    </div>
+                </div>
+
+                <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+                    <div class="card-header">Weekly logins</div>
+                    <div class="card-body">
+                      <h4 class="card-title">345</h4>
+                      <p class="card-text">10% increase</p>
+                    </div>
+                </div>
+
+                <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+                    <div class="card-header">Weekly visitors</div>
+                    <div class="card-body">
+                      <h4 class="card-title">9086</h4>
+                      <p class="card-text">20% increase</p>
+                    </div>
+                </div>
+            <div class="row">
         </div>
         <div class="analytics">
             <div id="user_analytics">
-                Chart here
+                <h2>Analytics</h2>
+                <div div class="card border-secondary mb-3">
+                    <div class="card-header">User Overview</div>
+                    <div class="card-body">
+                      <canvas height="200" id="user_chart"></canvas>
+                    </div>
+                </div>
+
+                <div div class="card border-secondary mb-3">
+                    <div class="card-header">Visitors Overview</div>
+                    <div class="card-body">
+                        <canvas height="200" id="visitor_chart"></canvas>
+                    </div>
+                </div>
             </div>
+        </div>
+
+        <div>
+            <h2>Tickets</h2>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                      <th scope="col">Ticket no.</th>
+                      <th scope="col">Subject</th>
+                      <th scope="col">Assignee</th>
+                      <th scope="col">Status</th>
+                      <th scope="col">Last Update</th>
+                      <th scope="col">Priority</th>
+                    </tr>
+                <thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">12345</th>
+                        <td>High loading time</td>
+                        <td>John Smith</td>
+                        <td>Column content</td>
+                        <td>12/24/2022</td>
+                        <td>High</td>
+                    </tr>
+
+                    <tr class="table-danger">
+                        <th scope="row">12345</th>
+                        <td>High loading time</td>
+                        <td>John Smith</td>
+                        <td>Danger</td>
+                        <td>12/24/2022</td>
+                        <td>High</td>
+                    </tr>
+
+                    <tr class="table-success">
+                        <th scope="row">12345</th>
+                        <td>High loading time</td>
+                        <td>John Smith</td>
+                        <td>Done</td>
+                        <td>12/24/2022</td>
+                        <td>High</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </section>
 </body>
