@@ -33,6 +33,11 @@ function validateForm(){
     {
         alert('please use at least one number')
     }
+
+    if(!isSpace)
+    {
+        alert('please do not use space')
+    }
 }
 
 function isSpace(str) {
