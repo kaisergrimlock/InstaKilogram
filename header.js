@@ -15,6 +15,7 @@ let appHeader = `
                   <li class="nav-item">
                       <a class="nav-link" href="#">About</a>
                   </li>
+                  
               </ul>
               <form class="d-flex">
                 <input class="form-control me-sm-2" type="text" placeholder="Search">
@@ -23,7 +24,16 @@ let appHeader = `
               <a href="/user/signin.html">
                   <button class="btn btn-danger">Sign In</button>
               </a>
-          
+              <div class="dropdown">
+                <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-expanded="false">
+                    Dropdown button
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+                </div>
           </div>
       </div>
   </nav>
