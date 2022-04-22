@@ -1,3 +1,16 @@
+let cookies = `
+<div id="cookies">
+    <div class="alert alert-dismissible alert-light">
+        <div class="cookies">
+            <p>We use cookies to personalize your experience. By continuing to this website you agree to our use of cookies</p>
+            <button id="cookies-btn" type="button" class="btn btn-info">Got it!</button>
+            <a href="#">Read our policies</a>
+        </div>
+    </div>
+`;
+document.getElementById("app-cookies").innerHTML = cookies;
+
+
 setCookies = (cName, cValue, expdays) => {
     let date = new Date();
     date.setTime(date.getTime() + (expdays * 24 * 60 * 60 * 100))
