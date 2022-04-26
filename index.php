@@ -25,8 +25,6 @@
           <button class="btn btn-outline-danger btn-lg">Register</button>
          </a> 
         </div>
-        
-       
     </main>
 
   </body>
