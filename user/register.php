@@ -14,6 +14,14 @@
     <?php
         include ('../bootstrap.php')
     ?>
+    <?php
+    if(isset($_POST['img_submit'])){
+        $img_name = $_FILES['img-upload']['name'];
+        $temp_img_name = $_FILES['img-upload']['temp_name'];
+        move_uploaded_file($temp_img_name, $img_name);
+    }
+    ?>
+
     <div class="container">
         <form action="" method="post" enctype="multipart/form-data" class="form-group row" >
         <h1>Create an Account...</h1>
@@ -34,7 +42,7 @@
             </div>
             <div class="form-group">
                 <label for="formFile" class="form-label mt-4">Profile Image: </label>
-                <input class="form-control" type="file" id="formFile">
+                <input class="form-control" type="file" id="formFile" name="img-upload">
             </div>
             <div class="form-group">
                 <label class="form-label mt-4">Password:</label>
