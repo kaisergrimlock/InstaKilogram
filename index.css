@@ -1,0 +1,16 @@
+.bg{
+    background-color: #F2A89F;
+}
+
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
