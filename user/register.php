@@ -20,7 +20,6 @@
         <form action="" method="post" enctype="multipart/form-data" class="form-group row" onsubmit="validateForm()">
         <h1>Create an Account...</h1>
         <div class="">
-        <?php echo $error; ?>
         </div>
             <div class="form-group">
                 <label class="form-label mt-4">Email Address:</label>

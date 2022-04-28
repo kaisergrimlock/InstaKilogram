@@ -31,7 +31,6 @@
         <div class="signin-button">
             <small class="form-text text-muted">Don't have an account yet? <a href="/InstaKilogram/user/register.php">Register here</a></small>
         </div>
-        <?php echo $error; ?>
     </div>
 </body>
 </html>
