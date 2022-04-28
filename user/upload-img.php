@@ -9,6 +9,6 @@ if(isset($_POST['img_submit'])){
 
 ?>
 <form action='' method='POST' enctype='multipart/form-data'>
-<input type='file' name='img_upload'><br><br>
+<input type='file' name='img_upload'><br>
 <input type='submit' name='img_submit'>
 </form>
