@@ -1,4 +1,9 @@
-<?php require ('script.php'); ?>
+<?php 
+session_start(); 
+if (!isset($_SESSION['email'])) {
+    include "signin.php";
+}else{
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +13,7 @@
     <title>Profile Page</title>
     <link rel="stylesheet" href="user.css">
 </head>
+
 <body>
     <section> 
     <?php include ('../bootstrap.php')?>
@@ -18,10 +24,10 @@
         <div class="panel">
             <div class="user-heading round">
                 <a href="#">
-                    <img src="../images/profilesmaple.jpg" alt="profile picture" >
+                    <img src="./profile_img/<?=$_SESSION['img-upload'] ?>" alt="profile picture" >
                 </a>
-                <h1> <?php echo $data[1] ?></h1>
-                <p>deydey@theEmail.com</p>
+                <h1><?=$_SESSION['fname'] ?></h1>
+                <p><?=$_SESSION['email']  ?></p>
                 <button class="btn btn-outline-dark"> Change Profile</button>
             </div>
         </div>
@@ -58,10 +64,10 @@
                 <h1>Bio Graph</h1>
                 <div class="row">
                     <div class="bio-row" id="fname">
-                        <p><span>First Name </span>: Camila</p>
+                        <p><span>First Name </span>: <?=$_SESSION['fname'] ?></p>
                     </div>
                     <div class="bio-row" id="lname">
-                        <p><span>Last Name </span>: Smith</p>
+                        <p><span>Last Name </span>: <?=$_SESSION['lname'] ?></p>
                     </div>
                     <div class="bio-row" id="country">
                         <p><span>Country </span>: Australia</p>
@@ -90,3 +96,7 @@
     </div>
         </section>
 </body>
+</html>
+<?php
+}
+?>

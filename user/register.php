@@ -1,4 +1,4 @@
-<?php require ('script.php'); ?>
+<?php require('script.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,15 +12,8 @@
 <body>
     <section>
         
-    <?php
-        include ('../bootstrap.php')
-    ?>
-    <?php
-    if(isset($_POST['img_submit'])){
-        $img_name = $_FILES['img-upload']['name'];
-        $temp_img_name = $_FILES['img-upload']['temp_name'];
-        move_uploaded_file($temp_img_name, $img_name);
-    }
+    <?php include ('../bootstrap.php'); 
+
     ?>
 
     <div class="container">
@@ -31,15 +24,15 @@
         </div>
             <div class="form-group">
                 <label class="form-label mt-4">Email Address:</label>
-                <input type="email" name="email" value="<?php echo $email; ?>" class="form-control" required>
+                <input type="email" name="email" value="" class="form-control" required>
             </div>
             <div class="form-group"> 
                 <label class="form-label mt-4">First Name:</label>
-                <input type="text" name="fname" value="<?php echo $fname; ?>" class="form-control" required>
+                <input type="text" name="fname" value="" class="form-control" required>
             </div> 
             <div class="form-group">
                 <label class="form-label mt-4">Last Name:</label>
-                <input type="text" name="lname"  value="<?php echo $lname; ?>" class="form-control" required>
+                <input type="text" name="lname"  value="" class="form-control" required>
             </div>
             <div class="form-group">
                 <label for="formFile" class="form-label mt-4">Profile Image: </label>

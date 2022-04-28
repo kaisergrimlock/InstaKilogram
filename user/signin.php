@@ -1,4 +1,6 @@
-<?php require ('script.php'); ?>
+<?php 
+ require('script.php'); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +14,6 @@
 <body>
 <?php include ('../bootstrap.php')?>
     <div class="container">
-    <?php echo $error; ?>
         <form action="" method="post" enctype="multipart/form-data" class="form-group row">
             <h1>Sign In</h1>
             <div class="form-group">
@@ -30,6 +31,7 @@
         <div class="signin-button">
             <small class="form-text text-muted">Don't have an account yet? <a href="/InstaKilogram/user/register.php">Register here</a></small>
         </div>
+        <?php echo $error; ?>
     </div>
 </body>
 </html>

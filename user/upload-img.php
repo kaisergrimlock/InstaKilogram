@@ -3,7 +3,7 @@ if(isset($_POST['img_submit'])){
 	
 	$img_name=$_FILES['img_upload']['name'];
 	$tmp_img_name=$_FILES['img_upload']['tmp_name'];
-    $folder='upload/';
+    $folder='profile_img/';
 	move_uploaded_file($tmp_img_name,$folder.$img_name);
 }
 
