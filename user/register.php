@@ -36,7 +36,7 @@
             </div>
             <div class="form-group">
                 <label for="formFile" class="form-label mt-4">Profile Image: </label>
-                <input class="form-control" type="file" id="formFile" name="img-upload">
+                <input class="form-control" type="file" id="formFile" name='img-upload'>
             </div>
             <div class="form-group">
                 <label class="form-label mt-4">Password:</label>
