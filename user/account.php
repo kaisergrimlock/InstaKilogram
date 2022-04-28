@@ -11,6 +11,7 @@ if (!isset($_SESSION['email'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Page</title>
+    <link rel="stylesheet" href="account.css">
     <link rel="stylesheet" href="user.css">
 </head>
 
@@ -37,13 +38,18 @@ if (!isset($_SESSION['email'])) {
             <form class="upload-form">
                 <textarea placeholder="What's in your mind today?" rows="2" class="form-control input-lg p-text-area"></textarea>
                     <input type="submit" class="btn btn-danger pull-right">
+
                     <div class="panel-upload">
+
                         <ul>
                             <li>
                                 <a href="#"><i class="fa fa-map-marker"></i></a>
                             </li>
                             <li>
-                                <a href="#"><i class="fa fa-camera"></i></a>
+                                <form action="" method="post" enctype="multipart/form-data">
+                                <label for="formFile"><i class="fa fa-camera"></i></label>
+                                <input type="file" id="formFile" name='img-upload-account'>
+                                </form>
                             </li>
                             <li>
                                 <a href="#"><i class=" fa fa-film"></i></a>
@@ -68,24 +74,6 @@ if (!isset($_SESSION['email'])) {
                     </div>
                     <div class="bio-row" id="lname">
                         <p><span>Last Name </span>: <?=$_SESSION['lname'] ?></p>
-                    </div>
-                    <div class="bio-row" id="country">
-                        <p><span>Country </span>: Australia</p>
-                    </div>
-                    <div class="bio-row" id="bday">
-                        <p><span>Birthday</span>: 13 July 1983</p>
-                    </div>
-                    <div class="bio-row" id="job">
-                        <p><span>Occupation </span>: UI Designer</p>
-                    </div>
-                    <div class="bio-row" id="email">
-                        <p><span>Email </span>: jsmith@flatlab.com</p>
-                    </div>
-                    <div class="bio-row" id="mobile">
-                        <p><span>Mobile </span>: (12) 03 4567890</p>
-                    </div>
-                    <div class="bio-row" id="phone">
-                        <p><span>Phone </span>: 88 (02) 123456</p>
                     </div>
                 </div>
             </div>
