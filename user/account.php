@@ -46,7 +46,7 @@ if (!isset($_SESSION['email'])) {
                             </li>
                             <li>
                                 <label for="formFile"><i class="fa fa-camera"></i></label>
-                                <input type="file" id="formFile" name='img-upload-account'>
+                                <input type="file" id="formFile" name='img-upload'>
                             </li>
                             <li>
                                 <a href="#"><i class=" fa fa-film"></i></a>
