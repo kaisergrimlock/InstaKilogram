@@ -50,8 +50,8 @@
                         Menu
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li><a class="dropdown-item" href="../user/register.php">Register</a></li>
-                        <li><a class="dropdown-item" href="../user/signin.php">Sign-in</a></li>
+                        <li><a class="dropdown-item" href="/InstaKilogram/user/register.php">Register</a></li>
+                        <li><a class="dropdown-item" href="/InstaKilogram/user/signin.php">Sign-in</a></li>
                     </ul>
                     </div>
               </div>

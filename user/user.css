@@ -21,7 +21,9 @@ html {
 .profile-nav, .profile-info{
     margin-top:30px;   
 }
-
+#formFile input[type="file"]{
+    display: none;
+  }  
 .profile-nav .user-heading {
     background: #F2A89F;
     color: #fff;
@@ -30,21 +32,18 @@ html {
     padding: 30px;
     text-align: center;
 }
-
 .profile-nav .user-heading.round a  {
     border-radius: 50%;
     -webkit-border-radius: 50%;
     border: 10px solid rgba(255,255,255,0.3);
     display: inline-block;
 }
-
 .profile-nav .user-heading a img {
     width: 112px;
     height: 112px;
     border-radius: 50%;
     -webkit-border-radius: 50%;
 }
-
 .profile-nav .user-heading h1 {
     font-size: 22px;
     font-weight: 300;
@@ -63,6 +62,7 @@ html {
     border-bottom: 1px solid #ebeae6;
     margin-top: 0;
     line-height: 30px;
+   
 }
 
 .profile-nav ul > li:last-child {

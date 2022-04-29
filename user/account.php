@@ -1,6 +1,6 @@
-
 <?php 
 session_start(); 
+require('script.php');
 if (!isset($_SESSION['email'])) {
     include "signin.php";
 }else{
@@ -12,8 +12,8 @@ if (!isset($_SESSION['email'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Page</title>
-    <link rel="stylesheet" href="account.css">
     <link rel="stylesheet" href="user.css">
+    <link rel="stylesheet" href="account.css">
 </head>
 
 <body>
@@ -46,7 +46,7 @@ if (!isset($_SESSION['email'])) {
                             </li>
                             <li>
                                 <label for="formFile"><i class="fa fa-camera"></i></label>
-                                <input type="file" id="formFile" name='img-upload'>
+                                <input type="file" id="formFile" name='post-upload'>
                             </li>
                             <li>
                                 <a href="#"><i class=" fa fa-film"></i></a>
@@ -73,6 +73,16 @@ if (!isset($_SESSION['email'])) {
                         <p><span>Last Name </span>: <?=$_SESSION['lname'] ?></p>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="post">
+            <div class="bio-graph-heading">
+                Posts 
+            </div>
+            <div class="panel-body bio-graph-info">
+                <h1>Images You Share</h1>
+                <img src="./img_post/feed-4.jpg" alt="post images" >
+                    
             </div>
         </div>
         

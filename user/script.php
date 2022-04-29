@@ -1,14 +1,6 @@
 <?php 
-#Post Image Function
-if(isset($_POST["btn_upload_post"])){
-    $img_name=$_FILES['img-upload']['name'];
-	$tmp_img_name=$_FILES['img-upload']['tmp_name'];
-    $folder = 'img_post/';
-    move_uploaded_file($tmp_img_name, $folder.$img_name);
-}
 
 #Sign Up Function
-
 if(isset($_POST["btn_signup"])){
     $email = $_POST["email"];
     $fname = $_POST["fname"];
@@ -57,6 +49,7 @@ if(isset($_POST["btn_signin"])){
         $_SESSION['fname']=$data[1];
         $_SESSION['lname']=$data[2];
         $_SESSION['img-upload']=$data[4];
+        $_SESSION['post-upload']=$data[5];
         header('location:account.php');
     } else {
         echo '<div class="alert alert-dismissible alert-danger">
@@ -66,4 +59,11 @@ if(isset($_POST["btn_signin"])){
     }
     }
 
+#Post Image Function
+if(isset($_POST["btn_upload_post"])){
+    $post_img_name=$_FILES['post-upload']['name'];
+	$tmp_img_name=$_FILES['post-upload']['tmp_name'];
+    $folder = 'img_post/';
+    move_uploaded_file($tmp_img_name, $folder.$post_img_name);
+}
     ?>

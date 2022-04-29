@@ -5,7 +5,7 @@
     <meta http-epuiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Login</title>
-    <link rel="stylesheet" href="/admin/style.css">
+    <link rel="stylesheet" href="admin.css">
     <script defer src="../header.js"></script>
 </head>
 <body>
