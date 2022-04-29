@@ -54,6 +54,12 @@ if (!isset($_SESSION['email'])) {
                             <li>
                                 <a href="#"><i class="fa fa-microphone"></i></a>
                             </li>
+                            <li>
+                                <div>
+                                    <input type="checkbox" class="form-check-input" id="private" value="private">
+                                    <label class="form-check-label" for="private">Private</label>
+                                </div>
+                            </li>
                         </ul>
                     </div>
             </form>
