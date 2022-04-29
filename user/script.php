@@ -59,7 +59,7 @@ if(isset($_POST["btn_signin"])){
     }
     }
 
-#Post Image Function
+#Post Image & Message Function
 if(isset($_POST["btn_upload_post"])){
     $text_post = $_POST["text_post"];
     $post_img_name=$_FILES['post-upload']['name'];
