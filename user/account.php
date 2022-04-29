@@ -1,3 +1,4 @@
+
 <?php 
 session_start(); 
 if (!isset($_SESSION['email'])) {
@@ -35,21 +36,17 @@ if (!isset($_SESSION['email'])) {
     </div>
     <div class="profile-info col-md-9">
         <div class="panel">
-            <form class="upload-form">
+            <form action="" method="post" enctype="multipart/form-data" class="upload-form">
                 <textarea placeholder="What's in your mind today?" rows="2" class="form-control input-lg p-text-area"></textarea>
-                    <input type="submit" class="btn btn-danger pull-right">
-
+                    <input type="submit" class="btn btn-danger pull-right" name="btn_upload_post">
                     <div class="panel-upload">
-
                         <ul>
                             <li>
                                 <a href="#"><i class="fa fa-map-marker"></i></a>
                             </li>
                             <li>
-                                <form action="" method="post" enctype="multipart/form-data">
                                 <label for="formFile"><i class="fa fa-camera"></i></label>
                                 <input type="file" id="formFile" name='img-upload-account'>
-                                </form>
                             </li>
                             <li>
                                 <a href="#"><i class=" fa fa-film"></i></a>

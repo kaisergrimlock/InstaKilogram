@@ -1,4 +1,11 @@
 <?php 
+#Post Image Function
+if(isset($_POST["btn_upload_post"])){
+    $img_name = $_FILES['img-upload-account']['name'];
+    $temp_img_name = $_FILES['img-upload-account']['tmp_name'];
+    $folder = 'img_post/';
+    move_uploaded_file($tmp_img_name, $folder.$img_name);
+}
 
 #Sign Up Function
 
