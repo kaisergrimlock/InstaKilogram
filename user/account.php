@@ -37,7 +37,7 @@ if (!isset($_SESSION['email'])) {
     <div class="profile-info col-md-9">
         <div class="panel">
             <form action="" method="post" enctype="multipart/form-data" class="upload-form">
-                <textarea placeholder="What's in your mind today?" rows="2" class="form-control input-lg p-text-area"></textarea>
+                <textarea placeholder="What's in your mind today?" rows="2" class="form-control input-lg p-text-area" name="text_post"></textarea>
                     <input type="submit" class="btn btn-danger pull-right" name="btn_upload_post">
                     <div class="panel-upload">
                         <ul>
@@ -81,8 +81,7 @@ if (!isset($_SESSION['email'])) {
             </div>
             <div class="panel-body bio-graph-info">
                 <h1>Images You Share</h1>
-                <img src="./img_post/feed-4.jpg" alt="post images" >
-                    
+                <img src="./img_post/feed-4.jpg" alt="post images" > 
             </div>
         </div>
         

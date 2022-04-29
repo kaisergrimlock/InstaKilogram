@@ -61,9 +61,13 @@ if(isset($_POST["btn_signin"])){
 
 #Post Image Function
 if(isset($_POST["btn_upload_post"])){
+    $text_post = $_POST["text_post"];
     $post_img_name=$_FILES['post-upload']['name'];
 	$tmp_img_name=$_FILES['post-upload']['tmp_name'];
     $folder = 'img_post/';
     move_uploaded_file($tmp_img_name, $folder.$post_img_name);
+    $arrayPostData = array($text_post,$post_img_name );
+    $fp = fopen('post.csv','a+');
+    $input = fputcsv($fp, $arrayPostData);
 }
     ?>
