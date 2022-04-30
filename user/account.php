@@ -2,7 +2,7 @@
 session_start(); 
 require('script.php');
 if (!isset($_SESSION['email'])) {
-    include "signin.php";
+    require "signin.php";
 }else{
     ?>
 <!DOCTYPE html>

@@ -12,10 +12,12 @@
     <link rel="stylesheet" href="user.css">
 </head>
 <body>
+<?php include("../bootstrap.php");?>
 
     <div class="container">
+        <div class="form-container">
         <form action="" method="post" enctype="multipart/form-data" class="form-group row">
-            <h1>Sign In</h1>
+            <h1 class="text-center">Sign In</h1>
             <div class="form-group">
                 <label for="username" class="form-label mt-4">Email Address:</label>
                 <input type="email" name="email" id="email"  placeholder="Enter email address" class="form-control" required>
@@ -31,6 +33,7 @@
         <div class="signin-button">
             <small class="form-text text-muted">Don't have an account yet? <a href="/InstaKilogram/user/register.php">Register here</a></small>
         </div>
+    </div>
     </div>
 </body>
 </html>

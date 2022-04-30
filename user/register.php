@@ -10,15 +10,11 @@
     <link rel="stylesheet" href="user.css">
 </head>
 <body>
+<?php include("../bootstrap.php");?>
     <section>
-        
-    <?php include ('../bootstrap.php'); 
-
-    ?>
-
     <div class="container">
         <form action="" method="post" enctype="multipart/form-data" class="form-group row" onsubmit="validateForm()">
-        <h1>Create an Account...</h1>
+        <h1 class="text-center">Create an Account...</h1>
         <div class="">
         </div>
             <div class="form-group">

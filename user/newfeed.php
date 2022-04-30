@@ -1,6 +1,9 @@
 <?php 
- require('script.php'); ?>
-
+ require('script.php');
+ if (!isset($_SESSION['email'])) {
+    require "signin.php";
+}else{
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,6 +16,12 @@
 </head>
 <body>
 <?php include ('../bootstrap.php')?>
-    <div class="container"></div>
+<div class="container">
+<img src="./img_post/<?=$_SESSION['post-upload'] ?>" alt="posts" >
+
+
+</div>
 </body>
 </html>
+<?php
+}?>
