@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="index.css">
     <script defer src="header.js"></script>
     <script defer src="./cookies/cookies.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
 
   <body class="bg">
@@ -37,4 +38,27 @@ if(isset($_POST['submit'])){
 
 ?>
   </body>
+  <footer>
+    <section class="footer">
+        <div class="social">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+        </div>
+        <ul class="list">
+          <li>
+            <a href="#">About</a>
+          </li>  
+          <li>
+            <a href="#">Privacy</a>
+          </li>
+          <li>
+            <a href="#">Help Links</a>
+          </li>    
+        </ul> 
+        <p class="copyright">
+          Copyright &copy; Group1. All Rights Reserved
+        </p>
+    </section>
+  </footer>
 </html>
