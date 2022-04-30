@@ -71,4 +71,7 @@ if(isset($_POST["btn_upload_post"])){
     $fp = fopen('post.csv','a+');
     $input = fputcsv($fp, $arrayPostData);
 }
+
+#Display Posted Image
+
     ?>
