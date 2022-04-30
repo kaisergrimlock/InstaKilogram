@@ -13,9 +13,6 @@
   </head>
 
   <body class="bg">
-    <?php
-    require ("bootstrap.php")
-    ?>
     <?php include("cookies.php")?>
 
     <main>
@@ -24,6 +21,9 @@
         <div class="box">
         <a href="/InstaKilogram/user/register.php">
           <button class="btn btn-outline-danger btn-lg">Register</button>
+         </a> 
+         <a href="/InstaKilogram/user/signin.php">
+          <button class="btn btn-outline-danger btn-lg">Sign in</button>
          </a> 
         </div>
     </main>
