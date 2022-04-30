@@ -30,27 +30,5 @@
     <?php
 ?>
   </body>
-  <footer>
-    <section class="footer">
-        <div class="social">
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-        </div>
-        <ul class="list">
-          <li>
-            <a href="#">About</a>
-          </li>  
-          <li>
-            <a href="#">Privacy</a>
-          </li>
-          <li>
-            <a href="#">Help Links</a>
-          </li>    
-        </ul> 
-        <p class="copyright">
-          Copyright &copy; Group1. All Rights Reserved
-        </p>
-    </section>
-  </footer>
+  <?php include_once("footer.php")?>
 </html>
