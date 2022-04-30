@@ -42,16 +42,15 @@
                     <input class="form-control me-sm-2" type="text" placeholder="Search">
                     <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
                    </form>
-                  <a href="/InstaKilogram/user/signin.php">
-                      <button class="btn btn-danger">Sign In</button>
-                  </a>
-                  <div class="dropdown">
+                  
+                    <div class="dropdown">
                     <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-expanded="false">
                         Menu
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li><a class="dropdown-item" href="/InstaKilogram/user/register.php">Register</a></li>
-                        <li><a class="dropdown-item" href="/InstaKilogram/user/signin.php">Sign-in</a></li>
+                        <li><a class="dropdown-item" href="/InstaKilogram/user/newfeed.php">Newfeed</a></li>
+                        <li><a class="dropdown-item" href="/InstaKilogram/user/account.php">My Account</a></li>
+                        <li><a class="dropdown-item" href="/InstaKilogram/logout.php">Log out</a></li>
                     </ul>
                     </div>
               </div>

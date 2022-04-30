@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="user.css">
 </head>
 <body>
-<?php include ('../bootstrap.php')?>
+
     <div class="container">
         <form action="" method="post" enctype="multipart/form-data" class="form-group row">
             <h1>Sign In</h1>
