@@ -56,7 +56,9 @@ if (!isset($_SESSION['email'])) {
                             </li>
                             <li>
                                 <div>
-                                    <input type="checkbox" class="form-check-input" id="private" value="private">
+                                    <input type="radio" class="form-check-input" id="public" name="privacy" value="public">
+                                    <label class="form-check-label" for="public">Public</label>
+                                    <input type="radio" class="form-check-input" id="private" name="privacy" value="private">
                                     <label class="form-check-label" for="private">Private</label>
                                 </div>
                             </li>
