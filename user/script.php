@@ -64,11 +64,12 @@ if(isset($_POST["btn_upload_post"])){
     $text_post = $_POST["text_post"];
     $email_post = $_SESSION['email'];
     $privacy = $_POST["privacy"];
+    $date = date('d-m-y h:i:s');
     $post_img_name=$_FILES['post-upload']['name'];
 	$tmp_img_name=$_FILES['post-upload']['tmp_name'];
     $folder = 'img_post/';
     move_uploaded_file($tmp_img_name, $folder.$post_img_name);
-    $arrayPostData = array($text_post,$post_img_name,$privacy, $email_post);
+    $arrayPostData = array($text_post,$post_img_name,$privacy, $email_post, $date);
     $fp = fopen('post.csv','a+');
     $input = fputcsv($fp, $arrayPostData);
 }
