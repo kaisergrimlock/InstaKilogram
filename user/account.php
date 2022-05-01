@@ -60,6 +60,8 @@ if (!isset($_SESSION['email'])) {
                                     <label class="form-check-label" for="public">Public</label>
                                     <input type="radio" class="form-check-input" id="private" name="privacy" value="private">
                                     <label class="form-check-label" for="private">Private</label>
+                                    <input type="radio" class="form-check-input" id="internal" name="privacy" value="internal">
+                                    <label class="form-check-label" for="public">Internal Use</label>
                                 </div>
                             </li>
                         </ul>
