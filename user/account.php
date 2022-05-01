@@ -89,7 +89,7 @@ if (!isset($_SESSION['email'])) {
             </div>
             <div class="panel-body bio-graph-info">
                 <h1>Images You Share</h1>
-                <img src="./img_post/feed-4.jpg" alt="post images" > 
+                <?php post_image()?>
             </div>
         </div>
         

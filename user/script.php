@@ -73,5 +73,14 @@ if(isset($_POST["btn_upload_post"])){
 }
 
 #Display Posted Image
-
+function post_image(){
+    if (($handle = fopen('../user/post.csv','r'))!== FALSE) {
+        $row = 1;
+        while (($data =  fgetcsv($handle,1000,",")) !== FALSE) {
+            echo '<img src="./img_post/'.$data[1].'" alt="post images" >';
+        }
+    }else{
+        echo"Error";
+    }
+}
     ?>
