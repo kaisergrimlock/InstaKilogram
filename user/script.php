@@ -98,16 +98,11 @@ function post_image_feed(){
     if (($handle = fopen('../user/post.csv','r'))!== FALSE) {
         $row = 1;
         while (($data =  fgetcsv($handle,1000,",")) !== FALSE) {
-            if ($data[3] == $email_current){
                 echo '<div class="card mb-3 feed-post">';
                 echo '<p class="card-header"> Posted by '.$data[3].'</p>';
                 echo '<img src="./img_post/'.$data[1].'" alt="post images" >';
                 echo '<p class="card-text">'.$data[0].'</p>';
                 echo '</div>';
-            }
-            else{
-                echo '';
-            } 
         }
     }else{
         echo"Error";
