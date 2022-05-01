@@ -1,9 +1,6 @@
 <?php 
 session_start(); 
 require('script.php');
-if (!isset($_SESSION['email'])) {
-    require "signin.php";
-}else{
     ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,6 +27,3 @@ if (!isset($_SESSION['email'])) {
     </section>
 </body>
 </html>
-<?php
-}
-?>

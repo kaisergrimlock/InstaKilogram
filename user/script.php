@@ -94,7 +94,6 @@ function post_image(){
 
 #Display Posted Image Feed
 function post_image_feed(){
-    $email_current = $_SESSION['email'];
     if (($handle = fopen('../user/post.csv','r'))!== FALSE) {
         $row = 1;
         while (($data =  fgetcsv($handle,1000,",")) !== FALSE) {
