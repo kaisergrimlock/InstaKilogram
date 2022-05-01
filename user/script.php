@@ -73,7 +73,7 @@ if(isset($_POST["btn_upload_post"])){
     $input = fputcsv($fp, $arrayPostData);
 }
 
-#Display Posted Image
+#Display Posted Image Account
 function post_image(){
     $email_current = $_SESSION['email'];
     if (($handle = fopen('../user/post.csv','r'))!== FALSE) {
@@ -84,8 +84,27 @@ function post_image(){
             }
             else{
                 echo '';
+            } 
+        }
+    }else{
+        echo"Error";
+    }
+}
+
+#Display Posted Image Feed
+function post_image_feed(){
+    $email_current = $_SESSION['email'];
+    if (($handle = fopen('../user/post.csv','r'))!== FALSE) {
+        $row = 1;
+        while (($data =  fgetcsv($handle,1000,",")) !== FALSE) {
+            if ($data[3] == $email_current){
+                echo '<p> Posted by'.$data[3].' :</p>';
+                echo '<img src="./img_post/'.$data[1].'" alt="post images" >';
+                echo '<p>'.$data[0].'</p>';
             }
-            
+            else{
+                echo '';
+            } 
         }
     }else{
         echo"Error";
