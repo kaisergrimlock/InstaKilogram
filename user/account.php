@@ -97,6 +97,7 @@ if (!isset($_SESSION['email'])) {
     </div>
     </div>
         </section>
+        <a href="../user/newfeed.php">Click here</a>
     <?php include_once("../footer.php")?>
 </body>
 </html>
