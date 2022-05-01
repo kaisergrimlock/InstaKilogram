@@ -97,6 +97,7 @@ if (!isset($_SESSION['email'])) {
     </div>
     </div>
         </section>
+    <?php include_once("../footer.php")?>
 </body>
 </html>
 <?php

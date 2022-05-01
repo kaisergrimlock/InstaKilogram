@@ -25,3 +25,9 @@ body{
     font-weight: 400;
     background-color: #F2A89F;
 }
+
+footer{
+    margin-top: 20px;
+    position:absolute;
+    bottom:0; 
+}
