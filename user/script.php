@@ -62,22 +62,30 @@ if(isset($_POST["btn_signin"])){
 #Post Image & Message Function
 if(isset($_POST["btn_upload_post"])){
     $text_post = $_POST["text_post"];
+    $email_post = $_SESSION['email'];
     $privacy = $_POST["privacy"];
     $post_img_name=$_FILES['post-upload']['name'];
 	$tmp_img_name=$_FILES['post-upload']['tmp_name'];
     $folder = 'img_post/';
     move_uploaded_file($tmp_img_name, $folder.$post_img_name);
-    $arrayPostData = array($text_post,$post_img_name,$privacy);
+    $arrayPostData = array($text_post,$post_img_name,$privacy, $email_post);
     $fp = fopen('post.csv','a+');
     $input = fputcsv($fp, $arrayPostData);
 }
 
 #Display Posted Image
 function post_image(){
+    $email_current = $_SESSION['email'];
     if (($handle = fopen('../user/post.csv','r'))!== FALSE) {
         $row = 1;
         while (($data =  fgetcsv($handle,1000,",")) !== FALSE) {
-            echo '<img src="./img_post/'.$data[1].'" alt="post images" >';
+            if ($data[3] == $email_current){
+                echo '<img src="./img_post/'.$data[1].'" alt="post images" >';
+            }
+            else{
+                echo '';
+            }
+            
         }
     }else{
         echo"Error";
