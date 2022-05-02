@@ -1,5 +1,4 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="../footer.css">
 <footer class="bg-dark text-center text-white">
   <div class="container">
     <!--<section class="mb-4 p-4 mt-auto">
@@ -10,10 +9,10 @@
     <section class="links">
       <div class="row">
           <div class="col-sm">
-            <a href="#" class="text-white">Privacy</a>
+            <a href="privacy.php" class="text-white">Privacy</a>
           </div>
           <div class="col-sm">
-            <a href="#" class="text-white">About</a>
+            <a href="aboutus.php" class="text-white">About</a>
           </div>
           <div class="col-sm">
             <a href="#" class="text-white">Help</a>
