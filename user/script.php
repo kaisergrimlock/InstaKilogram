@@ -72,6 +72,7 @@ if(isset($_POST["btn_upload_post"])){
     $arrayPostData = array($text_post,$post_img_name,$privacy, $email_post, $date);
     $fp = fopen('post.csv','a+');
     $input = fputcsv($fp, $arrayPostData);
+    header("Refresh:0");
 }
 
 #Display Posted Image Account
