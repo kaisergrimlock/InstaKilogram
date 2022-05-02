@@ -81,7 +81,7 @@ function post_image(){
         $row = 1;
         while (($data =  fgetcsv($handle,1000,",")) !== FALSE) {
             if ($data[3] == $email_current){
-                echo '<img src="./img_post/'.$data[1].'" alt="post images" >';
+                echo '<img class="img-fluid rounded shadow-sm d-block" src="./img_post/'.$data[1].'" alt="post images" >';
             }
             else{
                 echo '';
