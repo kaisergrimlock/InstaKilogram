@@ -42,9 +42,6 @@
             <tr>
                 <th scope="col">No</th>
                 <th scope="col">Email</th>
-                <th scope="col">First Name</th>
-                <th scope="col">Last Name</th>
-                <th scope="col">Password</th>
             </tr>
         </thead>
         <tbody>
@@ -55,9 +52,6 @@
                     echo "<tr>";
                     echo '<td scope="row">'.$row++.'</td>';
                     echo '<td scope="row">'.$data[0].'</td>';
-                    echo '<td scope="row">'.$data[1]."</td>";
-                    echo '<td scope="row">'.$data[2]."</td>";
-                    echo '<td scope="row">'.$data[3]."</td>";
                     echo"</tr>";
                 }
             }else{

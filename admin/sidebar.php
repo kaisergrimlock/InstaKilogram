@@ -43,15 +43,12 @@
                         <a href="crud.php">Users Management</a>
                     </li>
                     <li>
-                        <a href="#">Users Posts</a>
-                    </li>
-                    <li>
-                        <a href="#">Users 3</a>
+                        <a href="#">Detail</a>
                     </li>
                 </ul>
                 </li >
                 <li>
-                    <a href="#section-profile">Edit</a>
+                    <a href="#section-profile">Images</a>
                 </li>
                 <li>
                     <a href="#section-dropdown1">Analytics</a>

@@ -71,9 +71,9 @@ if (!isset($_SESSION['email'])) {
     
         <div class="panel">
             <div class="bio-graph-heading">
-                Aliquam ac magna metus. Nam sed arcu non tellus fringilla fringilla ut vel ispum. Aliquam ac magna metus.
+                <h4>About </h4>
             </div>
-            <div class="panel-body bio-graph-info">
+           <div class="panel-body bio-graph-info">
                 <h1>Bio Graph</h1>
                 <div class="row">
                     <div class="bio-row" id="fname">
@@ -84,13 +84,12 @@ if (!isset($_SESSION['email'])) {
                     </div>
                 </div>
             </div>
-        </div>
+        </div> <br>
         <div class="post">
             <div class="bio-graph-heading">
-                Posts 
+            <h4>Images You Share</h4>
             </div>
             <div class="panel-body bio-graph-info">
-                <h1>Images You Share</h1>
                 <?php post_image()?>
             </div>
         </div>
