@@ -1,7 +1,14 @@
-<link rel="stylesheet" href="footer.css">
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="/InstaKilogram/footer.css">
+</head>
+
 <footer>
 <div class="bg-dark text-center text-white mt-5">
-            <div class="card mx-7 ">
+            <div class="Card mx-7 ">
                 <div class="row mb-4 ">
                     <div class="col-md-4 col-sm-11 col-xs-11">
                         <div class="footer-text pull-left">
@@ -33,7 +40,6 @@
                      <div class="col-md-2 col-sm-4 col-xs-4">
                      <a href="./help.php"><h5 class="heading">Help</h5></a>
                      </div>
-
                 </div>
                 
                 
