@@ -33,6 +33,11 @@
                               <span class="visually-hidden">(current)</span>
                           </a>
                       </li>
+                      <li class="nav-item">
+                            <a class="nav-link active" href="/InstaKilogram/index.php">Newfeed
+                              <span class="visually-hidden">(current)</span>
+                            </a>
+                      </li>
                   </ul>
                   <form class="d-flex">
                     <input class="form-control me-sm-2" type="text" placeholder="Search">
@@ -41,10 +46,9 @@
                   
                     <div class="dropdown">
                     <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-expanded="false">
-                        Menu
+                        Account Menu
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li><a class="dropdown-item" href="/InstaKilogram/user/newfeed.php">Newfeed</a></li>
                         <li><a class="dropdown-item" href="/InstaKilogram/user/account.php">My Account</a></li>
                         <li><a class="dropdown-item" href="/InstaKilogram/logout.php">Log out</a></li>
                     </ul>
