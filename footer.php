@@ -9,10 +9,10 @@
     <section class="links">
       <div class="row">
           <div class="col-sm">
-            <a href="privacy.php" class="text-white">Privacy</a>
+            <a href="../privacy.php" class="text-white">Privacy</a>
           </div>
           <div class="col-sm">
-            <a href="aboutus.php" class="text-white">About</a>
+            <a href="../aboutus.php" class="text-white">About</a>
           </div>
           <div class="col-sm">
             <a href="#" class="text-white">Help</a>

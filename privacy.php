@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
 </head>
 <body>
+<?php include("bootstrap.php");?>
+<div class="container">
     <h1>InstaKilogram Data Policy</h1>
     <h2>I. What kinds of information do we collect?</h2>
     <p>Things that you and others do and provide.Information and content you provide. We collect the content, communications and other information you provide when you use our Products, including when you sign up for an account, create or share content and message or communicate with others. This can include information in or about the content that you provide, such as the location of a photo or the date a file was created. Things others do and information they provide about you. We also receive and analyse content, communications and information that other people provide when they use our Products. This can include information about you, such as when others share or comment on a photo of you, send a message to you or upload, sync or import your contact information.</p>
@@ -22,8 +23,6 @@
     <h2>VI. How to contact us with questions</h2>
     <p>You can learn more about how privacy works InstaKilogram. If you have questions about this policy, you can contact us as described below. You can contact us by writing to: s3911417@rmit.edu.vn</p>
     <p>This policy is referenced on Instagram web site</p> 
-
-
-
+</div>
 </body>
 </html>
