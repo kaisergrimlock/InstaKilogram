@@ -2,7 +2,7 @@
 session_start(); 
 require('script.php');
 if (!isset($_SESSION['email'])) {
-    require "signin.php";
+    header('Location: signin.php');
 }else{
     ?>
 <!DOCTYPE html>
@@ -28,8 +28,8 @@ if (!isset($_SESSION['email'])) {
                 <a href="#">
                     <img src="./profile_img/<?=$_SESSION['img-upload'] ?>" alt="profile picture" >
                 </a>
-                <h1><?=$_SESSION['fname'] ?></h1>
-                <p><?=$_SESSION['email']  ?></p>
+                <h1 class="fname"><?=$_SESSION['fname'] ?></h1>
+                <p class="email"><?=$_SESSION['email']  ?></p>
                 <button class="btn btn-outline-dark"> Change Profile</button>
             </div>
         </div>
