@@ -56,7 +56,7 @@ if (!isset($_SESSION['email'])) {
                             </li>
                             <li>
                                 <div>
-                                    <input type="radio" class="form-check-input" id="public" name="privacy" value="public">
+                                    <input type="radio" class="form-check-input" id="public" name="privacy" value="public" checked>
                                     <label class="form-check-label" for="public">Public</label>
                                     <input type="radio" class="form-check-input" id="private" name="privacy" value="private">
                                     <label class="form-check-label" for="private">Private</label>
@@ -94,12 +94,10 @@ if (!isset($_SESSION['email'])) {
                 <?php post_image()?>
             </div>
         </div>
-        
     </div>
     </div>
     </div>
-        </section>
-        <a href="../user/newfeed.php">Click here</a>
+    </section>
     <?php include_once("../footer.php")?>
 </body>
 </html>
