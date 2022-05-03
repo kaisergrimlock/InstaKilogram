@@ -10,18 +10,27 @@ require('script.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Page</title>
     <link rel="stylesheet" href="user.css">
-    <link rel="stylesheet" href="account.css">
 </head>
 
 <body>
     <section>
     <?php include ('../bootstrap.php')?>
+    <br>
     <div class="container bootstrap snippets bootdey">
+    <div class="row">
+    <div class="profile-nav col-md-3">
         <div class="panel">
+            <div class="user-heading round"> Discover new posts</div>
+            
+        </div>
+    </div>
+        <div class="profile-info col-md-9">
             <div  class="post">
                 <?php post_image_feed()?>
+                
             </div>
         </div>
+</div>
 
     </div>
     </section>
