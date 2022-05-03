@@ -23,7 +23,7 @@
           <button class="btn btn-outline-danger btn-lg">Register</button>
          </a> 
          <a href="/InstaKilogram/user/signin.php">
-          <button class="btn btn-outline-danger btn-lg">Sign in</button>
+          <button class="btn btn-outline-danger btn-lg">Sign in</button> <br>
          </a> 
         </div>
     </main>

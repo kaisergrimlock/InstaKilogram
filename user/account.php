@@ -2,7 +2,7 @@
 session_start(); 
 require('script.php');
 if (!isset($_SESSION['email'])) {
-    require "signin.php";
+    header('Location: signin.php');
 }else{
     ?>
 <!DOCTYPE html>
@@ -28,8 +28,8 @@ if (!isset($_SESSION['email'])) {
                 <a href="#">
                     <img src="./profile_img/<?=$_SESSION['img-upload'] ?>" alt="profile picture" >
                 </a>
-                <h1><?=$_SESSION['fname'] ?></h1>
-                <p><?=$_SESSION['email']  ?></p>
+                <h1 class="fname"><?=$_SESSION['fname'] ?></h1>
+                <p class="email"><?=$_SESSION['email']  ?></p>
                 <button class="btn btn-outline-dark"> Change Profile</button>
             </div>
         </div>
@@ -56,7 +56,7 @@ if (!isset($_SESSION['email'])) {
                             </li>
                             <li>
                                 <div>
-                                    <input type="radio" class="form-check-input" id="public" name="privacy" value="public">
+                                    <input type="radio" class="form-check-input" id="public" name="privacy" value="public" checked>
                                     <label class="form-check-label" for="public">Public</label>
                                     <input type="radio" class="form-check-input" id="private" name="privacy" value="private">
                                     <label class="form-check-label" for="private">Private</label>
@@ -71,9 +71,9 @@ if (!isset($_SESSION['email'])) {
     
         <div class="panel">
             <div class="bio-graph-heading">
-                Aliquam ac magna metus. Nam sed arcu non tellus fringilla fringilla ut vel ispum. Aliquam ac magna metus.
+                <h4>About </h4>
             </div>
-            <div class="panel-body bio-graph-info">
+           <div class="panel-body bio-graph-info">
                 <h1>Bio Graph</h1>
                 <div class="row">
                     <div class="bio-row" id="fname">
@@ -84,22 +84,19 @@ if (!isset($_SESSION['email'])) {
                     </div>
                 </div>
             </div>
-        </div>
+        </div> <br>
         <div class="post">
             <div class="bio-graph-heading">
-                Posts 
+            <h4>Images You Share</h4>
             </div>
             <div class="panel-body bio-graph-info">
-                <h1>Images You Share</h1>
                 <?php post_image()?>
             </div>
         </div>
-        
     </div>
     </div>
     </div>
-        </section>
-        <a href="../user/newfeed.php">Click here</a>
+    </section>
     <?php include_once("../footer.php")?>
 </body>
 </html>

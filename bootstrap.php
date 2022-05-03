@@ -33,10 +33,6 @@
                               <span class="visually-hidden">(current)</span>
                           </a>
                       </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="#">About</a>
-                      </li>
-                      
                   </ul>
                   <form class="d-flex">
                     <input class="form-control me-sm-2" type="text" placeholder="Search">

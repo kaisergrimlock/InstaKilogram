@@ -28,13 +28,13 @@ html {
     background: #F2A89F;
     color: #fff;
     border-radius: 4px 4px 0 0;
-    -webkit-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0;
     padding: 30px;
     text-align: center;
 }
 .profile-nav .user-heading.round a  {
     border-radius: 50%;
-    -webkit-border-radius: 50%;
+    border-radius: 50%;
     border: 10px solid rgba(255,255,255,0.3);
     display: inline-block;
 }
@@ -42,7 +42,7 @@ html {
     width: 112px;
     height: 112px;
     border-radius: 50%;
-    -webkit-border-radius: 50%;
+    border-radius: 50%;
 }
 .profile-nav .user-heading h1 {
     font-size: 22px;
@@ -71,7 +71,7 @@ html {
 
 .profile-nav ul > li > a {
     border-radius: 0;
-    -webkit-border-radius: 0;
+    border-radius: 0;
     color: #89817f;
     border-left: 5px solid #fff;
 }
@@ -84,7 +84,7 @@ html {
 
 .profile-nav ul > li:last-child > a:last-child {
     border-radius: 0 0 4px 4px;
-    -webkit-border-radius: 0 0 4px 4px;
+    border-radius: 0 0 4px 4px;
 }
 
 .profile-nav ul > li > a > i{
@@ -131,7 +131,7 @@ html {
     font-style: italic;
     padding: 40px 110px;
     border-radius: 15px 15px 0 0;
-    -webkit-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0;
     font-size: 16px;
     font-weight: 300;
 }

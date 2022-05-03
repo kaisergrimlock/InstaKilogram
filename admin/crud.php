@@ -1,26 +1,5 @@
 <?php include "sidebar.php"?>
 
-<!-- EDIT FUNCTION -->
-<div class="modal">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Modal title</h5>
-        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true"></span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p>Modal body text goes here.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Save changes</button>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-
 <!-- SEARCH USERS -->
 <form action="search.php" method="POST">
         <div class="row mx-3">
@@ -41,7 +20,7 @@
                 <th scope="col">Email</th>
                 <th scope="col">First Name</th>
                 <th scope="col">Last Name</th>
-                <th scope="col">Password</th>
+                 <th scope="col">Details</th>
             </tr>
         </thead>
         <tbody>
@@ -52,9 +31,9 @@
                     echo "<tr>";
                     echo '<td scope="row">'.$row++.'</td>';
                     echo '<td scope="row">'.$data[0].'</td>';
-                    echo '<td scope="row">'.$data[1]."</td>";
-                    echo '<td scope="row">'.$data[2]."</td>";
-                    echo '<td scope="row">'.$data[3]."</td>";
+                    echo '<td scope="row">'.$data[1].'</td>';
+                    echo '<td scope="row">'.$data[2].'</td>';
+                    echo '<td scope="row"> <a href="detail.php"><button class="btn btn-dark">Details</button></a></td>';
                     echo"</tr>";
                 }
             }else{
