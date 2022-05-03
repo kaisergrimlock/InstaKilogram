@@ -36,6 +36,8 @@
             <div class="form-group">
                 <label class="form-label mt-4">Password:</label>
                 <input type="password" name="password" value="" class="form-control" required>
+                <input type="submit" value="Check" /><br />
+                <span><?php echo $msg?></span>
             </div>
             <div class="form-group">
                 <label class="form-label mt-4">Retype Password:</label>

@@ -1,11 +1,32 @@
 <?php 
 
 #Sign Up Function
+$msg="";
+
 if(isset($_POST["btn_signup"])){
     $email = $_POST["email"];
     $fname = $_POST["fname"];
     $lname = $_POST["lname"];
     $password = $_POST["password"];
+    
+    $number = preg_match('@[0-9]@', $password);
+    $uppercase = preg_match('@[A-Z]@', $password);
+    $lowercase = preg_match('@[a-z]@', $password);
+    $specialChars = preg_match('@[^\w]@', $password);
+   
+    if(strlen($password) < 8 || !$number || !$uppercase || !$lowercase || !$specialChars) {
+      $msg = "Password must be at least 8 characters in length and must contain at least one number, one upper case letter, one lower case letter and one special character.";
+    } else {
+      $msg = "Your password is strong.";
+      return false;
+    }
+    if ($_POST["password"] === $_POST["reptpassword"]) {
+        // success!
+     }
+     else {
+        return false;
+     }
+  
     $reptpassword = $_POST["reptpassword"];
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
     $reptpassword = $_POST["reptpassword"];
