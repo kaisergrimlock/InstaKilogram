@@ -39,19 +39,14 @@ if(isset($_POST["btn_signup"])){
     $arrayData = array($email,$fname,$lname,$hashedPassword,$img_name );
     $fp = fopen('user_data.csv','a+');
     
+    //  checking duplicate email
+    $csv = array_map('str_getcsv', file('user_data.csv'));
     
-    // if (($handle = fopen("user_data.csv", "r")) !== FALSE) {
-    //     while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
-    //         console.log($data);
-    //       if($data[0] == $email){
-    //           return false;}
-    //       }            
-    //     fclose($handle);        
-    // }
-
-    // else{
-    //    echo "<h3> Please enter again!</h3>"; 
-    // }
+    foreach($csv as $line){
+    if($line[0] == $email){
+       return false;
+    }
+    }
     
     $input = fputcsv($fp, $arrayData);
 
