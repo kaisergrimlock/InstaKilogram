@@ -9,6 +9,7 @@ if(isset($_POST["btn_signup"])){
     $lname = $_POST["lname"];
     $password = $_POST["password"];
     
+    // password validation
     $number = preg_match('@[0-9]@', $password);
     $uppercase = preg_match('@[A-Z]@', $password);
     $lowercase = preg_match('@[a-z]@', $password);
@@ -19,7 +20,7 @@ if(isset($_POST["btn_signup"])){
       return false;
     } else {
       $msg = "Your password is strong.";
-      return true;
+      
     }
     if ($_POST["password"] === $_POST["reptpassword"]) {
         // success!
@@ -37,6 +38,21 @@ if(isset($_POST["btn_signup"])){
 	move_uploaded_file($tmp_img_name,$folder.$img_name);
     $arrayData = array($email,$fname,$lname,$hashedPassword,$img_name );
     $fp = fopen('user_data.csv','a+');
+    
+    
+    // if (($handle = fopen("user_data.csv", "r")) !== FALSE) {
+    //     while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+    //         console.log($data);
+    //       if($data[0] == $email){
+    //           return false;}
+    //       }            
+    //     fclose($handle);        
+    // }
+
+    // else{
+    //    echo "<h3> Please enter again!</h3>"; 
+    // }
+    
     $input = fputcsv($fp, $arrayData);
 
     if ($input){
