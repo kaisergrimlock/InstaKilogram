@@ -117,7 +117,6 @@ if(isset($_POST["btn_upload_post"])){
 function post_image(){
     $email_current = $_SESSION['email'];
     if (($handle = fopen('../user/post.csv','r'))!== FALSE) {
-        $row = 1;
         while (($data =  fgetcsv($handle,1000,",")) !== FALSE) {
             if ($data[3] == $email_current){
                     display_img($data);
