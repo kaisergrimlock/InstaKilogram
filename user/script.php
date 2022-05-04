@@ -120,15 +120,7 @@ function post_image(){
         $row = 1;
         while (($data =  fgetcsv($handle,1000,",")) !== FALSE) {
             if ($data[3] == $email_current){
-                    echo '<div class="card mb-3">';
-                    echo '<h3 class="card-header">'.$data[0].'</h3>';
-                    echo '<div class="card-body">';
-                    echo '<h6 class="card-title text-info">' .$data[3]. '</h6>';
-                    echo '<p class="card-subtitle text-muted"> '.$data[4].'</>';
-                    echo '<h6> <em>'.$data[2].'</em> </h6>';
-                    echo '</div>';
-                    echo '<img src="./img_post/'.$data[1].'" width="40%"></img>';
-                    echo '</div> ';
+                    display_img($data);
             }
             else{
                 echo '';
@@ -163,6 +155,7 @@ function post_image_feed(){
     }
 }
 
+#Function to display images
 function display_img($array){
     echo '<div class="card mb-3">';
     echo '<h3 class="card-header">'.$array[0].'</h3>';
