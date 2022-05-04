@@ -24,5 +24,6 @@
     <p>You can learn more about how privacy works InstaKilogram. If you have questions about this policy, you can contact us as described below. You can contact us by writing to: s3911417@rmit.edu.vn</p>
     <p>This policy is referenced on Instagram web site</p> 
 </div>
+
 </body>
 </html>

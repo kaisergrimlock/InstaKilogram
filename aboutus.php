@@ -9,13 +9,15 @@
 
 </head>
 <body>
-    <h1>About Us</h1>
-    <h2>InstaKilogram is photo sharing socail networking services similar to Instagram.<br> 
-        People can upload photos or videos to our service and share them with other users.<br> 
-        They can also view posts shared by their friends on InstaKilogram.<br>
-        Anyone can create an account by registering an email address and selecting a username.</h2>
+    <?php include("bootstrap.php");?>
 
-
-
+    <div class="container">   
+        <h3>About Us</h3>
+            <p>InstaKilogram is photo sharing socail networking services similar to Instagram.<br> 
+                People can upload photos or videos to our service and share them with other users.<br> 
+                They can also view posts shared by their friends on InstaKilogram.<br>
+                Anyone can create an account by registering an email address and selecting a username.
+            </p>
+    </div>
 </body>
 </html>
