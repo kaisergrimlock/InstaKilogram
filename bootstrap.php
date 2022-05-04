@@ -34,7 +34,7 @@
                           </a>
                       </li>
                       <li class="nav-item">
-                            <a class="nav-link active" href="/InstaKilogram/index.php">Newfeed
+                            <a class="nav-link active" href="/InstaKilogram/user/newfeed.php">Newfeed
                               <span class="visually-hidden">(current)</span>
                             </a>
                       </li>

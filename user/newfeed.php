@@ -27,13 +27,12 @@ require('script.php');
         <div class="profile-info col-md-9">
             <div  class="post">
                 <?php post_image_feed()?>
-                
             </div>
         </div>
 </div>
 
     </div>
     </section>
-    <?php include("footer.php")?>
+    <?php include("../footer.php")?>
 </body>
 </html>
