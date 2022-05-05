@@ -13,7 +13,6 @@
 </head>
 <body>
 <?php include("../bootstrap.php");?>
-
     <div class="container">
         <div class="form-container">
         <form action="" method="post" enctype="multipart/form-data" class="form-group row">
