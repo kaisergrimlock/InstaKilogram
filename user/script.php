@@ -129,6 +129,7 @@ function post_image(){
 function post_image_feed(){
     $email_current = $_SESSION['email'];
     if (($handle = fopen('../user/post.csv','r'))!== FALSE){
+        
         if(isset($_SESSION['email'])){
             while (($data =  fgetcsv($handle,1000,",")) !== FALSE){
                 if($data[2] == 'public' || $data[2] == 'internal'){
