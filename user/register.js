@@ -3,39 +3,39 @@ var lname = document.getElementById('lname')
 var password = document.getElementById('password')
 var retype = document.getElementById('reptpassword')
 var email = document.getElementById('email')
-
+let alert_validation = document.getElementById('alert-validation')
 function validateForm(){
     let upper = /[A-Z]/
     let lower = /[a-z]/
     let num = /[0-9]/
     if(password.value.length < 8 || password.value.length > 20){
-        alert('please enter password between 8 and 20')
+        alert('Please enter between 8 and 20 characters')
     }
 
     if(upper.test(password.value) != true){
-        alert('please use at least one upper case')
+        alert('Please use at least one uppercase character')
     }
 
     if (lower.test(password.value) != true){
-        alert('please use at least one lower case')
+        alert('Please use at least one lowercase character')
     }
 
     if (password.value != retype.value){
-        alert('please retype the same password')
+        alert('Please retype the same password')
     }  
     
     if (isSpace(password.value) == true){
-        alert('please do not use space')
+        alert('Please do not use space')
     }
 
     if(num.test(password.value) != true)
     {
-        alert('please use at least one number')
+        alert('Please enter at least one number')
     }
 
     if(!isSpace)
     {
-        alert('please do not use space')
+        alert('Please do not use space')
     }
 }
 

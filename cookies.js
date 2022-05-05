@@ -1,5 +1,3 @@
-console.log("cookies")
-
 setCookies = (cName, cValue, expdays) => {
     let date = new Date();
     date.setTime(date.getTime() + (expdays * 24 * 60 * 60 * 100))

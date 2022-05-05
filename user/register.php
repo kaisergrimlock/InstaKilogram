@@ -12,6 +12,7 @@
 <body>
 <?php include("../bootstrap.php");?>
     <section>
+    <div id="alert-validation"></div>
     <div class="container">
         <form action="" method="post" enctype="multipart/form-data" class="form-group row" onsubmit="validateForm()">
         <h1 class="text-center">Create an Account...</h1>
@@ -36,8 +37,6 @@
             <div class="form-group">
                 <label class="form-label mt-4">Password:</label>
                 <input type="password" name="password" id="password" class="form-control" required>
-                <input type="submit" value="Check" /><br />
-                <span><?php echo $msg?></span>
             </div>
             <div class="form-group">
                 <label class="form-label mt-4">Retype Password:</label>
@@ -53,8 +52,6 @@
                
             </form>
     </div>
-   
-</section>
 <?php include_once("../footer.php")?>
 </body>
 </html>
