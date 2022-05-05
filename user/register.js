@@ -5,24 +5,7 @@ var reptpassword = document.getElementById('reptpassword')
 var email = document.getElementById('email')
 pat = //
 console.log("js is working")
-function validateForm(){
-    let upper = /[A-Z]/
-    let lower = /[a-z]/
-    let num = /[0-9]/
-    if(password.value.length < 8 || password.value.length > 20){
-        alert('please enter password between 8 and 20')
-    }
 
-<<<<<<< Updated upstream
-    if(upper.test(password.value) != true){
-        alert('please use at least one upper case')
-    }
-
-    if (lower.test(password.value) != true){
-        alert('please use at least one lower case')
-    }
-
-=======
 function validateForm(){
     let upper = /[A-Z]/
     let lower = /[a-z]/
@@ -39,7 +22,6 @@ function validateForm(){
         alert('please use at least one lower case')
     }
 
->>>>>>> Stashed changes
     if (password.value != retype.value){
         alert('please retype the same password')
     }  
@@ -60,10 +42,7 @@ function validateForm(){
 }
 
 function isSpace(str) {
-<<<<<<< Updated upstream
-=======
     var test = 0
->>>>>>> Stashed changes
     for (let i=0; i < str.length; i++)
     {
         let character = str.charAt(i)
@@ -71,11 +50,5 @@ function isSpace(str) {
         {
             return true
         }
-<<<<<<< Updated upstream
-        else{
-            return false;
-        }
-=======
->>>>>>> Stashed changes
     }
 }

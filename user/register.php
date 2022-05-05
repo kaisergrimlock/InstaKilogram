@@ -19,17 +19,6 @@
         </div>
             <div class="form-group">
                 <label class="form-label mt-4">Email Address:</label>
-<<<<<<< Updated upstream
-                <input type="email" name="email" id="email" class="form-control" required>
-            </div>
-            <div class="form-group"> 
-                <label class="form-label mt-4">First Name:</label>
-                <input type="text" name="fname" id="fname" class="form-control" required>
-            </div> 
-            <div class="form-group">
-                <label class="form-label mt-4">Last Name:</label>
-                <input type="text" name="lname"  id="lname" class="form-control" required>
-=======
                 <input type="email" name="email" id="email" value="" class="form-control" required>
             </div>
             <div class="form-group"> 
@@ -39,7 +28,6 @@
             <div class="form-group">
                 <label class="form-label mt-4">Last Name:</label>
                 <input type="text" name="lname"  id="lname"value="" class="form-control" required>
->>>>>>> Stashed changes
             </div>
             <div class="form-group">
                 <label for="formFile" class="form-label mt-4">Profile Image: </label>
@@ -47,21 +35,13 @@
             </div>
             <div class="form-group">
                 <label class="form-label mt-4">Password:</label>
-<<<<<<< Updated upstream
-                <input type="password" name="password" id="password" class="form-control" required>
-=======
                 <input type="password" name="password" id="password" value="" class="form-control" required>
->>>>>>> Stashed changes
                 <input type="submit" value="Check" /><br />
                 <span><?php echo $msg?></span>
             </div>
             <div class="form-group">
                 <label class="form-label mt-4">Retype Password:</label>
-<<<<<<< Updated upstream
-                <input type="password" name="reptpassword" id="reptpassword" class="form-control" required> <br>
-=======
                 <input type="password" name="reptpassword" id="reptpassword" value="" class="form-control" required> <br>
->>>>>>> Stashed changes
             </div>
             <div class="buttons">
                 <input type="submit" name="btn_signup" value="Submit" class="btn btn-danger" >
