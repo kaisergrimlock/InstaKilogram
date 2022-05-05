@@ -193,4 +193,7 @@ function display_img($array){
     echo '<img src="./img_post/'.$array[1].'" width="40%"></img>';
     echo '</div> ';
 }
+
+#Search
+
     ?>
