@@ -3,7 +3,6 @@ var lname = document.getElementById('lname')
 var password = document.getElementById('password')
 var retype = document.getElementById('reptpassword')
 var email = document.getElementById('email')
-// pat = //
 
 function validateForm(){
     let upper = /[A-Z]/
