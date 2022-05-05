@@ -1,4 +1,5 @@
-<?php include "sidebar.php"?>
+<?php include "sidebar.php";
+require "admin_script.php";?>
 
 <!-- SEARCH USERS -->
 <form action="search.php" method="POST">
@@ -24,22 +25,7 @@
             </tr>
         </thead>
         <tbody>
-            <?php
-            if (($handle = fopen('../user/user_data.csv','r'))!== FALSE) {
-                $row = 1;
-                while (($data =  fgetcsv($handle,1000,",")) !== FALSE) {
-                    echo "<tr>";
-                    echo '<td scope="row">'.$row++.'</td>';
-                    echo '<td scope="row">'.$data[0].'</td>';
-                    echo '<td scope="row">'.$data[1].'</td>';
-                    echo '<td scope="row">'.$data[2].'</td>';
-                    echo '<td scope="row"> <a href="detail.php"><button class="btn btn-dark">Details</button></a></td>';
-                    echo"</tr>";
-                }
-            }else{
-                echo"Error";
-            }
-            ?>
+            <?php display_table()?>
         </tbody>
     </table>
 </div>

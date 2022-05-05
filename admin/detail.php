@@ -36,7 +36,7 @@
         <tbody>
             <?php
             if (($handle = fopen('../user/user_data.csv','r'))!== FALSE) {
-                for($i = 1; $line =  fgetcsv($handle); $i++) {
+                for($i = 1; $data =  fgetcsv($handle); $i++) {
                     if($i === $data[0]){
                         fclose($handle);
                     echo "<tr>";

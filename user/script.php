@@ -104,7 +104,7 @@ if(isset($_POST["btn_upload_post"])){
     $var = '';
     echo formatDuplicateExtension($post_img_name);
     echo($post_img_name);
-    if (file_exists("/InstaKilogram/user/img_post/" . $_FILES["post-upload"]["name"]))
+    if (file_exists("/InstaKilogram/user/img_post/" . $post_img_name))
     {
      echo("file already exsits");
       // its new location and hashing the filename only.

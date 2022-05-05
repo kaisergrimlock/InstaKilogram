@@ -25,9 +25,7 @@
             </div>
             <div class="buttons">
                 <input type="submit" value="Sign In" class="btn btn-danger" id="submit" onclick="validateForm()">
-            </div>
-            
-           
+            </div>   
     </div>
     </section>
 
