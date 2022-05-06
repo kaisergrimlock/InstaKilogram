@@ -102,18 +102,16 @@ if(isset($_POST["btn_upload_post"])){
     $tmp_img_name=$_FILES['post-upload']['tmp_name'];
     $folder = 'img_post/';
     $var = '';
-    echo formatDuplicateExtension($post_img_name);
-    echo($post_img_name);
-    if (file_exists("/InstaKilogram/user/img_post/" . $post_img_name))
+    if (file_exists("../user/img_post/" . $post_img_name))
     {
      echo("file already exsits");
       // its new location and hashing the filename only.
-     $post_img_name=($post_img_name);   
+     $var=formatDuplicateExtension($post_img_name);   
      // store your renamed file here in your database
      // using the assigned $var variable.
     }
-    move_uploaded_file($tmp_img_name, $folder.$post_img_name);
-    $arrayPostData = array($text_post,$post_img_name,$privacy, $email_post, $date);
+    move_uploaded_file($tmp_img_name, $folder.$var);
+    $arrayPostData = array($text_post,$var,$privacy, $email_post, $date);
     $fp = fopen('post.csv','a+');
     $input = fputcsv($fp, $arrayPostData);
     header("Refresh:0");
