@@ -140,6 +140,7 @@ return $stmt;
 
 #Display Posted Image Account
 function post_image(){
+    $array = csvToArray('../user/post.csv');
     $email_current = $_SESSION['email'];
     if (($handle = fopen('../user/post.csv','r'))!== FALSE) {
         while (($data =  fgetcsv($handle,1000,",")) !== FALSE) {
@@ -158,7 +159,7 @@ function post_image(){
 #Display Posted Image Feed
 function post_image_feed(){
     $email_current = $_SESSION['email'];
-    if (($handle = fopen('../user/sorted_post.csv','r'))!== FALSE){
+    if (($handle = fopen('../user/post.csv','r'))!== FALSE){
         
         if(isset($_SESSION['email'])){
             while (($data =  fgetcsv($handle,1000,",")) !== FALSE){
@@ -194,7 +195,7 @@ function display_img($array){
 }
 
 
-#Sort CSV
+#Sort CSV (Failed)
 function mysort($p1, $p2){
     return strtotime($p2[4]) - strtotime($p1[4]);
 }
@@ -215,8 +216,10 @@ function csvToArray($csvFile){
 function array2csv($data, $newdata, $delimiter = ',', $enclosure = '"', $escape_char = "\\")
 {
     $f = fopen($newdata, 'r+');
-    foreach ($data as $item) {
-        fputcsv($f, $item, $delimiter, $enclosure, $escape_char);
+    if($data !== NULL){
+        foreach ($data as $item) {
+            fputcsv($f, $item, $delimiter, $enclosure, $escape_char);
+        }
     }
     rewind($f);
     return stream_get_contents($f);
