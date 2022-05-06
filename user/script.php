@@ -102,29 +102,30 @@ if(isset($_POST["btn_upload_post"])){
     $tmp_img_name=$_FILES['post-upload']['tmp_name'];
     $folder = 'img_post/';
     $var = '';
+    echo formatDuplicateExtension($post_img_name);
+    echo($post_img_name);
     if (file_exists("../user/img_post/" . $post_img_name))
     {
      echo("file already exsits");
       // its new location and hashing the filename only.
-     $var=formatDuplicateExtension($post_img_name);   
-     // store your renamed file here in your database
-     // using the assigned $var variable.
+     $post_img_name=formatDuplicateExtension($post_img_name);   
     }
-    move_uploaded_file($tmp_img_name, $folder.$var);
-    $arrayPostData = array($text_post,$var,$privacy, $email_post, $date);
+    move_uploaded_file($tmp_img_name, $folder.$post_img_name);
+    $arrayPostData = array($text_post,$post_img_name,$privacy, $email_post, $date);
     $fp = fopen('post.csv','a+');
     $input = fputcsv($fp, $arrayPostData);
     header("Refresh:0");
 }
 
 
+#Unique Image Name Function (Somewhat)
 function formatDuplicateExtension($filename){
     $stmt = NULL;
     $format = explode('.', $filename);
     $i = 0;
     foreach($format as $key => $value){     
         if($value === end($format)){
-            $stmt .= '(1).'.$format[$i];
+            $stmt .= '('.rand(0,99999).').'.$format[$i];
         }elseif($key === count($format)-2){
             $stmt .= $format[$i];
         }else{
