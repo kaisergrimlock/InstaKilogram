@@ -217,7 +217,7 @@ function csvToArray($csvFile){
 
 function array2csv($data, $newdata, $delimiter = ',', $enclosure = '"', $escape_char = "\\")
 {
-    $f = fopen('../user/sorted_post.csv', 'r+');
+    $f = fopen($newdata, 'r+');
     foreach ($data as $item) {
         fputcsv($f, $item, $delimiter, $enclosure, $escape_char);
     }
