@@ -158,7 +158,10 @@ function post_image(){
 #Display Posted Image Feed
 function post_image_feed(){
     $email_current = $_SESSION['email'];
-    if (($handle = fopen('../user/post.csv','r'))!== FALSE){
+    $array = csvToArray('../user/post.csv');
+    usort($array, 'mysort');
+    array2csv($array, '../user/sorted_post.csv');
+    if (($handle = fopen('../user/sorted_post.csv','r'))!== FALSE){
         
         if(isset($_SESSION['email'])){
             while (($data =  fgetcsv($handle,1000,",")) !== FALSE){
@@ -195,8 +198,8 @@ function display_img($array){
 
 
 #Sort CSV
-function datesort($p1, $p2){
-    return strtotime($p1[4]) - strtotime($p2[4]);
+function mysort($p1, $p2){
+    return strtotime($p2[4]) - strtotime($p1[4]);
 }
 
 function csvToArray($csvFile){
@@ -212,7 +215,7 @@ function csvToArray($csvFile){
     return $lines;
 }
 
-function array2csv($data, $delimiter = ',', $enclosure = '"', $escape_char = "\\")
+function array2csv($data, $newdata, $delimiter = ',', $enclosure = '"', $escape_char = "\\")
 {
     $f = fopen('../user/sorted_post.csv', 'r+');
     foreach ($data as $item) {
