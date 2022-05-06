@@ -45,9 +45,10 @@ if(isset($_POST["btn_signup"])){
     
     //  checking duplicate email
     $csv = array_map('str_getcsv', file('user_data.csv'));
+    $lower_email = strtolower($email);
     
     foreach($csv as $line){
-        if($line[0] == $email){
+        if(strtolower($line[0]) == $email){
         return false;
         }
     }
@@ -141,6 +142,7 @@ return $stmt;
 #Display Posted Image Account
 function post_image(){
     $array = csvToArray('../user/post.csv');
+    usort($array, 'mysort');
     $email_current = $_SESSION['email'];
     if (($handle = fopen('../user/post.csv','r'))!== FALSE) {
         while (($data =  fgetcsv($handle,1000,",")) !== FALSE) {
@@ -158,6 +160,8 @@ function post_image(){
 
 #Display Posted Image Feed
 function post_image_feed(){
+    $array = csvToArray('../user/post.csv');
+    usort($array, 'mysort');
     $email_current = $_SESSION['email'];
     if (($handle = fopen('../user/post.csv','r'))!== FALSE){
         
