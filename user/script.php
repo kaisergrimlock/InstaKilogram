@@ -193,6 +193,38 @@ function display_img($array){
     echo '</div> ';
 }
 
+
+#Sort CSV
+function datesort($p1, $p2){
+    return strtotime($p1[4]) - strtotime($p2[4]);
+}
+
+function csvToArray($csvFile){
+ 
+    $file_to_read = fopen($csvFile, 'r');
+ 
+    while (!feof($file_to_read) ) {
+        $lines[] = fgetcsv($file_to_read, 1000, ',');
+ 
+    }
+ 
+    fclose($file_to_read);
+    return $lines;
+}
+
+function array2csv($data, $delimiter = ',', $enclosure = '"', $escape_char = "\\")
+{
+    $f = fopen('../user/sorted_post.csv', 'r+');
+    foreach ($data as $item) {
+        fputcsv($f, $item, $delimiter, $enclosure, $escape_char);
+    }
+    rewind($f);
+    return stream_get_contents($f);
+}
+
+
+
+
 #Search
 
     ?>
