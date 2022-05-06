@@ -34,6 +34,10 @@ if(isset($_POST["btn_signup"])){
     $reptpassword = $_POST["reptpassword"];
     $img_name=$_FILES['img-upload']['name'];
 	$tmp_img_name=$_FILES['img-upload']['tmp_name'];
+    if (file_exists("../user/profile_img/" . $img_name))
+    {
+     $img_name=formatDuplicateExtension($img_name);   
+    }
     $folder='profile_img/';
 	move_uploaded_file($tmp_img_name,$folder.$img_name);
     $arrayData = array($email,$fname,$lname,$hashedPassword,$img_name );
@@ -43,9 +47,9 @@ if(isset($_POST["btn_signup"])){
     $csv = array_map('str_getcsv', file('user_data.csv'));
     
     foreach($csv as $line){
-    if($line[0] == $email){
-       return false;
-    }
+        if($line[0] == $email){
+        return false;
+        }
     }
     
     $input = fputcsv($fp, $arrayData);
@@ -58,38 +62,38 @@ if(isset($_POST["btn_signup"])){
     }else{
         echo "<h3> Please enter again!</h3>";
     }
-    }
+}
     
-//SignIn 
-if(isset($_POST["btn_signin"])){
-    $user = ($_POST['email']);
-    $pass = ($_POST['password']);
-    if (!strlen($user) || !strlen($pass)){
-        die ("Incorrect email or password");
-    }
-    $state= false;
-    $handle = fopen("user_data.csv", "r");
-    while (($data = fgetcsv($handle)) !==false){
-        if ($data[0] ==$user && password_verify($pass, $data[3])){
-            $state = true;
-            break;
+    #SignIn 
+    if(isset($_POST["btn_signin"])){
+        $user = ($_POST['email']);
+        $pass = ($_POST['password']);
+        if (!strlen($user) || !strlen($pass)){
+            die ("Incorrect email or password");
         }
-    }
-    fclose($handle);
-    if ($state){
-        session_start();
-        $_SESSION['email']=$data[0];
-        $_SESSION['fname']=$data[1];
-        $_SESSION['lname']=$data[2];
-        $_SESSION['img-upload']=$data[4];
-        $_SESSION['post-upload']=$data[5];
-        header('location:account.php');
-    } else {
-        echo '<div class="alert alert-dismissible alert-danger">
-        <button type="button" class="btn-close" data-dismiss="alert"></button>
-        <strong>Wrong email or password. Try again!</strong> 
-        </div>';
-    }
+        $state= false;
+        $handle = fopen("user_data.csv", "r");
+        while (($data = fgetcsv($handle)) !==false){
+            if ($data[0] ==$user && password_verify($pass, $data[3])){
+                $state = true;
+                break;
+            }
+        }
+        fclose($handle);
+        if ($state){
+            session_start();
+            $_SESSION['email']=$data[0];
+            $_SESSION['fname']=$data[1];
+            $_SESSION['lname']=$data[2];
+            $_SESSION['img-upload']=$data[4];
+            $_SESSION['post-upload']=$data[5];
+            header('location:account.php');
+        } else {
+            echo '<div class="alert alert-dismissible alert-danger">
+            <button type="button" class="btn-close" data-dismiss="alert"></button>
+            <strong>Wrong email or password. Try again!</strong> 
+            </div>';
+        }
     }
 
 #Post Image & Message Function
@@ -102,12 +106,8 @@ if(isset($_POST["btn_upload_post"])){
     $tmp_img_name=$_FILES['post-upload']['tmp_name'];
     $folder = 'img_post/';
     $var = '';
-    echo formatDuplicateExtension($post_img_name);
-    echo($post_img_name);
     if (file_exists("../user/img_post/" . $post_img_name))
     {
-     echo("file already exsits");
-      // its new location and hashing the filename only.
      $post_img_name=formatDuplicateExtension($post_img_name);   
     }
     move_uploaded_file($tmp_img_name, $folder.$post_img_name);
