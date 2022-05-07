@@ -42,14 +42,6 @@ function post_image_feed(){
     }
 
 //Delete Image
-function delete_image(){
-if (($handle = fopen('../user/post.csv','r'))!== FALSE){
-                while (($data =  fgetcsv($handle,1000,",")) !== FALSE){
-                    delete_image($data);
-                }
-            }
-        }
-
 function display_img($data){
     echo "<tr>";
             echo '<td scope="row">'.$data[0].'</td>';

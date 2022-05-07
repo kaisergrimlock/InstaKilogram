@@ -10,9 +10,9 @@ if(isset($_POST["btn_signup"])){
     $password = $_POST["password"];
     $redate = date('d-m-y h:i:s');
     $row = count(file("account.csv"));
-    if($rows > 1)
+    if($row > 1)
     {
-        $rows = ($rows - 1) + 1;
+        $row = ($row - 1) + 1;
     }
 
     // password validation
