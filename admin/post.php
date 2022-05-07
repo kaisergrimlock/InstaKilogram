@@ -18,9 +18,8 @@ echo($img_id);
         </thead>
         <tbody>
             <?php 
-           post_image_feed()
-    
-
+           post_image_feed();
+           delete();
             ?>
         </tbody>
     </table>

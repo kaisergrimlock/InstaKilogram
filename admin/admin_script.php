@@ -64,15 +64,14 @@ function delete(){
     $temp_table = fopen('../user/temp_post.csv','w');
 
     while (($data = fgetcsv($table, 1000)) !== FALSE){
-        if($data[1] == $_GET['img']){ // this is if you need the first column in a row
-            echo('delte');
+        if($data[1] == $_GET['img']){
             continue;
         }
         fputcsv($temp_table,$data);
     }
     fclose($table);
     fclose($temp_table);
-    rename('temp_post.csv','post.csv');
+    rename('../user/temp_post.csv','../user/post.csv');
 
 }
 ?>
