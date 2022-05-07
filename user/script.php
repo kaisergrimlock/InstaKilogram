@@ -8,7 +8,13 @@ if(isset($_POST["btn_signup"])){
     $fname = $_POST["fname"];
     $lname = $_POST["lname"];
     $password = $_POST["password"];
-    
+    $redate = date('d-m-y h:i:s');
+    $row = count(file("account.csv"));
+    if($no_rows > 1)
+    {
+        $no_rows = ($no_rows - 1) + 1;
+    }
+
     // password validation
     $number = preg_match('@[0-9]@', $password);
     $uppercase = preg_match('@[A-Z]@', $password);
@@ -40,21 +46,31 @@ if(isset($_POST["btn_signup"])){
     }
     $folder='profile_img/';
 	move_uploaded_file($tmp_img_name,$folder.$img_name);
-    $arrayData = array($email,$fname,$lname,$hashedPassword,$img_name );
-    $fp = fopen('user_data.csv','a+');
+    $fp = fopen('account.csv','a+');
+     $arrayData = array(
+        'No' => $row, 
+        'Email' => $email,
+        'FirstName' => $fname,
+        'LastName' => $lname, 
+        'RegisterDate' => $redate, 
+        'HashedPassword' => $hashedPassword,
+        'Profilemage' => $img_name );
     
     //  checking duplicate email
-    $csv = array_map('str_getcsv', file('user_data.csv'));
+    $csv = array_map('str_getcsv', file('account.csv'));
     $lower_email = strtolower($email);
     
     foreach($csv as $line){
-        if(strtolower($line[0]) == $email){
+        if(strtolower($line[1]) == $email){
+            echo '<div class="alert alert-dismissible alert-danger">
+                     <button type="button" class="btn-close" data-dismiss="alert"></button>
+                     <strong>This email has been used.</strong>Please use different one
+                     </div>';
         return false;
         }
     }
     
-    $input = fputcsv($fp, $arrayData);
-
+   $input = fputcsv($fp, $arrayData);
     if ($input){
         echo '<div class="alert alert-dismissible alert-success">
                      <button type="button" class="btn-close" data-dismiss="alert"></button>
@@ -73,9 +89,9 @@ if(isset($_POST["btn_signup"])){
             die ("Incorrect email or password");
         }
         $state= false;
-        $handle = fopen("user_data.csv", "r");
+        $handle = fopen("account.csv", "r");
         while (($data = fgetcsv($handle)) !==false){
-            if ($data[0] ==$user && password_verify($pass, $data[3])){
+            if ($data[1] ==$user && password_verify($pass, $data[5])){
                 $state = true;
                 break;
             }
@@ -83,11 +99,12 @@ if(isset($_POST["btn_signup"])){
         fclose($handle);
         if ($state){
             session_start();
-            $_SESSION['email']=$data[0];
-            $_SESSION['fname']=$data[1];
-            $_SESSION['lname']=$data[2];
-            $_SESSION['img-upload']=$data[4];
-            $_SESSION['post-upload']=$data[5];
+            $_SESSION['email']=$data[1];
+            $_SESSION['fname']=$data[2];
+            $_SESSION['lname']=$data[3];
+            $_SESSION['redate']=$data[4];
+            $_SESSION['img-upload']=$data[6];
+            $_SESSION['post-upload']=$data[7];
             header('location:account.php');
         } else {
             echo '<div class="alert alert-dismissible alert-danger">

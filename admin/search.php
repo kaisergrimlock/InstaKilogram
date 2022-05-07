@@ -26,7 +26,7 @@ require "admin_script.php";?>
             </tr>
         </thead>
         <tbody>
-            <?php display_table()?>
+            
         </tbody>
     </table>
 </div>

@@ -1,4 +1,5 @@
-<?php include "sidebar.php"?>
+<?php include "sidebar.php";
+require "admin_script.php";?>
 
 <!-- EDIT FUNCTION -->
 <div class="modal">
@@ -35,21 +36,16 @@
         </thead>
         <tbody>
             <?php
-            if (($handle = fopen('../user/user_data.csv','r'))!== FALSE) {
-                for($i = 1; $data =  fgetcsv($handle); $i++) {
-                    if($i === $data[0]){
-                        fclose($handle);
-                    echo "<tr>";
-                    echo '<td scope="row">'.$data[0].'</td>';
-                    echo '<td scope="row">'.$data[1].'</td>';
-                    echo '<td scope="row">'.$data[2].'</td>';
-                    echo '<td scope="row">'.$data[3].'</td>';
-                    echo '<td scope="row"> <a href="detail.php"><button class="btn btn-dark">Details</button></a></td>';
-                    echo"</tr>";}
-                }
-            }else{
-                echo"Error";
-            }
+            if (($handle = fopen('../user/account.csv','r'))!== FALSE) {
+            while (($data =  fgetcsv($handle,1000,",")) !== FALSE){
+              
+              if ($data[0] == '2'){
+                    display_detail($data);
+                  }
+            else{
+                echo '';
+            } 
+              }}
             ?>
         </tbody>
     </table>

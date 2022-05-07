@@ -46,12 +46,12 @@
         </thead>
         <tbody>
             <?php
-            if (($handle = fopen('../user/user_data.csv','r'))!== FALSE) {
-                $row = 1;
+            if (($handle = fopen('../user/account.csv','r'))!== FALSE) {
+
                 while (($data =  fgetcsv($handle,1000,",")) !== FALSE) {
                     echo "<tr>";
-                    echo '<td scope="row">'.$row++.'</td>';
                     echo '<td scope="row">'.$data[0].'</td>';
+                    echo '<td scope="row">'.$data[1].'</td>';
                     echo"</tr>";
                 }
             }else{

@@ -43,7 +43,7 @@
                         <a href="crud.php">Users Management</a>
                     </li>
                     <li>
-                        <a href="#">Detail</a>
+                        <a href="search.php">Search User</a>
                     </li>
                 </ul>
                 </li >
