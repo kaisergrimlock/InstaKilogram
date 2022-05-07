@@ -3,12 +3,12 @@ var lname = document.getElementById('lname')
 var password = document.getElementById('password')
 var retype = document.getElementById('reptpassword')
 var email = document.getElementById('email')
-let alert_validation = document.getElementById('alert-validation')
 function validateForm(){
     let upper = /[A-Z]/
     let lower = /[a-z]/
     let num = /[0-9]/
     let spec = /[ !"#$%&'()*+,-./:;<=>?@[\\\]^_`{|}~]/
+
     if(password.value.length < 8 || password.value.length > 20){
         alert('Please enter between 8 and 20 characters')
     }
@@ -29,8 +29,8 @@ function validateForm(){
         alert('Please do not use space')
     }
 
-    if(spec.test(password.value) != true){
-        alert('Please use at least one special character like @ or !')
+    if (spec.test(password.value) != true){
+        alert('Please use at least one special character')
     }
 
     if(num.test(password.value) != true)
