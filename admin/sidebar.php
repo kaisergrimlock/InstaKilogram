@@ -48,7 +48,7 @@
                 </ul>
                 </li >
                 <li>
-                    <a href="#section-profile">Images</a>
+                    <a href="post.php">Images</a>
                 </li>
                 <li>
                     <a href="#section-dropdown1">Analytics</a>

@@ -19,22 +19,43 @@ function display_table(){
 }
 
 //Display Detail
-function display_detail(){
-    if (($handle = fopen('../user/account.csv','r'))!== FALSE) {
-        while (($data =  fgetcsv($handle,1000,",")) !== FALSE) {
-            if($data[1] == $_GET["email"]){
-                echo "<tr>";
-                echo '<td scope="row">'.$data[0].'</td>';
-                echo '<td scope="row">'.$data[1].'</td>';
-                echo '<td scope="row">'.$data[2].'</td>';
-                echo '<td scope="row">'.$data[3].'</td>';
-                echo '<td scope="row">'.$data[5].'</td>';
-                echo '<td scope="row"> <a href="detail.php"><button class="btn btn-dark">Reset Password</button></a></td>';
-                echo"</tr>";
+function display_detail($data){
+    echo "<tr>";
+    echo '<td scope="row">'.$data[1].'</td>';
+    echo '<td scope="row">'.$data[2].'</td>';
+    echo '<td scope="row">'.$data[3].'</td>';
+    echo '<td scope="row">'.$data[5].'</td>';
+    echo '<td scope="row"> <a href="detail.php"><button class="btn btn-dark">Reset Password</button></a></td>';
+    echo"</tr>";
+}
+//Display Post
+function post_image_feed(){
+    if (($handle = fopen('../user/post.csv','r'))!== FALSE){
+            while (($data =  fgetcsv($handle,1000,",")) !== FALSE){
+                    display_img($data);
             }
         }
-    }else{
-        echo"Error";
-    } 
+    }
+
+//Delete Image
+function delete_image(){
+if (($handle = fopen('../user/post.csv','r'))!== FALSE){
+                while (($data =  fgetcsv($handle,1000,",")) !== FALSE){
+                    if($data[1] == $_GET["img"]){
+                        
+                        unset($data);
+                    }      
+                }
+            }
+        }
+
+function display_img($data){
+    echo "<tr>";
+            echo '<td scope="row">'.$data[0].'</td>';
+            echo '<td scope="row">'.$data[3].'</td>';
+            echo '<td scope="row"><img src="../user/img_post/'.$data[1].'" width="30%"></img></td>';
+            echo '<td scope="row"> <a href="post.php?img='.$data[1].'"><button class="btn btn-dark" id="deleteBtn">Delele</button></a></td>';
+            delete_image($data);
+            echo"</tr>";
 }
 ?>

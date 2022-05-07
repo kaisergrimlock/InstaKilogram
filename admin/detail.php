@@ -1,7 +1,7 @@
 <?php include "sidebar.php";
 require "admin_script.php";
 $email = $_GET["email"];
-echo($email);
+
 ?>
 
 <!-- EDIT FUNCTION -->
@@ -40,15 +40,14 @@ echo($email);
         <tbody>
             <?php
             if (($handle = fopen('../user/account.csv','r'))!== FALSE) {
-            while (($data =  fgetcsv($handle,1000,",")) !== FALSE){
-              
-              if ($data[0] == '2'){
-                    display_detail($data);
-                  }
-            else{
-                echo '';
-            } 
-              }}
+        while (($data =  fgetcsv($handle,1000,",")) !== FALSE) {
+            if($data[1] == $_GET["email"]){
+                display_detail($data);
+            }
+        }
+    }else{
+        echo"Error";
+    } 
             ?>
         </tbody>
     </table>
