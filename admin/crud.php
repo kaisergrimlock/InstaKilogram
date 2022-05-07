@@ -22,7 +22,7 @@ require "admin_script.php";?>
                 <th scope="col">First Name</th>
                 <th scope="col">Last Name</th>
                 <th scope="col">RegisterDate</th>
-                 <th scope="col">Details</th>
+                <th scope="col">Details</th>
             </tr>
         </thead>
         <tbody>

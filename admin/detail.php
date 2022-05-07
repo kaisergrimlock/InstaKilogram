@@ -1,5 +1,8 @@
 <?php include "sidebar.php";
-require "admin_script.php";?>
+require "admin_script.php";
+$email = $_GET["email"];
+echo($email);
+?>
 
 <!-- EDIT FUNCTION -->
 <div class="modal">

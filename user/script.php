@@ -10,9 +10,9 @@ if(isset($_POST["btn_signup"])){
     $password = $_POST["password"];
     $redate = date('d-m-y h:i:s');
     $row = count(file("account.csv"));
-    if($no_rows > 1)
+    if($rows > 1)
     {
-        $no_rows = ($no_rows - 1) + 1;
+        $rows = ($rows - 1) + 1;
     }
 
     // password validation
@@ -222,15 +222,13 @@ function mysort($p1, $p2){
 }
 
 function csvToArray($csvFile){
- 
-    $file_to_read = fopen($csvFile, 'r');
- 
-    while (!feof($file_to_read) ) {
-        $lines[] = fgetcsv($file_to_read, 1000, ',');
- 
+    $handle = fopen($csvFile, "r");
+    while (($data = fgetcsv($handle)) !==false){
+        if(array(null) !== $data)
+        {
+            $lines[] = $data;
+        }
     }
- 
-    fclose($file_to_read);
     return $lines;
 }
 
