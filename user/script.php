@@ -178,8 +178,6 @@ function post_image(){
 
 #Display Posted Image Feed
 function post_image_feed(){
-    $array = csvToArray('../user/post.csv');
-    usort($array, 'mysort');
     $email_current = $_SESSION['email'];
     if (($handle = fopen('../user/post.csv','r'))!== FALSE){
         
