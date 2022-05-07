@@ -33,6 +33,7 @@ $email = $_GET["email"];
                 <th scope="col">Email</th>
                 <th scope="col">First Name</th>
                 <th scope="col">Last Name</th>
+                <th scope="col">Profile Image</th>
                 <th scope="col">Password</th>
                 <th scope="col">Edit</th>
             </tr>

@@ -30,7 +30,7 @@ function validateForm(){
     }
 
     if (spec.test(password.value) != true){
-        alert('Please use at least one special character')
+        alert('Please use one special character')
     }
 
     if(num.test(password.value) != true)
