@@ -18,11 +18,7 @@ echo($img_id);
         </thead>
         <tbody>
             <?php 
-            if (($handle = fopen('../user/post.csv','r'))!== FALSE){
-            while (($data =  fgetcsv($handle,1000,",")) !== FALSE){
-                    display_img($data);
-            }
-        }
+           post_image_feed()
     
 
             ?>

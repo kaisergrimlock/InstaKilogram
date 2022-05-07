@@ -32,7 +32,11 @@ function display_detail($data){
 function post_image_feed(){
     if (($handle = fopen('../user/post.csv','r'))!== FALSE){
             while (($data =  fgetcsv($handle,1000,",")) !== FALSE){
+                if($data[1] == $_GET["img"]){
+                        unset($data);
+                    } 
                     display_img($data);
+                         
             }
         }
     }
@@ -41,10 +45,7 @@ function post_image_feed(){
 function delete_image(){
 if (($handle = fopen('../user/post.csv','r'))!== FALSE){
                 while (($data =  fgetcsv($handle,1000,",")) !== FALSE){
-                    if($data[1] == $_GET["img"]){
-                        
-                        unset($data);
-                    }      
+                    delete_image($data);
                 }
             }
         }
@@ -55,7 +56,6 @@ function display_img($data){
             echo '<td scope="row">'.$data[3].'</td>';
             echo '<td scope="row"><img src="../user/img_post/'.$data[1].'" width="30%"></img></td>';
             echo '<td scope="row"> <a href="post.php?img='.$data[1].'"><button class="btn btn-dark" id="deleteBtn">Delele</button></a></td>';
-            delete_image($data);
             echo"</tr>";
 }
 
