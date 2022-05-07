@@ -160,7 +160,7 @@ return $stmt;
 function post_image(){
     $array = csvToArray('../user/post.csv');
     usort($array, 'mysort');
-    array2csv($array, '/../user/post.csv');
+    array2csv($array, '../user/post.csv');
     $email_current = $_SESSION['email'];
     if (($handle = fopen('../user/post.csv','r'))!== FALSE) {
         while (($data =  fgetcsv($handle,1000,",")) !== FALSE) {
