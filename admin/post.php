@@ -1,6 +1,7 @@
 <?php include "sidebar.php";
 require "admin_script.php";
-
+$img_id = $_GET['img'];
+echo($img_id);
 ?>
 
 
