@@ -1,0 +1,18 @@
+.bg{
+    background-color: #F2A89F;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.container{ 
+    position: relative;
+    min-height: auto;
+    padding: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;  
+}
