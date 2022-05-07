@@ -33,7 +33,7 @@ function post_image_feed(){
     if (($handle = fopen('../user/post.csv','r'))!== FALSE){
             while (($data =  fgetcsv($handle,1000,",")) !== FALSE){
                 if($data[1] == $_GET["img"]){
-                        unset($data);
+                        unset($data[1]);
                     } 
                     display_img($data);
                          
