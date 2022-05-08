@@ -10,9 +10,9 @@ if(isset($_POST["btn_signup"])){
     $password = $_POST["password"];
     $redate = date('d-m-y h:i:s');
     $row = count(file("account.csv"));
-    if($rows > 1)
+    if($row > 1)
     {
-        $rows = ($rows - 1) + 1;
+        $row = ($row - 1) + 1;
     }
 
     // password validation
@@ -114,6 +114,24 @@ if(isset($_POST["btn_signup"])){
         }
     }
 
+#Replace Profile Image
+function replace_profile_img(){
+    $email = $_SESSION['email'];
+    if (($handle = fopen('../user/user_data.csv','r'))!== FALSE){
+        while (($data =  fgetcsv($handle,1000,",")) !== FALSE) {
+            if ($data[1] == $email){
+                    $img = $data[6];
+            }
+        }
+    }
+    $img_name=$_FILES['profile_change']['name'];
+	$tmp_img_name=$_FILES['profile_change']['tmp_name'];
+    $img_name = $img;
+    $folder='profile_img/';
+	move_uploaded_file($tmp_img_name,$folder.$img_name);
+}
+
+
 #Post Image & Message Function
 if(isset($_POST["btn_upload_post"])){
     $text_post = $_POST["text_post"];
@@ -155,12 +173,11 @@ return $stmt;
 }
 
 
-
 #Display Posted Image Account
 function post_image(){
     $array = csvToArray('../user/post.csv');
     usort($array, 'mysort');
-    array2csv($array, '/../user/post.csv');
+    array2csv($array, '../user/post.csv');
     $email_current = $_SESSION['email'];
     if (($handle = fopen('../user/post.csv','r'))!== FALSE) {
         while (($data =  fgetcsv($handle,1000,",")) !== FALSE) {

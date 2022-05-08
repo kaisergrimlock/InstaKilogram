@@ -1,19 +1,19 @@
-<?php include "sidebar.php"?>
+<?php include "sidebar.php";?>
 
 <!-- ADMIN DASHBOARD -->
 <div id="section-dashboard" class="tab-content">
     <div class="">
-        <h2>Weekly Summary</h2>
+        <h2>Statistic Website Summary</h2>
         <div class="row">
             <div class="card border-primary mb-3">
-                <div class="card-header">Weekly users</div>
+                <div class="card-header">Total Users</div>
                 <div class="card-body">
-                    <h4 class="card-title">150</h4>
+                    <h4 class="card-title"><?php echo count($data)?></h4>
                     <p class="card-text">6% increase</p>
                 </div>
             </div>
             <div class="card border-warning mb-3">
-                <div class="card-header">Weekly registers</div>
+                <div class="card-header">Total Images</div>
                 <div class="card-body">
                     <h4 class="card-title">100</h4>
                     <p class="card-text">5% increase</p>
@@ -26,13 +26,6 @@
                     <p class="card-text">10% increase</p>
                 </div>
             </div>
-            <div class="card border-danger mb-3">
-                <div class="card-header">Weekly visitors</div>
-                <div class="card-body">
-                    <h4 class="card-title">9086</h4>
-                    <p class="card-text">20% increase</p>
-                </div>
-            </div> 
         </div>
     </div>
     <div>
@@ -47,10 +40,10 @@
         <tbody>
             <?php
             if (($handle = fopen('../user/account.csv','r'))!== FALSE) {
-
+                $row = 1;
                 while (($data =  fgetcsv($handle,1000,",")) !== FALSE) {
                     echo "<tr>";
-                    echo '<td scope="row">'.$data[0].'</td>';
+                    echo '<td scope="row">'.$row++.'</td>';
                     echo '<td scope="row">'.$data[1].'</td>';
                     echo"</tr>";
                 }

@@ -2,16 +2,6 @@
 require "admin_script.php";?>
 
 <!-- SEARCH USERS -->
-<form action="search.php" method="POST">
-        <div class="row mx-3">
-            <div class="col-11">
-                <input class="form-control me-sm-2" name="search" type="text" placeholder="Search User">  
-            </div> 
-             <div class="col-1">
-            <button class="btn btn-info" type="submit">Search</button>
-            </div> 
-        </div>      
-</form>
 <br>
 <div>
     <table class="table table-hover text-center">
