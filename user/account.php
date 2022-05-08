@@ -30,7 +30,10 @@ if (!isset($_SESSION['email'])) {
                 </a>
                 <h1 class="fname"><?=$_SESSION['fname'] ?></h1>
                 <p class="email"><?=$_SESSION['email']  ?></p>
-                <button class="btn btn-outline-dark"> Change Profile</button>
+                <form action="" method="post" enctype="multipart/form-data" class="upload-form">
+                    <label class="btn btn-outline-dark" for="profile_change">Change Profile</label>
+                    <input type="file" id="profile_change" name='profile_change'>
+                </form>
             </div>
         </div>
     </div>

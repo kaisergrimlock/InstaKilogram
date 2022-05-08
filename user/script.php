@@ -114,6 +114,24 @@ if(isset($_POST["btn_signup"])){
         }
     }
 
+#Replace Profile Image
+function replace_profile_img(){
+    $email = $_SESSION['email'];
+    if (($handle = fopen('../user/user_data.csv','r'))!== FALSE){
+        while (($data =  fgetcsv($handle,1000,",")) !== FALSE) {
+            if ($data[1] == $email){
+                    $img = $data[6];
+            }
+        }
+    }
+    $img_name=$img;
+	$tmp_img_name=$_FILES['img-upload']['tmp_name'];
+    $folder='profile_img/';
+	move_uploaded_file($tmp_img_name,$folder.$img_name);
+
+}
+
+
 #Post Image & Message Function
 if(isset($_POST["btn_upload_post"])){
     $text_post = $_POST["text_post"];
@@ -153,7 +171,6 @@ function formatDuplicateExtension($filename){
     }
 return $stmt;
 }
-
 
 
 #Display Posted Image Account
