@@ -124,11 +124,11 @@ function replace_profile_img(){
             }
         }
     }
-    $img_name=$img;
-	$tmp_img_name=$_FILES['img-upload']['tmp_name'];
+    $img_name=$_FILES['profile_change']['name'];
+	$tmp_img_name=$_FILES['profile_change']['tmp_name'];
+    $img_name = $img;
     $folder='profile_img/';
 	move_uploaded_file($tmp_img_name,$folder.$img_name);
-
 }
 
 
@@ -177,7 +177,7 @@ return $stmt;
 function post_image(){
     $array = csvToArray('../user/post.csv');
     usort($array, 'mysort');
-    array2csv($array, '/../user/post.csv');
+    array2csv($array, '../user/post.csv');
     $email_current = $_SESSION['email'];
     if (($handle = fopen('../user/post.csv','r'))!== FALSE) {
         while (($data =  fgetcsv($handle,1000,",")) !== FALSE) {

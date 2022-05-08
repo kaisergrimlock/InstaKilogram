@@ -33,6 +33,7 @@ if (!isset($_SESSION['email'])) {
                 <form action="" method="post" enctype="multipart/form-data" class="upload-form">
                     <label class="btn btn-outline-dark" for="profile_change">Change Profile</label>
                     <input type="file" id="profile_change" name='profile_change'>
+                    <input type="submit" class="btn btn-danger pull-right" name="btn_change_profile">
                 </form>
             </div>
         </div>
