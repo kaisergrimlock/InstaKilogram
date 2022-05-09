@@ -98,4 +98,37 @@ function delete(){
     rename('../user/temp_post.csv','../user/post.csv');
 
 }
+
+#Search User
+function search_user(){
+    $array = csvToArray('../user/account.csv');
+    usort($array, 'mysort');
+    array2csv($array, '../user/account.csv');
+    $search = $_GET['search'];
+    if($search == NULL){
+        $search = '.';
+    }
+    $match = FALSE;
+    $regular_expression = sprintf("/%s/",$search);
+    if (($handle = fopen('../user/account.csv','r'))!== FALSE) {
+        $row = 1;
+        while (($data =  fgetcsv($handle,1000,",")) !== FALSE) {
+            if(preg_match($regular_expression,$data[0])){
+                $match = TRUE;
+            }
+            if($match = TRUE){
+                echo "<tr>";
+                echo '<td scope="row">'.$row++.'</td>';
+                echo '<td scope="row">'.$data[1].'</td>';
+                echo '<td scope="row">'.$data[2].'</td>';
+                echo '<td scope="row">'.$data[3].'</td>';
+                echo '<td scope="row">'.$data[4].'</td>';
+                echo '<td scope="row"> <a href="detail.php?email='.$data[1].'"><button class="btn btn-dark">Details</button></a></td>';
+                echo"</tr>";
+            }
+        }
+    }else{
+        echo"Error";
+    } 
+}
 ?>

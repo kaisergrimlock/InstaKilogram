@@ -5,7 +5,9 @@ require "admin_script.php";?>
 <form action="search.php" method="POST">
         <div class="row mx-3">
             <div class="col-11">
-                <input class="form-control me-sm-2" name="search" type="text" placeholder="Search User">  
+                <form action="search.php" method="GET">
+                    <input class="form-control me-sm-2" name="search" type="text" placeholder="Search User">  
+                </form>
             </div> 
              <div class="col-1">
             <button class="btn btn-info" type="submit">Search</button>
@@ -17,12 +19,17 @@ require "admin_script.php";?>
     <table class="table table-hover text-center">
         <thead>
             <tr class="table-dark">
-                <th scope="col">No</th>
-                <th scope="col">Email</th>
-                <th scope="col">First Name</th>
-                <th scope="col">Last Name</th>
-                <th scope="col">RegisterDate</th>
-                 <th scope="col">Details</th>
+                <thead>
+                    <th scope="col">No</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">RegisterDate</th>
+                    <th scope="col">Details</th>
+                </thead>
+                <tbody>
+                    <?php search_user()?>
+                </tbody>
             </tr>
         </thead>
         <tbody>
