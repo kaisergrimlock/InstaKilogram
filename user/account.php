@@ -30,11 +30,6 @@ if (!isset($_SESSION['email'])) {
                 </a>
                 <h1 class="fname"><?=$_SESSION['fname'] ?></h1>
                 <p class="email"><?=$_SESSION['email']  ?></p>
-                <form action="" method="post" enctype="multipart/form-data" class="upload-form">
-                    <label class="btn btn-outline-dark" for="profile_change">Change Profile</label>
-                    <input type="file" id="profile_change" name='profile_change'>
-                    <input type="submit" class="btn btn-danger pull-right" name="btn_change_profile">
-                </form>
             </div>
         </div>
     </div>
@@ -50,7 +45,7 @@ if (!isset($_SESSION['email'])) {
                             </li>
                             <li>
                                 <label for="formFile"><i class="fa fa-camera"></i></label>
-                                <input type="file" id="formFile" name='post-upload'>
+                                <input type="file" id="formFile" name='post-upload' class="d-none">
                             </li>
                             <li>
                                 <a href="#"><i class=" fa fa-film"></i></a>
