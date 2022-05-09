@@ -14,17 +14,19 @@
     <?php 
     include("bootstrap.php");
     include("cookies.php")?>
-    <main>
-        <img class="center"src="./images/logo.jpeg" style=" width:300px " >
-        <div class="box"> <h1> New to the website?</h1> </div>
-        <div class="box">
+    <main>  
+      <div class="text-center">
+        <img class="img"src="./images/logo.jpeg">
+      </div>
+      <div class="box"> <h1> New to the website?</h1> </div>
+      <div class="box">
         <a href="/InstaKilogram/user/register.php">
           <button class="btn btn-outline-danger btn-lg">Register</button>
          </a> 
          <a href="/InstaKilogram/user/signin.php">
           <button class="btn btn-outline-danger btn-lg">Sign in</button> <br>
          </a> 
-        </div>
+      </div>
     </main>
     <?php
 ?>

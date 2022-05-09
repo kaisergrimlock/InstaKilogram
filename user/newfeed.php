@@ -22,7 +22,7 @@ require('script.php');
         <div class="panel">
             <div class="user-heading round"> Discover new posts</div>
             <form method='post'>
-            <button class="btn btn-secondary my-2 my-sm-0" name="btn_sort">Sort</button>
+            <a href="<?php $_SERVER['PHP_SELF']; ?>"><button class="btn btn-secondary my-2 my-sm-0" name="btn_refresh">Refresh</button></a>
 </form>
             
         </div>

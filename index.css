@@ -2,12 +2,8 @@
 .bg{
     background-color: #F2A89F;
 }
-
-.center{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
+.img{
+    width:300px
 }
 
 .box{
