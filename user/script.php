@@ -1,4 +1,6 @@
 <?php 
+date_default_timezone_set('Asia/Ho_Chi_Minh');
+
 
 #Sign Up Function
 $msg="";

@@ -23,9 +23,11 @@
             </div>
             <div class="form-group">
                 <label for="password" class="form-label mt-4">Password:</label>
-                <input type="password" name="password" id="password" placeholder="Enter password" class="form-control" required> <br>
+                <input type="password" name="password" id="password" placeholder="Enter password" class="form-control" required> 
             </div>
+            <small class="form-text text-muted"><a href="/InstaKilogram/user/reset.php">Forgot your password?</a></small> 
             <div class="buttons">
+                <br>
                 <input type="submit" value="Sign In" class="btn btn-danger" name="btn_signin">
             </div>
         </form>
