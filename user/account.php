@@ -29,10 +29,36 @@ if (!isset($_SESSION['email'])) {
                 </a>
                 <h1 class="fname"><?=$_SESSION['fname'] ?></h1>
                 <p class="email"><?=$_SESSION['email']  ?></p>
-                <a href="../user/profile_replace.php" class="btn btn-danger">Change Profile</a>
+                <button class="btn btn-outline-dark" data-toggle="modal" data-target="#changeProfile"> Change Profile</button>
+                <!-- The Modal Change Profile Image-->
+                <div class="modal" id="changeProfile">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title"><h3 class="text-muted">Change Your Profile Image </h3></h4>
+                                <button type="button" class="btn-close" data-dismiss="modal"  aria-label="Close"></button>
+                            </div>
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <form enctype="multipart/form-data" enctype="multipart/form-data"  method="post" action="account.php">
+                                    <label for="replace_image" class="form-label mt-4"><h6 class="text-muted">Upload Here </h6></label>
+                                    <input type="file" class="form-control" name="replace_image"oninput="pic.src=window.URL.createObjectURL(this.files[0])">
+                                    <img id="pic" style="width:50%"/>       
+                            </div>
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <input type="submit" class="btn btn-danger pull-right" value="Change Image" name="replace_submit">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            </div>
+                        </form>  
+                    </div>
+                </div>
             </div>
+         </div>
         </div>
     </div>
+    
     <div class="profile-info col-md-9">
         <div class="panel">
             <form action="" method="post" enctype="multipart/form-data" class="upload-form">
@@ -43,7 +69,7 @@ if (!isset($_SESSION['email'])) {
                                 <a href="#"><i class="fa fa-map-marker"></i></a>
                             </li>
                             <li>
-                                <i class="fa fa-camera" data-toggle="modal" data-target="#myModal"></i></label> 
+                                <i class="fa fa-camera" data-toggle="modal" data-target="#postImage"></i></label> 
                             </li>
                             <li>
                                 <a href="#"><i class=" fa fa-film"></i></a>
@@ -54,8 +80,8 @@ if (!isset($_SESSION['email'])) {
                         </ul>
                     </div>
                 </div>
-                <!-- The Modal -->
-                <div class="modal" id="myModal">
+                <!-- The Modal Post Image-->
+                <div class="modal" id="postImage">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <!-- Modal Header -->
@@ -65,7 +91,7 @@ if (!isset($_SESSION['email'])) {
                             </div>
                             <!-- Modal body -->
                             <div class="modal-body">
-                                <label for="formFile" class="form-label mt-4">Default file input example</label>
+                                <label for="formFile" class="form-label mt-4">Upload Here</label>
                                 <input type=file id="formFile" name='post-upload' class="form-control" oninput="pic.src=window.URL.createObjectURL(this.files[0])">
                                 <img id="pic" style="width:50%"/>
                                 <div>
