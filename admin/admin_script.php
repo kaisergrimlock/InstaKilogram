@@ -119,16 +119,7 @@ function search_user(){
         $row = 1;
         $match = FALSE;
         while (($data =  fgetcsv($handle,1000,",")) !== FALSE) {
-            if(preg_match($regular_expression,$data[1])){
-                $match = TRUE;
-            }
             if(preg_match($regular_expression,$data[2])){
-                $match = TRUE;
-            }
-            if(preg_match($regular_expression,$data[3])){
-                $match = TRUE;
-            }
-            if($match == TRUE){
                 echo "<tr>";
                 echo '<td scope="row">'.$row++.'</td>';
                 echo '<td scope="row">'.$data[1].'</td>';
