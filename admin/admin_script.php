@@ -1,4 +1,14 @@
 <?php
+#Count
+function count_member(){
+    $row = 0;
+    if (($handle = fopen('../user/post.csv','r'))!== FALSE){
+        while (($data =  fgetcsv($handle,1000,",")) !== FALSE){
+            $row++;
+        }
+    }
+    return $row;
+}
 
 #Display Table Function
 function display_table(){
@@ -167,4 +177,18 @@ function reset_pwd(){
     rename_win('../user/temp_account.csv','../user/account.csv');
 }
 
+
+#Sign-in
+if(isset($_POST["btn_signin"])){
+    $user = ($_POST['admin-name']);
+    $pass = ($_POST['admin-password']);
+    $state = false;
+    if($user == 'admin' && $pass == 'password'){
+        $state = true;
+    }
+    if($state){
+        $_SESSION['admin'] = 'admin';
+        header('location: ../admin/dashboard.php');
+    }
+}
 ?>

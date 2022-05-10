@@ -8,7 +8,7 @@
             <div class="card border-primary mb-3">
                 <div class="card-header">Total Users</div>
                 <div class="card-body">
-                    <h4 class="card-title"><?php echo count($data)?></h4>
+                    <h4 class="card-title"><?php echo(count_member())?></h4>
                     <p class="card-text">6% increase</p>
                 </div>
             </div>

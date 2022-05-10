@@ -7,13 +7,14 @@
     <title>Admin Login</title>
     <link rel="stylesheet" href="admin.css">
     <script defer src="../header.js"></script>
+    <?php include('admin_script.php')?>
 </head>
 <body>
     <section>
         <header id="app-header"></header>
         
     <div class="container">
-        <form action="/user/register.html" method="post" enctype="multipart/form-data" class="form-group row">
+        <form method="post" enctype="multipart/form-data" class="form-group row">
             <h1>Admin Login</h1>
             <div class="form-group">
                 <label for="admin-name" class="form-label mt-4">Username</label>
@@ -24,7 +25,7 @@
                 <input type="text" placeholder="Password" name="admin-password" class="form-control" id="admin-password"> <br>
             </div>
             <div class="buttons">
-                <input type="submit" value="Sign In" class="btn btn-danger" id="submit">
+                <input type="submit" value="Sign In" class="btn btn-danger" id="submit" name="btn_signin">
             </div>   
     </div>
     </section>
