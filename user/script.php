@@ -17,7 +17,7 @@ if(isset($_POST["btn_signup"])){
         $row = ($row - 1) + 1;
     }
 
-    //password validation
+    // password validation
     $number = preg_match('@[0-9]@', $password);
     $uppercase = preg_match('@[A-Z]@', $password);
     $lowercase = preg_match('@[a-z]@', $password);

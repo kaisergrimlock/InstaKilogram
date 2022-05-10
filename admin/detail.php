@@ -45,7 +45,6 @@ $email = $_GET["email"];
             if($data[1] == $_GET["email"]){
                 display_detail($data);
             }
-            reset_pwd($data);            
         }
     }else{
         echo"Error";
