@@ -24,7 +24,7 @@
                 <input type="text" placeholder="Password" name="admin-password" class="form-control" id="admin-password"> <br>
             </div>
             <div class="buttons">
-                <input type="submit" value="Sign In" class="btn btn-danger" id="submit" onclick="validateForm()">
+                <input type="submit" value="Sign In" class="btn btn-danger" id="submit">
             </div>   
     </div>
     </section>
