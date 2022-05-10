@@ -128,10 +128,10 @@ if(isset($_POST["btn_signup"])){
             }
         }
     }
-    $img_name = $img;
     if(file_exists($img)){
         unlink($img);
     }
+    $img_name = $img;
     $img_name=$_FILES['replace_image']['name'];
 	$tmp_img_name=$_FILES['replace_image']['tmp_name'];
     $img_name = $img;
