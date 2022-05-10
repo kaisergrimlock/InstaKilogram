@@ -57,7 +57,7 @@ function display_detail($data){
     echo '<td scope="row">'.$data[3].'</td>';
     echo '<td scope="row"><img src="../user/profile_img/'.$data[6].'" width="100%"></img></td>';
     echo '<td scope="row">'.$data[5].'</td>';
-    echo '<td scope="row"> <a href="detail.php"><button class="btn btn-dark">Reset Password</button></a></td>';
+    echo '<td scope="row"> <a href="detail.php?password='.$data[5].'"><button class="btn btn-dark">Reset Password</button></a></td>';
     echo"</tr>";
 }
 //Display Post
@@ -153,6 +153,7 @@ function reset_pwd(){
     }
     fclose($table);
     fclose($temp_table);
+    unlink('../user/account.csv');
     rename('../user/temp_account.csv','../user/account.csv');
 }
 
