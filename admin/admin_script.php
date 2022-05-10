@@ -113,11 +113,7 @@ function search_user(){
     $array = csvToArray('../user/account.csv');
     usort($array, 'mysort');
     array2csv($array, '../user/account.csv');
-    if(isset($_POST['search'])){
-        $search = $_POST['search'];
-    }else{
-        $search = ' ';
-    }
+    $search = $_POST['search'];
     $regular_expression = sprintf("/%s/i",$search);
     if (($handle = fopen('../user/account.csv','r'))!== FALSE) {
         $row = 1;
