@@ -5,7 +5,7 @@ require "admin_script.php";?>
 <form action="search.php" method="POST">
         <div class="row mx-3">
             <div class="col-11">
-                <form action="search.php" method="GET">
+                <form action="search.php" method="POST">
                     <input class="form-control me-sm-2" name="search" type="text" placeholder="Search User">  
                 </form>
             </div> 

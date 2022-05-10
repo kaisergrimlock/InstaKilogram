@@ -113,12 +113,22 @@ function search_user(){
     $array = csvToArray('../user/account.csv');
     usort($array, 'mysort');
     array2csv($array, '../user/account.csv');
-    $search = 'thao';
+    $search = $_POST['search'];
     $regular_expression = sprintf("/%s/",$search);
     if (($handle = fopen('../user/account.csv','r'))!== FALSE) {
         $row = 1;
+        $match = FALSE;
         while (($data =  fgetcsv($handle,1000,",")) !== FALSE) {
-            if(preg_match($regular_expression,$data[1]) || preg_match($regular_expression,$data[2]) || preg_match($regular_expression,$data[3])){
+            if(preg_match($regular_expression,$data[1])){
+                $match = TRUE;
+            }
+            if(preg_match($regular_expression,$data[2])){
+                $match = TRUE;
+            }
+            if(preg_match($regular_expression,$data[3])){
+                $match = TRUE;
+            }
+            if($match == TRUE){
                 echo "<tr>";
                 echo '<td scope="row">'.$row++.'</td>';
                 echo '<td scope="row">'.$data[1].'</td>';
