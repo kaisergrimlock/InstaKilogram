@@ -16,9 +16,8 @@ if (!isset($_SESSION['email'])) {
 <body>
     <form enctype="multipart/form-data" enctype="multipart/form-data"  method="post">
         <input type="file" name="replace_image">
-        <input type="submit" name="submit_image">
-    </form>
-      
+        <input type="submit" value="replace_image" name="replace_submit">
+    </form>   
 </body>
 </html>
 </section>

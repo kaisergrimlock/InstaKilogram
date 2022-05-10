@@ -117,8 +117,7 @@ if(isset($_POST["btn_signup"])){
     }
 
 #Replace Profile Image
-function replace_profile_img(){
-    session_start();
+if(isset($_POST["replace_submit"])){
     $img = " ";
     $email = $_SESSION['email'];
     if (($handle = fopen('../user/account.csv','r'))!== FALSE){
@@ -135,6 +134,7 @@ function replace_profile_img(){
     $folder='profile_img/';
 	move_uploaded_file($tmp_img_name,$folder.$img_name);
 }
+
 
 
 #Post Image & Message Function
