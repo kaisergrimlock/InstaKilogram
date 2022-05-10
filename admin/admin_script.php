@@ -1,15 +1,4 @@
 <?php
-#Count
-function count_member(){
-    $row = 0;
-    if (($handle = fopen('../user/post.csv','r'))!== FALSE){
-        while (($data =  fgetcsv($handle,1000,",")) !== FALSE){
-            $row++;
-        }
-    }
-    return $row;
-}
-
 #Display Table Function
 function display_table(){
     $array = csvToArray('../user/account.csv');
@@ -197,7 +186,7 @@ if(isset($_POST["btn_signin"])){
     }
     if($state){
         $_SESSION['admin'] = 'admin';
-        header('location: ../admin/dashboard.php');
+        header('location: ../admin/crud.php');
     }
 }
 ?>
