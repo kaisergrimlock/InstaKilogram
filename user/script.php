@@ -198,6 +198,8 @@ function post_image(){
         echo"Error";
     }
 }
+#Replace Profile Image
+
 
 #Display Posted Image Feed
 function post_image_feed(){
