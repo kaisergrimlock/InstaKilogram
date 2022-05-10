@@ -44,8 +44,7 @@ $email = $_GET["email"];
         while (($data =  fgetcsv($handle,1000,",")) !== FALSE) {
             if($data[1] == $_GET["email"]){
                 display_detail($data);
-            }
-            reset_pwd($data);            
+            }         
         }
     }else{
         echo"Error";
