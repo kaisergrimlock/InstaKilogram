@@ -32,10 +32,6 @@
                 <h3>InstaKilogram</h3>
             </div>
             <ul class="list-unstyled components">
-                <p> Admin Dashboard </p>
-                 <li>
-                        <a href="dashboard.php">Dashboard</a>
-                    </li>
                 <li  class="active" >
                 <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Users</a>
                 <ul class="collapse list-unstyled" id="homeSubmenu">
