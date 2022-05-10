@@ -24,14 +24,12 @@ if(isset($_POST["btn_signup"])){
     $specialChars = preg_match('@[^\w]@', $password);
    
     if(strlen($password) < 8 || !$number || !$uppercase || !$lowercase || !$specialChars) {
-      $msg = "Password must be at least 8 characters in length and must contain at least one number, one upper case letter, one lower case letter and one special character.";
       return false;
     } else {
-      $msg = "Your password is strong.";
-      
+        return true;
     }
     if ($_POST["password"] === $_POST["reptpassword"]) {
-        // success!
+        return true;
      }
      else {
         return false;
@@ -117,21 +115,27 @@ if(isset($_POST["btn_signup"])){
     }
 
 #Replace Profile Image
-function replace_profile_img(){
+if(isset($_POST["replace_submit"])){
+    $img = " ";
     $email = $_SESSION['email'];
-    if (($handle = fopen('../user/user_data.csv','r'))!== FALSE){
+    if (($handle = fopen('../user/account.csv','r'))!== FALSE){
         while (($data =  fgetcsv($handle,1000,",")) !== FALSE) {
             if ($data[1] == $email){
                     $img = $data[6];
+                    
             }
         }
     }
-    $img_name=$_FILES['profile_change']['name'];
-	$tmp_img_name=$_FILES['profile_change']['tmp_name'];
+    if(file_exists($img)){
+        unlink($filename);
+    }
+    $img_name=$_FILES['replace_image']['name'];
+	$tmp_img_name=$_FILES['replace_image']['tmp_name'];
     $img_name = $img;
     $folder='profile_img/';
 	move_uploaded_file($tmp_img_name,$folder.$img_name);
 }
+
 
 
 #Post Image & Message Function
