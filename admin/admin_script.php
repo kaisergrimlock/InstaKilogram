@@ -62,9 +62,14 @@ function display_detail($data){
 }
 //Display Post
 function post_image_feed(){
+    if(isset($_GET['img'])){
+        $img_id = $_GET['img'];
+    }else{
+        $img_id = '';
+    }
     if (($handle = fopen('../user/post.csv','r'))!== FALSE){
             while (($data =  fgetcsv($handle,1000,",")) !== FALSE){
-                if($data[1] == $_GET["img"]){
+                if($data[1] == $img_id){
                         unset($data[1]);
                     } 
                     display_img($data);
@@ -86,9 +91,13 @@ function display_img($data){
 function delete(){
     $table = fopen('../user/post.csv','r');
     $temp_table = fopen('../user/temp_post.csv','w');
-
+    if(isset($_GET['img'])){
+        $img_id = $_GET['img'];
+    }else{
+        $img_id = '';
+    }
     while (($data = fgetcsv($table, 1000)) !== FALSE){
-        if($data[1] == $_GET['img']){
+        if($data[1] == $img_id){
             continue;
         }
         fputcsv($temp_table,$data);
