@@ -55,9 +55,9 @@ function display_detail($data){
     echo '<td scope="row">'.$data[1].'</td>';
     echo '<td scope="row">'.$data[2].'</td>';
     echo '<td scope="row">'.$data[3].'</td>';
-    echo '<td scope="row"><img src="../user/profile_img/'.$data[6].'" width="100%"></img></td>';
+    echo '<td scope="row"><img src="../user/profile_img/'.$data[6].'" width="50%"></img></td>';
     echo '<td scope="row">'.$data[5].'</td>';
-    echo '<td scope="row"> <a href="detail.php"><button class="btn btn-dark">Reset Password</button></a></td>';
+    echo '<td scope="row"> <a href="detail.php?password='.$data[5].'"><button class="btn btn-dark">Reset Password</button></a></td>';
     echo"</tr>";
 }
 //Display Post
@@ -133,5 +133,29 @@ function search_user(){
     }else{
         echo"Error";
     } 
+}
+
+function reset_pwd(){
+$reset = '$2y$10$RX/scWl1BPkR0XiaOslMh.gi2G6S8m1r7kRcxZIBedmQXN.rE.nzq';
+$hashedReset = password_hash($reset, PASSWORD_DEFAULT);
+$table = fopen('../user/account.csv','r');
+    $temp_table = fopen('../user/temp_account.csv','w');
+    if(isset($_GET['password'])){
+        $psw_id = $_GET['password'];
+    }else{
+        $psw_id = '';
+    }
+    while (($data = fgetcsv($table, 1000)) !== FALSE){
+        if($data[5] == $psw_id){
+            $data[5] = $reset;
+        }
+        fputcsv($temp_table,$data);
+        
+        
+    }
+    fclose($table);
+    fclose($temp_table);
+    rename('../user/temp_account.csv','../user/account.csv');
+
 }
 ?>
