@@ -1,5 +1,11 @@
-<?php include "sidebar.php";
-require "admin_script.php";?>
+<?php 
+include "sidebar.php";
+require "admin_script.php";
+session_start();
+if(!isset($_SESSION['admin'])){
+    header('location: signin.php');
+}else{
+?>
 
 <!-- SEARCH USERS -->
 <br>
@@ -25,4 +31,6 @@ require "admin_script.php";?>
 </section> 
 
 </body>
-</html> 
+</html>
+<?php
+}?>
