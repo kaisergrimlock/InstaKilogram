@@ -14,7 +14,7 @@ if (!isset($_SESSION['email'])) {
     <title>Document</title>
 </head>
 <body>
-    <form enctype="multipart/form-data" enctype="multipart/form-data"  method="post">
+    <form enctype="multipart/form-data" enctype="multipart/form-data"  method="post" action="account.php">
         <input type="file" name="replace_image">
         <input type="submit" value="replace_image" name="replace_submit">
     </form>   

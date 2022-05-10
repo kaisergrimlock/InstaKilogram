@@ -124,9 +124,12 @@ if(isset($_POST["replace_submit"])){
         while (($data =  fgetcsv($handle,1000,",")) !== FALSE) {
             if ($data[1] == $email){
                     $img = $data[6];
-                    echo($img);
+                    
             }
         }
+    }
+    if(file_exists($img)){
+        unlink($filename);
     }
     $img_name=$_FILES['replace_image']['name'];
 	$tmp_img_name=$_FILES['replace_image']['tmp_name'];
