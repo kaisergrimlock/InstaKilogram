@@ -242,7 +242,7 @@ function display_img($array){
 }
 
 
-#Sort CSV (Failed)
+#Sort CSV
 function mysort($p1, $p2){
     return strtotime($p2[4]) - strtotime($p1[4]);
 }
