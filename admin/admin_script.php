@@ -91,11 +91,16 @@ function post_image_feed(){
 //Delete Image
 function display_img($data){
     echo "<tr>";
-            echo '<td scope="row">'.$data[0].'</td>';
-            echo '<td scope="row">'.$data[3].'</td>';
-            echo '<td scope="row"><img src="../user/img_post/'.$data[1].'" width="30%"></img></td>';
-            echo '<td scope="row"> <a href="post.php?img='.$data[1].'"><button class="btn btn-dark" id="deleteBtn">Delele</button></a></td>';
-            echo"</tr>";
+    echo '<td scope="row">'.$data[0].'</td>';
+    echo '<td scope="row">'.$data[3].'</td>';
+    if(isset($data[1])){
+        echo '<td scope="row"><img src="../user/img_post/'.$data[1].'" width="30%"></img></td>';
+        echo '<td scope="row"> <a href="post.php?img='.$data[1].'"><button class="btn btn-dark" id="deleteBtn">Delele</button></a></td>';
+    }else{
+        echo '<td scope="row">Deleted</td>';
+        echo '<td scope="row">No Operation</td>';
+    }
+    echo"</tr>";
 }
 
 function delete(){
