@@ -16,10 +16,10 @@
     include("cookies.php")?>
     <main>  
       <div class="text-center">
-        <img class="img-index"src="./images/logo.jpeg">
+        <img class="img"src="./images/logo.jpeg">
       </div>
-      <div class="box-index"> <h1> New to the website?</h1> </div>
-      <div class="box-index">
+      <div class="box"> <h1> New to the website?</h1> </div>
+      <div class="box">
         <a href="/InstaKilogram/user/register.php">
           <button class="btn btn-outline-danger btn-lg">Register</button>
          </a> 
