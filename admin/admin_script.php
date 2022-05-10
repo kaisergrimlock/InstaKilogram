@@ -81,11 +81,11 @@ function post_image_feed(){
 //Delete Image
 function display_img($data){
     echo "<tr>";
-            echo '<td scope="row">'.$data[0].'</td>';
-            echo '<td scope="row">'.$data[3].'</td>';
-            echo '<td scope="row"><img src="../user/img_post/'.$data[1].'" width="30%"></img></td>';
-            echo '<td scope="row"> <a href="post.php?img='.$data[1].'"><button class="btn btn-dark" id="deleteBtn">Delele</button></a></td>';
-            echo"</tr>";
+    echo '<td scope="row">'.$data[0].'</td>';
+    echo '<td scope="row">'.$data[3].'</td>';
+    echo '<td scope="row"><img src="../user/img_post/'.$data[1].'" width="30%"></img></td>';
+    echo '<td scope="row"> <a href="post.php?img='.$data[1].'"><button class="btn btn-dark" id="deleteBtn">Delele</button></a></td>';
+    echo"</tr>";
 }
 
 function delete(){
@@ -105,7 +105,6 @@ function delete(){
     fclose($table);
     fclose($temp_table);
     rename('../user/temp_post.csv','../user/post.csv');
-
 }
 
 #Search User
@@ -137,29 +136,5 @@ function search_user(){
     }else{
         echo"Error";
     } 
-}
-
-function reset_pwd(){
-$reset = '$2y$10$RX/scWl1BPkR0XiaOslMh.gi2G6S8m1r7kRcxZIBedmQXN.rE.nzq';
-$hashedReset = password_hash($reset, PASSWORD_DEFAULT);
-$table = fopen('../user/account.csv','r');
-    $temp_table = fopen('../user/temp_account.csv','w');
-    if(isset($_GET['password'])){
-        $psw_id = $_GET['password'];
-    }else{
-        $psw_id = '';
-    }
-    while (($data = fgetcsv($table, 1000)) !== FALSE){
-        if($data[5] == $psw_id){
-            $data[5] = $reset;
-        }
-        fputcsv($temp_table,$data);
-        
-        
-    }
-    fclose($table);
-    fclose($temp_table);
-    rename('../user/temp_account.csv/','../user/account.csv/');
-
 }
 ?>
