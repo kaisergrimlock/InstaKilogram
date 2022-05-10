@@ -33,30 +33,30 @@ if (!isset($_SESSION['email'])) {
                     <i class="fa fa-camera" data-toggle="modal" data-target="#myModal2"></i></label>
                 </form>
             </div>
-                            <!--My Modal 2-->
-                            <div class="modal" id="myModal2">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <!-- Modal Header -->
-                            <div class="modal-header">
-                                <h4 class="modal-title">Post Your Image</h4>
-                                <button type="button" class="btn-close" data-dismiss="modal"  aria-label="Close"></button>
-                            </div>
-                            <!-- Modal body -->
-                            <div class="modal-body">
-                                <label for="formFile" class="form-label mt-4">Default file input example</label>
-                                <input type=file id="formFile" name='post-upload' class="form-control" oninput="pic.src=window.URL.createObjectURL(this.files[0])">
-                                <img id="pic" style="width:50%"/>
-                            </div>
-                            <!-- Modal footer -->
-                            <div class="modal-footer">
-                                <input type="submit" class="btn btn-danger pull-right" name="btn_upload_post">
-                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                            </div>
-                        </div>
+            <!--My Modal 2-->
+            <div class="modal" id="myModal2">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Post Your Image</h4>
+                        <button type="button" class="btn-close" data-dismiss="modal"  aria-label="Close"></button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <label for="formFile" class="form-label mt-4">Default file input example</label>
+                        <input type=file id="formFile" name='replace-upload' class="form-control" oninput="pic.src=window.URL.createObjectURL(this.files[0])">
+                        <img id="pic" style="width:50%"/>
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <input type="submit" class="btn btn-danger pull-right" name="btn_upload_post">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                     </div>
                 </div>
+            </div>
         </div>
+    </div>
     </div>
     <div class="profile-info col-md-9">
         <div class="panel">
