@@ -18,7 +18,7 @@ html {
 .panel {
   background-color: white;
   border-radius: 5px;
-  padding: 0;
+  padding: auto;
   margin: auto;
 }
 .profile-nav, .profile-info{
