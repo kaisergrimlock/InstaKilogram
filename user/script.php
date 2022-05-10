@@ -118,17 +118,19 @@ if(isset($_POST["btn_signup"])){
 
 #Replace Profile Image
 function replace_profile_img(){
+    session_start();
     $img = " ";
     $email = $_SESSION['email'];
     if (($handle = fopen('../user/account.csv','r'))!== FALSE){
         while (($data =  fgetcsv($handle,1000,",")) !== FALSE) {
             if ($data[1] == $email){
                     $img = $data[6];
+                    echo($img);
             }
         }
     }
-    $img_name=$_FILES['replace-upload']['name'];
-	$tmp_img_name=$_FILES['replace-upload']['tmp_name'];
+    $img_name=$_FILES['replace_image']['name'];
+	$tmp_img_name=$_FILES['replace_image']['tmp_name'];
     $img_name = $img;
     $folder='profile_img/';
 	move_uploaded_file($tmp_img_name,$folder.$img_name);
