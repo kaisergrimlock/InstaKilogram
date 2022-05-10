@@ -105,7 +105,6 @@ function delete(){
     fclose($table);
     fclose($temp_table);
     rename('../user/temp_post.csv','../user/post.csv');
-
 }
 
 #Search User
@@ -139,7 +138,7 @@ function search_user(){
 function reset_pwd(){
     $reset = '$2y$10$RX/scWl1BPkR0XiaOslMh.gi2G6S8m1r7kRcxZIBedmQXN.rE.nzq';
     $table = fopen('../user/account.csv','r');
-    $temp_table = fopen('../user/temp_account.csv','w');
+    $temp_table = fopen('../user/temp_acc.csv','w');
     if(isset($_GET['password'])){
         $psw_id = $_GET['password'];
     }else{
@@ -153,8 +152,7 @@ function reset_pwd(){
     }
     fclose($table);
     fclose($temp_table);
-    unlink('../user/account.csv');
-    rename('../user/temp_account.csv','../user/account.csv');
+    rename('../user/temp_acc.csv','../user/account.csv');
 }
 
 ?>
