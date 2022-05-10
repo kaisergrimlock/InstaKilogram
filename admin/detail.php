@@ -5,7 +5,9 @@ if(isset($_GET['email'])){
 }else{
   $email = '';
 }
-
+if(!isset($_SESSION['admin'])){
+  header('location: signin.php');
+}else{
 ?>
 
 <!-- EDIT FUNCTION -->
@@ -66,4 +68,6 @@ if(isset($_GET['email'])){
 </section> 
 
 </body>
-</html> 
+</html>
+<?php
+}?>
