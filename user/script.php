@@ -24,14 +24,12 @@ if(isset($_POST["btn_signup"])){
     $specialChars = preg_match('@[^\w]@', $password);
    
     if(strlen($password) < 8 || !$number || !$uppercase || !$lowercase || !$specialChars) {
-      $msg = "Password must be at least 8 characters in length and must contain at least one number, one upper case letter, one lower case letter and one special character.";
       return false;
     } else {
-      $msg = "Your password is strong.";
-      
+        return true;
     }
     if ($_POST["password"] === $_POST["reptpassword"]) {
-        // success!
+        return true;
      }
      else {
         return false;
