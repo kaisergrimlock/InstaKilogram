@@ -182,10 +182,8 @@ if(isset($_POST["btn_signin"])){
     $pass = ($_POST['admin-password']);
     $state = false;
     if($user == 'admin' && $pass == 'password'){
-        $state = true;
-    }
-    if($state){
-        $_SESSION['admin'] = 'admin';
+        session_start();
+        $_SESSION['admin'] = true;
         header('location: ../admin/crud.php');
     }
 }

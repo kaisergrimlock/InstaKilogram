@@ -1,7 +1,7 @@
 <?php 
+session_start();
 include "sidebar.php";
 require "admin_script.php";
-session_start();
 if(!isset($_SESSION['admin'])){
     header('location: signin.php');
 }else{
