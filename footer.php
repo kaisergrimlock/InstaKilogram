@@ -27,18 +27,18 @@
                     <div class="col-md-2 col-sm-1 col-xs-1 mb-2"></div>
                     
                     <div class="col-md-2 col-sm-4 col-xs-4">
-                        <a href="../aboutus.php"><h5 class="heading">About</h5></a>
+                        <a href="/InstaKilogram/aboutus.php"><h5 class="heading">About</h5></a>
                     </div>
                  
                  
                     <div class="col-md-2 col-sm-4 col-xs-4">
                  
-                    <a href="../privacy.php"><h5 class="heading">Privacy</h5></a>
+                    <a href="/InstaKilogram/privacy.php"><h5 class="heading">Privacy</h5></a>
                     </div>
 
                  
                      <div class="col-md-2 col-sm-4 col-xs-4">
-                     <a href="../help.php"><h5 class="heading">Help</h5></a>
+                     <a href="/InstaKilogram/help.php"><h5 class="heading">Help</h5></a>
                      </div>
                 </div>
                 
