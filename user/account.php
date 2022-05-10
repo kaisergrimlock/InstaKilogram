@@ -24,7 +24,9 @@ if (!isset($_SESSION['email'])) {
     <div class="profile-nav col-md-3">
         <div class="panel">
             <div class="user-heading round">
-                <img src="./profile_img/<?=$_SESSION['img-upload'] ?>" alt="profile picture" >
+                <a href="#">
+                    <img src="./profile_img/<?=$_SESSION['img-upload'] ?>" alt="profile picture" >
+                </a>
                 <h1 class="fname"><?=$_SESSION['fname'] ?></h1>
                 <p class="email"><?=$_SESSION['email']  ?></p>
                 <a href="../user/profile_replace.php" class="btn btn-danger">Change Profile</a>
