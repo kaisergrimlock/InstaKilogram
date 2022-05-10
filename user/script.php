@@ -11,12 +11,6 @@ if(isset($_POST["btn_signup"])){
     $lname = $_POST["lname"];
     $password = $_POST["password"];
     $redate = date('d-m-y h:i:s');
-    $row = count(file("account.csv"));
-    if($row > 1)
-    {
-        $row = ($row - 1) + 1;
-    }
-
     // password validation
     $number = preg_match('@[0-9]@', $password);
     $uppercase = preg_match('@[A-Z]@', $password);

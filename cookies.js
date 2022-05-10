@@ -12,22 +12,22 @@ getCookie = (cName) => {
     const cArr = cDecoded.split("; ");
     let value;
     cArr.forEach(val => {
-        if(val.indexOf(name) === 0) value = val.substring(name.length);
+        if (val.indexOf(name) === 0) value = val.substring(name.length);
     })
     return value;
 }
 
 document.querySelector("#cookies-btn").addEventListener("click", () => {
-    document.querySelector("#cookies").style.display="none";
-    setCookies("cookies",true, 30);
+    document.querySelector("#cookies").style.display = "none";
+    setCookies("cookies", true, 30);
 })
 
 cookieMessage = () => {
-    if(!getCookie("cookies")){
+    if (!getCookie("cookies")) {
         document.querySelector("#cookies").style.display = "block";
     }
 
-    if(getCookie("cookies")){
+    if (getCookie("cookies")) {
         document.querySelector("#cookies").style.display = "none";
         console.log("none")
     }

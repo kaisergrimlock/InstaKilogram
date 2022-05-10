@@ -54,9 +54,9 @@ function display_detail($data){
     echo '<td scope="row">'.$data[1].'</td>';
     echo '<td scope="row">'.$data[2].'</td>';
     echo '<td scope="row">'.$data[3].'</td>';
-    echo '<td scope="row"><img src="../user/profile_img/'.$data[6].'" width="100%"></img></td>';
+    echo '<td scope="row"><img src="../user/profile_img/'.$data[6].'" width="70%"></img></td>';
     echo '<td scope="row">'.$data[5].'</td>';
-    echo '<td scope="row"> <a href="detail.php?password='.$data[5].'"><button class="btn btn-dark">Reset Password</button></a></td>';
+    echo '<td scope="row"><button class="btn btn-dark" data-toggle="modal" data-target="#resetPassword">Reset Password</button></td>';
     echo"</tr>";
 }
 //Display Post
@@ -156,27 +156,29 @@ function rename_win($oldfile,$newfile) {
 
 #Reset Password
 function reset_pwd(){
-    $reset = '$2y$10$RX/scWl1BPkR0XiaOslMh.gi2G6S8m1r7kRcxZIBedmQXN.rE.nzq';
+     if(isset($_POST['btn_reset'])){
+        $psw_val = $_POST['reset-psw'] ;
+    }
     $table = fopen('../user/account.csv','r');
     $temp_table = fopen('../user/temp_account.csv','w');
-    if(isset($_GET['password'])){
-        $psw_id = $_GET['password'];
-    }else{
-        $psw_id = '';
-    }
     while (($data = fgetcsv($table, 1000)) !== FALSE){
-        if($data[5] == $psw_id){
-            $data[5] = $reset;
+        if($data[1] == $_GET['email']){
+             $data[5] = $psw_val;
+             header("Refresh: 0");
         }
         fputcsv($temp_table,$data);
     }
+    unlink('../user/account.csv');
     fclose($table);
     fclose($temp_table);
-    rename_win('../user/temp_account.csv','../user/account.csv');
+    // rename_win('../user/temp_account.csv','../user/account.csv');
+    rename('../user/temp_account.csv','../user/account.csv');
+    
 }
 
 
-#Sign-in
+
+#Sign-in Admin
 if(isset($_POST["btn_signin"])){
     $user = ($_POST['admin-name']);
     $pass = ($_POST['admin-password']);

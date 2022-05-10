@@ -28,9 +28,10 @@ if(!isset($_SESSION['admin'])){
 </div>
 
 
-</section> 
+</section>
 
 </body>
+
 </html>
 <?php
 }?>

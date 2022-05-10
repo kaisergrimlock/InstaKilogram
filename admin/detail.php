@@ -1,37 +1,14 @@
-<?php include "sidebar.php";
+<?php 
+session_start();
+include "sidebar.php";
 require "admin_script.php";
 if(isset($_GET['email'])){
   $email = $_GET["email"];
 }else{
   $email = '';
 }
-if(!isset($_SESSION['admin'])){
-  header('location: signin.php');
-}else{
+
 ?>
-
-<!-- EDIT FUNCTION -->
-<div class="modal">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Modal title</h5>
-        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true"></span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p>Modal body text goes here.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Save changes</button>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<br>
 <div>
     <table class="table table-hover text-center">
         <thead>
@@ -50,11 +27,9 @@ if(!isset($_SESSION['admin'])){
         while (($data =  fgetcsv($handle,1000,",")) !== FALSE) {
             if($data[1] == $email){
                 display_detail($data);
-                reset_pwd();
             }else{
               echo'';
             }
-
         }
     }else{
         echo"Error";
@@ -63,11 +38,34 @@ if(!isset($_SESSION['admin'])){
         </tbody>
     </table>
 </div>
+<!-- The Modal Post Image-->
+<div class="modal" id="resetPassword">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Reset Password</h4>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body">
+                <form enctype="multipart/form-data" method="post" action="">
+                    <input type=text name='reset-psw' class="form-control"> </input> <?php reset_pwd($data);
+                    ?>
+            </div>
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <input type="submit" class="btn btn-danger pull-right" name="btn_reset">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
 
 
-</section> 
+</section>
 
 </body>
+
 </html>
-<?php
-}?>
