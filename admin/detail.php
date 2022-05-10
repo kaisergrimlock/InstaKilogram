@@ -1,6 +1,10 @@
 <?php include "sidebar.php";
 require "admin_script.php";
-$email = $_GET["email"];
+if(isset($_GET['email'])){
+  $email = $_GET["email"];
+}else{
+  $email = '';
+}
 
 ?>
 
@@ -42,9 +46,12 @@ $email = $_GET["email"];
             <?php
             if (($handle = fopen('../user/account.csv','r'))!== FALSE) {
         while (($data =  fgetcsv($handle,1000,",")) !== FALSE) {
-            if($data[1] == $_GET["email"]){
+            if($data[1] == $email){
                 display_detail($data);
+            }else{
+              echo'';
             }
+
         }
     }else{
         echo"Error";

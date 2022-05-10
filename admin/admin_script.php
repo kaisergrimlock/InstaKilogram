@@ -134,4 +134,26 @@ function search_user(){
         echo"Error";
     } 
 }
+
+#Reset Password
+function reset_pwd(){
+    $reset = '$2y$10$RX/scWl1BPkR0XiaOslMh.gi2G6S8m1r7kRcxZIBedmQXN.rE.nzq';
+    $table = fopen('../user/account.csv','r');
+    $temp_table = fopen('../user/temp_account.csv','w');
+    if(isset($_GET['password'])){
+        $psw_id = $_GET['password'];
+    }else{
+        $psw_id = '';
+    }
+    while (($data = fgetcsv($table, 1000)) !== FALSE){
+        if($data[5] == $psw_id){
+            $data[5] = $reset;
+        }
+        fputcsv($temp_table,$data);
+    }
+    fclose($table);
+    fclose($temp_table);
+    rename('../user/temp_account.csv','../user/account.csv');
+}
+
 ?>
