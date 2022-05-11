@@ -49,14 +49,11 @@
                 <li>
                     <a href="post.php">Images</a>
                 </li>
-                <li>
-                    <a href="#section-dropdown1">Analytics</a>
-                </li>
             </ul>
 
             <ul class="list-unstyled CTAs">
                 <li>
-                    <a href="logout.php" class="download">Log Out</a>
+                    <a href="/InstaKilogram/admin/logout.php" class="download">Log Out</a>
                 </li>
                 <li>
                     <a href="/InstaKilogram/user/signin.php" class="article">Log In</a>
