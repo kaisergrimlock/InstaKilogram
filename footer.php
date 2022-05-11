@@ -22,27 +22,20 @@
                             <i class="fa fa-linkedin-square fa-lg"></i>
                             <i class="fa fa-facebook"></i>
                         </div>
-
                     </div>
                 </div>
 
                 <div class="col-md-2 col-sm-1 col-xs-1 mb-2"></div>
-
                 <div class="col-md-2 col-sm-4 col-xs-4">
                     <a href="/InstaKilogram/aboutus.php">
                         <h5 class="heading">About</h5>
                     </a>
                 </div>
-
-
                 <div class="col-md-2 col-sm-4 col-xs-4">
-
                     <a href="/InstaKilogram/privacy.php">
                         <h5 class="heading">Privacy</h5>
                     </a>
                 </div>
-
-
                 <div class="col-md-2 col-sm-4 col-xs-4">
                     <a href="/InstaKilogram/help.php">
                         <h5 class="heading">Help</h5>
@@ -51,31 +44,18 @@
             </div>
 
 
-            <div class="divider mb-4">
-            </div>
+            <div class="divider mb-4"></div>
             <div class="row" style="font-size:10px;">
-
                 <div class="col-md-6 col-sm-6 col-xs-6">
-
                     <div class="pull-left">
-
                         <p><i class="fa fa-copyright"></i> 2022 group1</p>
-
                     </div>
-
                 </div>
-
-
-
                 <div class="col-md-6 col-sm-6 col-xs-6">
-
-
                     <div class="pull-right mr-4 d-flex policy">
-
                         <div>Terms of Use</div>
                         <div>Privacy Policy</div>
                         <div>Cookie Policy</div>
-
                     </div>
                 </div>
             </div>

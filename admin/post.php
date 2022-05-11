@@ -29,9 +29,9 @@ if(!isset($_SESSION['admin'])){
             </thead>
             <tbody>
                 <?php 
-           post_image_feed();
-           delete();
-            ?>
+                    post_image_feed();
+                    delete();
+                ?>
             </tbody>
         </table>
 

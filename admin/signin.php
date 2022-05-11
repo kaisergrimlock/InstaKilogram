@@ -14,7 +14,6 @@
 <body>
     <section>
         <header id="app-header"></header>
-
         <div class="container">
             <form method="post" enctype="multipart/form-data" class="form-group row">
                 <h1>Admin Login</h1>
@@ -33,8 +32,6 @@
                 </div>
         </div>
     </section>
-
-
 </body>
 
 </html>
