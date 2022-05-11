@@ -16,7 +16,7 @@ if(isset($_POST["btn_signup"])){
     $uppercase = preg_match('@[A-Z]@', $password);
     $lowercase = preg_match('@[a-z]@', $password);
     $specialChars = preg_match('@[^\w]@', $password);
-   
+
     if(strlen($password) < 8 || !$number || !$uppercase || !$lowercase || !$specialChars) {
       $msg = "Password must be at least 8 characters in length and must contain at least one number, one upper case letter, one lower case letter and one special character.";
       return false;
@@ -34,15 +34,33 @@ if(isset($_POST["btn_signup"])){
     $reptpassword = $_POST["reptpassword"];
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
     $reptpassword = $_POST["reptpassword"];
+
+    //verify image extension & image name
     $img_name=$_FILES['img-upload']['name'];
-	$tmp_img_name=$_FILES['img-upload']['tmp_name'];
+    $tmp_img_name=$_FILES['img-upload']['tmp_name'];
+    $allowed_extension = array("jpeg", "jpg", "png", "gif");
+    $file_extension = pathinfo($img_name, PATHINFO_EXTENSION);
+
+    if (!in_array($file_extension, $allowed_extension)){
+        echo '<div class="alert alert-dismissible alert-danger">
+                     <button type="button" class="btn-close" data-dismiss="alert"></button>
+                     <strong>You are allowed with only jpg/jpeg, png and gif.</strong>
+                     </div>';
+                     return false;
+    } 
     if (file_exists("../user/profile_img/" . $img_name))
     {
      $img_name=formatDuplicateExtension($img_name);   
     }
     $folder='profile_img/';
 	move_uploaded_file($tmp_img_name,$folder.$img_name);
-    $fp = fopen('account.csv','a+');
+    $fp = fopen('account.db.csv','a+');
+        //Add row
+    $row = count(file("account.db.csv"));
+    if($row > 1)
+    {
+        $row = ($row - 1) + 1;
+    }
      $arrayData = array(
         'No' => $row, 
         'Email' => $email,
@@ -53,7 +71,7 @@ if(isset($_POST["btn_signup"])){
         'Profilemage' => $img_name );
     
     //  checking duplicate email
-    $csv = array_map('str_getcsv', file('account.csv'));
+    $csv = array_map('str_getcsv', file('account.db.csv'));
     $lower_email = strtolower($email);
     
     foreach($csv as $line){
@@ -65,7 +83,8 @@ if(isset($_POST["btn_signup"])){
         return false;
         }
     }
-    
+
+    //Insert data to csv
    $input = fputcsv($fp, $arrayData);
     if ($input){
         echo '<div class="alert alert-dismissible alert-success">
@@ -76,7 +95,6 @@ if(isset($_POST["btn_signup"])){
         echo "<h3> Please enter again!</h3>";
     }
 }
-    
     #SignIn 
     if(isset($_POST["btn_signin"])){
         $user = ($_POST['email']);
@@ -85,7 +103,7 @@ if(isset($_POST["btn_signup"])){
             die ("Incorrect email or password");
         }
         $state= false;
-        $handle = fopen("account.csv", "r");
+        $handle = fopen("account.db.csv", "r");
         while (($data = fgetcsv($handle)) !==false){
             if ($data[1] ==$user && password_verify($pass, $data[5])){
                 $state = true;
@@ -114,7 +132,7 @@ if(isset($_POST["btn_signup"])){
  if(isset($_POST["replace_submit"])){
     $img = " ";
     $email = $_SESSION['email'];
-    if (($handle = fopen('../user/account.csv','r'))!== FALSE){
+    if (($handle = fopen('../user/account.db.csv','r'))!== FALSE){
         while (($data =  fgetcsv($handle,1000,",")) !== FALSE) {
             if ($data[1] == $email){
                     $img = $data[6];

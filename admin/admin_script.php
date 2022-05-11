@@ -1,10 +1,10 @@
 <?php
 #Display Table Function
 function display_table(){
-    $array = csvToArray('../user/account.csv');
+    $array = csvToArray('../user/account.db.csv');
     usort($array, 'mysort');
-    array2csv($array, '../user/account.csv');
-    if (($handle = fopen('../user/account.csv','r'))!== FALSE) {
+    array2csv($array, '../user/account.db.csv');
+    if (($handle = fopen('../user/account.db.csv','r'))!== FALSE) {
         $row = 1;
         while (($data =  fgetcsv($handle,1000,",")) !== FALSE) {
             echo "<tr>";
@@ -113,16 +113,16 @@ function delete(){
 
 #Search User
 function search_user(){
-    $array = csvToArray('../user/account.csv');
+    $array = csvToArray('../user/account.db.csv');
     usort($array, 'mysort');
-    array2csv($array, '../user/account.csv');
+    array2csv($array, '../user/account.db.csv');
     if(isset($_POST['search'])){
         $search = $_POST['search'];
     }else{
         $search = ' ';
     } 
     $regular_expression = sprintf("/%s/i",$search);
-    if (($handle = fopen('../user/account.csv','r'))!== FALSE) {
+    if (($handle = fopen('../user/account.db.csv','r'))!== FALSE) {
         $row = 1;
         $match = FALSE;
         while (($data =  fgetcsv($handle,1000,",")) !== FALSE) {
@@ -148,8 +148,8 @@ function reset_pwd(){
      if(isset($_POST['btn_reset'])){
         $psw_raw = $_POST['reset-psw'] ;
         $psw_val = password_hash($psw_raw, PASSWORD_DEFAULT);
-        $table = fopen('../user/account.csv','r');
-        $temp_table = fopen('../user/temp_account.csv','w');
+        $table = fopen('../user/account.db.csv','r');
+        $temp_table = fopen('../user/temp_account.db.csv','w');
         while (($data = fgetcsv($table, 1000)) !== FALSE){
             if($data[5] == $_GET['pass']){
                  $data[5] = $psw_val;
@@ -158,9 +158,14 @@ function reset_pwd(){
         }
         fclose($table);
         fclose($temp_table);
+<<<<<<< Updated upstream
         // rename_win('../user/temp_account.csv','../user/account.csv');
         rename('../user/temp_account.csv','../user/account.csv');
         // header('location: crud.php');
+=======
+        // rename_win('../user/temp_account.db.csv','../user/account.db.csv');
+        rename('../user/temp_account.db.csv','../user/account.db.csv');
+>>>>>>> Stashed changes
         header('location: crud.php');
     }
 }
