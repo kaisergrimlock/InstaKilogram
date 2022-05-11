@@ -14,7 +14,7 @@ require('script.php');
 </head>
 
 <body>
-    <section>
+    <main>
         <?php include ('../header.php')?>
         <br>
         <div class="container bootstrap snippets bootdey">
@@ -32,7 +32,7 @@ require('script.php');
             </div>
 
         </div>
-    </section>
+    </main>
     <?php include("../footer.php")?>
 </body>
 
