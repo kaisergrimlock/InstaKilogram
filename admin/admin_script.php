@@ -36,16 +36,19 @@ function csvToArray($csvFile){
     return $lines;
 }
 
-function array2csv($data, $newdata, $delimiter = ',', $enclosure = '"', $escape_char = "\\")
-{
-    $f = fopen($newdata, 'r+');
-    if($data !== NULL){
-        foreach ($data as $item) {
-            fputcsv($f, $item, $delimiter, $enclosure, $escape_char);
-        }
+function array2csv($data, $newdata, $delimiter = ',', $enclosure = '"'){
+    $file = fopen($newdata, 'w+');
+    foreach ($data as $data_line) {
+        fputcsv($file, $data_line, $delimiter, $enclosure);
     }
-    rewind($f);
-    return stream_get_contents($f);
+
+    $data_read="";
+    rewind($file);
+    //read CSV
+    while (!feof($file)) {
+        $data_read .= fread($file, 8192); // will return a string of all data separeted by commas.
+    }
+    fclose($file);
 }
 
 //Display Detail
