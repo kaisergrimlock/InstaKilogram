@@ -17,16 +17,16 @@
     <?php include("../header.php");?>
     <div class="container">
         <div class="form-container">
-            <form action="" method="post" enctype="multipart/form-data" class="form-group row">
+            <form method="post" enctype="multipart/form-data" class="form-group row">
                 <h1 class="text-center">Reset Password</h1>
                 <div class="form-group">
-                    <label for="username" class="form-label mt-4">New Password:</label>
+                    <label for="rstpswd" class="form-label mt-4">New Password:</label>
                     <input type="password" name="rstpswd" id="password" placeholder="Enter new password"
                         class="form-control" required>
                 </div>
                 <div class="form-group">
-                    <label for="password" class="form-label mt-4">Confirm Password</label>
-                    <input type="password" name="conreset" id="password" placeholder="Confirm password"
+                    <label for="reptpassword" class="form-label mt-4">Confirm Password</label>
+                    <input type="password" name="conreset" id="reptpassword" placeholder="Confirm password"
                         class="form-control" required> <br>
                 </div>
                 <div class="buttons">
@@ -37,7 +37,6 @@
                             here</a></small>
                 </div>
             </form>
-
         </div>
     </div>
     <?php include_once("../footer.php")?>
