@@ -5,12 +5,12 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
-	<link rel="stylesheet" href="aboutus.css">
+	<link rel="stylesheet" href="index.css">
 </head>	
 <body class="bg">
     <?php include("bootstrap.php");?>
-	<div class="section">
-		<div class="container">
+	<div class="section-about">
+		<div class="container-about">
 			<div class="content-section">
 				<div class="title">
 					<h1>About Us</h1>
@@ -34,7 +34,6 @@
 				<img src="./images/logo.jpeg">
 			</div>
 		</div>
-		<?php include("footer.php")?>
 	</div>
 
 	
