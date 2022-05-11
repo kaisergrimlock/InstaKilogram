@@ -31,7 +31,7 @@ require('script.php');
                 </div>
             </div>
 
-        </div>
+
     </main>
     <?php include("../footer.php")?>
 </body>
