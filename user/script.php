@@ -207,7 +207,7 @@ return $stmt;
 function post_image(){
     $array = csvToArray('../user/post.csv');
     usort($array, 'mysort');
-    array2csv($array, '../user/post.csv');
+    //array2csv($array, '../user/post.csv');
     $email_current = $_SESSION['email'];
     if (($handle = fopen('../user/post.csv','r'))!== FALSE) {
         while (($data =  fgetcsv($handle,1000,",")) !== FALSE) {
@@ -267,6 +267,7 @@ function display_img($array){
 
 
 #Sort CSV
+//sort function
 function mysort($p1, $p2){
     return strtotime($p2[4]) - strtotime($p1[4]);
 }
@@ -282,18 +283,34 @@ function csvToArray($csvFile){
     return $lines;
 }
 
-function array2csv($data, $newdata, $delimiter = ',', $enclosure = '"', $escape_char = "\\")
-{
-    $f = fopen($newdata, 'r+');
-    if($data !== NULL){
-        foreach ($data as $item) {
-            fputcsv($f, $item, $delimiter, $enclosure, $escape_char);
-        }
+//convert array to csv
+function array2csv($data, $newdata, $delimiter = ',', $enclosure = '"', $escape_char = "\\"){
+    $file = fopen($newdata, 'w+');
+    foreach ($data as $data_line) {
+        fputcsv($file, $data_line, $delimiter, $enclosure);
     }
-    rewind($f);
-    return stream_get_contents($f);
-    fclose($newdata);
+
+    $data_read="";
+    rewind($file);
+    //read CSV
+    while (!feof($file)) {
+        $data_read .= fread($file, 8192); // will return a string of all data separeted by commas.
+    }
+    fclose($file);
 }
+
+// function array2csv($data, $newdata, $delimiter = ',', $enclosure = '"', $escape_char = "\\")
+// {
+//     $f = fopen($newdata, 'r+');
+//     if($data !== NULL){
+//         foreach ($data as $item) {
+//             fputcsv($f, $item, $delimiter, $enclosure, $escape_char);
+//         }
+//     }
+//     rewind($f);
+//     return stream_get_contents($f);
+//     fclose($newdata);
+// }
 
 
 ?>
