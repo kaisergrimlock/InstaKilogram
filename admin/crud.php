@@ -21,9 +21,6 @@ if(!isset($_SESSION['admin'])){
 
 <body>
     <section>
-
-        
-
         <table class="table table-hover text-center">
             <thead>
                 <tr class="table-dark">
@@ -42,6 +39,8 @@ if(!isset($_SESSION['admin'])){
 
     </section>
 </body>
+
+</html>
 
 </html>
 <?php

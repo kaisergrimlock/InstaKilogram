@@ -6,24 +6,31 @@ if(!isset($_SESSION['admin'])){
     header('location: signin.php');
 }else{
 ?>
-
-<!-- SEARCH USERS -->
-<form action="search.php" method="POST">
-    <div class="row mx-3">
-        <div class="col-11">
-            <form action="search.php" method="POST">
-                <input class="form-control me-sm-2" name="search" type="text" placeholder="Search User">
-            </form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- SEARCH USERS -->
+    <form action="search.php" method="POST">
+        <div class="row mx-3">
+            <div class="col-11">
+                <form action="search.php" method="POST">
+                    <input class="form-control me-sm-2" name="search" type="text" placeholder="Search User">
+                </form>
+            </div>
+            <div class="col-1">
+                <button class="btn btn-info" type="submit">Search</button>
+            </div>
         </div>
-        <div class="col-1">
-            <button class="btn btn-info" type="submit">Search</button>
-        </div>
-    </div>
-</form>
-<br>
-<div>
-    <table class="table table-hover text-center">
-        <thead>
+    </form>
+    <br>
+    <div>
+        <table class="table table-hover text-center">
             <tr class="table-dark">
                 <thead>
                     <th scope="col">No</th>
@@ -33,19 +40,13 @@ if(!isset($_SESSION['admin'])){
                     <th scope="col">RegisterDate</th>
                     <th scope="col">Details</th>
                 </thead>
-        <tbody>
-            <?php search_user()?>
-        </tbody>
-        </tr>
-        </thead>
-        <tbody>
-
-        </tbody>
-    </table>
-</div>
+                <tbody>
+                    <?php search_user()?>
+                </tbody>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
 <?php
 }?>
-</section>
-</body>
-
-</html>

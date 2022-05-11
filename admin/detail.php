@@ -35,16 +35,16 @@ if(isset($_GET['email'])){
             <tbody>
                 <?php
             if (($handle = fopen('../user/account.db.csv','r'))!== FALSE) {
-        while (($data =  fgetcsv($handle,1000,",")) !== FALSE) {
-            if($data[1] == $email){
-                display_detail($data);
+                while (($data =  fgetcsv($handle,1000,",")) !== FALSE) {
+                    if($data[1] == $email){
+                        display_detail($data);
+                    }else{
+                    echo'';
+                    }
+                }
             }else{
-              echo'';
-            }
-        }
-    }else{
-        echo"Error";
-    } 
+                echo"Error";
+            } 
             ?>
             </tbody>
         </table>
