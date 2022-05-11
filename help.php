@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -43,19 +44,19 @@
                 <form>
                     <h2>Send Message</h2>
                     <div class="inputBox">
-                        <input type="text" name="" require="required">
+                        <input type="text">
                         <span>Full name</span>
                     </div>
                     <div class="inputBox">
-                        <input type="text" name="" require="required">
+                        <input type="text">
                         <span>Email</span>
                     </div>
                     <div class="inputBox">
-                        <textarea require="required"></textarea>
+                        <textarea></textarea>
                         <span>Type your Message</span>
                     </div>
                     <div class="inputBox">
-                        <input type="submit" name="" value="Send">
+                        <input type="submit" value="Send">
                     </div>
                 </form>
             </div>
