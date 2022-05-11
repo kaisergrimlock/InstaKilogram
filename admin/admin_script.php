@@ -161,6 +161,7 @@ function reset_pwd(){
         // rename_win('../user/temp_account.csv','../user/account.csv');
         rename('../user/temp_account.csv','../user/account.csv');
         // header('location: crud.php');
+        header('location: crud.php');
     }
 }
 
