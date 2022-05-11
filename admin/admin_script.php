@@ -158,14 +158,9 @@ function reset_pwd(){
         }
         fclose($table);
         fclose($temp_table);
-<<<<<<< Updated upstream
         // rename_win('../user/temp_account.csv','../user/account.csv');
-        rename('../user/temp_account.csv','../user/account.csv');
+        rename('../user/temp_account.db.csv','../user/account.csv');
         // header('location: crud.php');
-=======
-        // rename_win('../user/temp_account.db.csv','../user/account.db.csv');
-        rename('../user/temp_account.db.csv','../user/account.db.csv');
->>>>>>> Stashed changes
         header('location: crud.php');
     }
 }
