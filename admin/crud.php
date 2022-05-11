@@ -6,27 +6,35 @@ if(!isset($_SESSION['admin'])){
     header('location: signin.php');
 }else{
 ?>
+<!DOCTYPE html>
+<html lang="en">
 
-<!-- DISPLAY USERS -->
-<br>
-<div>
-    <table class="table table-hover text-center">
-        <thead>
-            <tr class="table-dark">
-                <th scope="col">No</th>
-                <th scope="col">Email</th>
-                <th scope="col">First Name</th>
-                <th scope="col">Last Name</th>
-                <th scope="col">RegisterDate</th>
-                <th scope="col">Details</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php display_table()?>
-        </tbody>
-    </table>
-</div>
-</section>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of Users</title>
+</head>
+
+<body>
+    <!-- DISPLAY USERS -->
+    <main>
+        <table class="table table-hover text-center">
+            <thead>
+                <tr class="table-dark">
+                    <th scope="col">No</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">RegisterDate</th>
+                    <th scope="col">Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php display_table()?>
+            </tbody>
+        </table>
+    </main>
 </body>
 
 </html>
