@@ -127,6 +127,7 @@ if(isset($_POST["btn_signup"])){
             <strong>Wrong email or password. Try again!</strong> 
             </div>';
         }
+        fclose('account.db.csv');
     }
 
  #Replace Profile Image
@@ -178,6 +179,7 @@ if(isset($_POST["btn_upload_post"])){
     $arrayPostData = array($text_post,$post_img_name,$privacy, $email_post, $date);
     $fp = fopen('post.csv','a+');
     $input = fputcsv($fp, $arrayPostData);
+    fclose('post.csv');
     header("Refresh:0");
 }
 
@@ -293,8 +295,4 @@ function array2csv($data, $newdata, $delimiter = ',', $enclosure = '"', $escape_
 }
 
 
-
-
-#Search
-
-    ?>
+?>
