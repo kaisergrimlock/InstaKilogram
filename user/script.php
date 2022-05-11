@@ -236,7 +236,12 @@ function post_image(){
 function post_image_feed(){
     $array = csvToArray('../user/post.csv');
     usort($array, 'mysort');
-    $email_current = $_SESSION['email'];
+    if(isset( $_SESSION['email'])){
+        $email_current = $_SESSION['email'];
+    }
+    else{
+        $email_current = '';
+    }
     if (($handle = fopen('../user/post.csv','r'))!== FALSE){
         
         if(isset($_SESSION['email'])){

@@ -15,7 +15,7 @@
                 <p>We use cookies to personalize your experience. By continuing to this website you agree to our use of
                     cookies</p>
                 <button id="cookies-btn" type="button" class="btn btn-info">Got it!</button>
-                <a href="#">Read our policies</a>
+                <a href="/InstaKilogram/privacy.php">Read our policies</a>
             </div>
         </div>
     </div>
