@@ -47,14 +47,14 @@ if (!isset($_SESSION['email'])) {
                                         </div>
                                         <!-- Modal body -->
                                         <div class="modal-body">
-                                            <form enctype="multipart/form-data" enctype="multipart/form-data"
-                                                method="post" action="account.php">
+                                            <form enctype="multipart/form-data" method="post" action="account.php">
                                                 <label for="replace_image " class="form-label mt-4 text-muted">
                                                     Upload Here
                                                 </label>
                                                 <input type="file" class="form-control" name="replace_image"
+                                                    id="replace_image"
                                                     oninput="pic.src=window.URL.createObjectURL(this.files[0])">
-                                                <img id="pic" style="width:50%"/>
+                                                <img id="pic" style="width:50%" alt="preview" />
                                         </div>
                                         <!-- Modal footer -->
                                         <div class="modal-footer">
@@ -73,7 +73,7 @@ if (!isset($_SESSION['email'])) {
 
                 <div class="profile-info col-md-9">
                     <div class="panel">
-                        <form action="" method="post" enctype="multipart/form-data" class="upload-form">
+                        <form method="post" enctype="multipart/form-data" class="upload-form">
                             <textarea placeholder="What's in your mind today?" rows="2"
                                 class="form-control input-lg p-text-area" name="text_post"></textarea>
                             <div class="panel-upload">
@@ -82,8 +82,7 @@ if (!isset($_SESSION['email'])) {
                                         <a href="#"><i class="fa fa-map-marker"></i></a>
                                     </li>
                                     <li>
-                                        <i class="fa fa-camera" data-toggle="modal"
-                                            data-target="#postImage"></i>
+                                        <i class="fa fa-camera" data-toggle="modal" data-target="#postImage"></i>
                                     </li>
                                     <li>
                                         <a href="#"><i class=" fa fa-film"></i></a>
@@ -101,7 +100,8 @@ if (!isset($_SESSION['email'])) {
                                 <!-- Modal Header -->
                                 <div class="modal-header">
                                     <h4 class="modal-title">Post Your Image</h4>
-                                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                                    <button type="button" class="btn-close" data-dismiss="modal"
+                                        aria-label="Close"></button>
                                 </div>
                                 <!-- Modal body -->
                                 <div class="modal-body">
