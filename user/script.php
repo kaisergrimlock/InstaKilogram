@@ -179,7 +179,6 @@ if(isset($_POST["btn_upload_post"])){
     $arrayPostData = array($text_post,$post_img_name,$privacy, $email_post, $date);
     $fp = fopen('post.csv','a+');
     $input = fputcsv($fp, $arrayPostData);
-    fclose('post.csv');
     header("Refresh:0");
 }
 
