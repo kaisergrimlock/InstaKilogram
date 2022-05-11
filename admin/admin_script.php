@@ -56,7 +56,7 @@ function display_detail($data){
     echo '<td scope="row">'.$data[3].'</td>';
     echo '<td scope="row"><img src="../user/profile_img/'.$data[6].'" width="70%"></img></td>';
     echo '<td scope="row">'.$data[5].'</td>';
-    echo '<td scope="row"><button class="btn btn-dark" data-toggle="modal" data-target="#resetPassword">Reset Password</button></td>';
+    echo '<td scope="row"><a href="reset.php?pass='.$data[5].'"><button class="btn btn-dark">Reset Password</button></a></td>';
     echo"</tr>";
 }
 //Display Post
@@ -162,13 +162,12 @@ function reset_pwd(){
     $table = fopen('../user/account.csv','r');
     $temp_table = fopen('../user/temp_account.csv','w');
     while (($data = fgetcsv($table, 1000)) !== FALSE){
-        if($data[1] == $_GET['email']){
+        if($data[5] == $_GET['pass']){
              $data[5] = $psw_val;
              header("Refresh: 0");
         }
         fputcsv($temp_table,$data);
     }
-    unlink('../user/account.csv');
     fclose($table);
     fclose($temp_table);
     // rename_win('../user/temp_account.csv','../user/account.csv');
