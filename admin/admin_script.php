@@ -59,7 +59,7 @@ function display_detail($data){
     echo '<td scope="row">'.$data[3].'</td>';
     echo '<td scope="row"><img src="../user/profile_img/'.$data[6].'" width="70%"></img></td>';
     echo '<td scope="row">'.$data[5].'</td>';
-    echo '<td scope="row"><a href="reset.php?pass='.$data[5].'"><button class="btn btn-dark">Reset Password</button></a></td>';
+    echo '<td scope="row"><a href="reset.php?pass='.$data[5].'" class="btn btn-dark">Reset Password</a></td>';
     echo"</tr>";
 }
 //Display Post
@@ -87,7 +87,7 @@ function display_img($data){
     echo '<td scope="row">'.$data[3].'</td>';
     if(isset($data[1])){
         echo '<td scope="row"><img src="../user/img_post/'.$data[1].'" width="30%"></img></td>';
-        echo '<td scope="row"> <a href="post.php?img='.$data[1].'"><button class="btn btn-dark" id="deleteBtn">Delele</button></a></td>';
+        echo '<td scope="row"> <a href="post.php?img='.$data[1].'" class="btn btn-dark" id="deleteBtn">Delele</a></td>';
     }else{
         echo '<td scope="row">Deleted</td>';
         echo '<td scope="row">No Operation</td>';
@@ -136,7 +136,7 @@ function search_user(){
                 echo '<td scope="row">'.$data[2].'</td>';
                 echo '<td scope="row">'.$data[3].'</td>';
                 echo '<td scope="row">'.$data[4].'</td>';
-                echo '<td scope="row"> <a href="detail.php?email='.$data[1].'"><button class="btn btn-dark">Details</button></a></td>';
+                echo '<td scope="row"> <a href="detail.php?email='.$data[1].'" class="btn btn-dark">Details</a></td>';
                 echo"</tr>";
             }
         }
