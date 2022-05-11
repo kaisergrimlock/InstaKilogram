@@ -292,6 +292,7 @@ function array2csv($data, $newdata, $delimiter = ',', $enclosure = '"', $escape_
     }
     rewind($f);
     return stream_get_contents($f);
+    fclose($newdata);
 }
 
 
