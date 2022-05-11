@@ -54,7 +54,7 @@ if (!isset($_SESSION['email'])) {
                                                 </label>
                                                 <input type="file" class="form-control" name="replace_image"
                                                     oninput="pic.src=window.URL.createObjectURL(this.files[0])">
-                                                <img id="pic" style="width:50%" alt="upload image"/>
+                                                <img id="pic" style="width:50%"/>
                                         </div>
                                         <!-- Modal footer -->
                                         <div class="modal-footer">
