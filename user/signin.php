@@ -16,10 +16,10 @@
     <?php include("../header.php");?>
     <div class="container">
         <div class="form-container">
-            <form action="" method="post" enctype="multipart/form-data" class="form-group row">
+            <form method="post" enctype="multipart/form-data" class="form-group row">
                 <h1 class="text-center">Sign In</h1>
                 <div class="form-group">
-                    <label for="username" class="form-label mt-4">Email Address:</label>
+                    <label for="email" class="form-label mt-4">Email Address:</label>
                     <input type="email" name="email" id="email" placeholder="Enter email address" class="form-control"
                         required>
                 </div>
