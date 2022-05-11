@@ -127,7 +127,6 @@ if(isset($_POST["btn_signup"])){
             <strong>Wrong email or password. Try again!</strong> 
             </div>';
         }
-        fclose('account.db.csv');
     }
 
  #Replace Profile Image
@@ -206,7 +205,7 @@ return $stmt;
 function post_image(){
     $array = csvToArray('../user/post.csv');
     usort($array, 'mysort');
-    //array2csv($array, '../user/post.csv');
+    array2csv($array, '../user/post.csv');
     $email_current = $_SESSION['email'];
     if (($handle = fopen('../user/post.csv','r'))!== FALSE) {
         while (($data =  fgetcsv($handle,1000,",")) !== FALSE) {
