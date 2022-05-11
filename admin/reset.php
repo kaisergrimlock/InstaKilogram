@@ -14,11 +14,10 @@ require "admin_script.php";
     <title>Document</title>
 </head>
 <body>
-    <form action="">
+    <form enctype="multipart/form-data" method="post" action="">
         <input type=text name='reset-psw' class="form-control"> </input> 
         <input type="submit" class="btn btn-danger" name="btn_reset">
-        <button type="button" class="btn btn-danger">Close</button>
     </form>
-    <?php reset_pwd($data);?>
+    <?php reset_pwd();?>
 </body>
 </html>

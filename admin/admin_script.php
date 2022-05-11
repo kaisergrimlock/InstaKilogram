@@ -158,21 +158,19 @@ function rename_win($oldfile,$newfile) {
 function reset_pwd(){
      if(isset($_POST['btn_reset'])){
         $psw_val = $_POST['reset-psw'] ;
-    }
-    $table = fopen('../user/account.csv','r');
-    $temp_table = fopen('../user/temp_account.csv','w');
-    while (($data = fgetcsv($table, 1000)) !== FALSE){
-        if($data[5] == $_GET['pass']){
-             $data[5] = $psw_val;
-             header("Refresh: 0");
+        $table = fopen('../user/account.csv','r');
+        $temp_table = fopen('../user/temp_account.csv','w');
+        while (($data = fgetcsv($table, 1000)) !== FALSE){
+            if($data[5] == $_GET['pass']){
+                 $data[5] = $psw_val;
+            }
+            fputcsv($temp_table,$data);
         }
-        fputcsv($temp_table,$data);
+        fclose($table);
+        fclose($temp_table);
+        // rename_win('../user/temp_account.csv','../user/account.csv');
+        rename('../user/temp_account.csv','../user/account.csv');
     }
-    fclose($table);
-    fclose($temp_table);
-    // rename_win('../user/temp_account.csv','../user/account.csv');
-    rename('../user/temp_account.csv','../user/account.csv');
-    
 }
 
 
