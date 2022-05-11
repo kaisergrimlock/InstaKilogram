@@ -33,7 +33,7 @@
                 </div>
             </div>
             <div class="image-section">
-                <img src="./images/logo.jpeg">
+                <img src="./images/logo.jpeg" alt="logo-about">
             </div>
         </div>
     </div>
