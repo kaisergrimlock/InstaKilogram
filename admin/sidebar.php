@@ -59,7 +59,7 @@
                     <a href="logout.php" class="download">Log Out</a>
                 </li>
                 <li>
-                    <a href="../user/signin.php" class="article">Log In</a>
+                    <a href="/InstaKilogram/user/signin.php" class="article">Log In</a>
                 </li>
             </ul>
         </nav>
