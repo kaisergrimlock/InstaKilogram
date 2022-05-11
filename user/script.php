@@ -54,6 +54,7 @@ if(isset($_POST["btn_signup"])){
     }
     $folder='profile_img/';
 	move_uploaded_file($tmp_img_name,$folder.$img_name);
+    
     $fp = fopen('account.db.csv','a+');
         //Add row
     $row = count(file("account.db.csv"));
@@ -160,6 +161,15 @@ if(isset($_POST["btn_upload_post"])){
     $tmp_img_name=$_FILES['post-upload']['tmp_name'];
     $folder = 'img_post/';
     $var = '';
+    $allowed_extension = array("jpeg", "jpg", "png", "gif");
+   
+    if (!in_array(pathinfo($post_img_name, PATHINFO_EXTENSION), $allowed_extension)){
+        echo '<div class="alert alert-dismissible alert-danger">
+                     <button type="button" class="btn-close" data-dismiss="alert"></button>
+                     <strong>You are allowed with only jpg/jpeg, png and gif.</strong>
+                     </div>';
+                     return false;
+    } 
     if (file_exists("../user/img_post/" . $post_img_name))
     {
      $post_img_name=formatDuplicateExtension($post_img_name);   
