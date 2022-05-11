@@ -142,22 +142,12 @@ function search_user(){
     } 
 }
 
-#Rename_Win
-function rename_win($oldfile,$newfile) {
-    if (!rename($oldfile,$newfile)) {
-        if (copy ($oldfile,$newfile)) {
-            unlink($oldfile);
-            return TRUE;
-        }
-        return FALSE;
-    }
-    return TRUE;
-}
 
 #Reset Password
 function reset_pwd(){
      if(isset($_POST['btn_reset'])){
-        $psw_val = $_POST['reset-psw'] ;
+        $psw_raw = $_POST['reset-psw'] ;
+        $psw_val = password_hash($psw_raw, PASSWORD_DEFAULT);
         $table = fopen('../user/account.csv','r');
         $temp_table = fopen('../user/temp_account.csv','w');
         while (($data = fgetcsv($table, 1000)) !== FALSE){
