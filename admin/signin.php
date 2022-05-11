@@ -25,7 +25,7 @@
                 </div>
                 <div class="form-group">
                     <label for="admin-name" class="form-label mt-4">Password</label>
-                    <input type="text" placeholder="Password" name="admin-password" class="form-control"
+                    <input type="password" placeholder="Password" name="admin-password" class="form-control"
                         id="admin-password"> <br>
                 </div>
                 <div class="buttons">
