@@ -284,7 +284,7 @@ function csvToArray($csvFile){
 }
 
 //convert array to csv
-function array2csv($data, $newdata, $delimiter = ',', $enclosure = '"', $escape_char = "\\"){
+function array2csv($data, $newdata, $delimiter = ',', $enclosure = '"'){
     $file = fopen($newdata, 'w+');
     foreach ($data as $data_line) {
         fputcsv($file, $data_line, $delimiter, $enclosure);
