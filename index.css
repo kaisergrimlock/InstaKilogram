@@ -7,6 +7,10 @@
     width: 300px;
 }
 
+.pri-img {
+    width: 100%;
+}
+
 .box-index {
     display: flex;
     align-items: center;

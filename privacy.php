@@ -1,5 +1,6 @@
-<html lang="en">
 <!DOCTYPE html>
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,7 +20,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="accordion" id="accordionExample">
-                                    <img src="./images/privacy1.webp" width="100%"></img>
+                                    <img class="pri-img" src="./images/privacy1.webp" alt="privacy1" />
                                     <div class="accordion-item">
                                         <h2 class="accordion-header" id="headingOne">
                                             <button class="accordion-button collapsed" type="button"
@@ -53,7 +54,7 @@
                     <div class="col-xs-12 col-sm-4">
                         <div class="card">
                             <div class="card-body">
-                                <img src="./images/privacy2.webp" width="100%"> </img>
+                                <img class="pri-img" src="./images/privacy2.webp" alt="privacy2" />
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingTwo">
                                         <button class="accordion-button collapsed" type="button" data-toggle="collapse"
@@ -78,7 +79,7 @@
                     <div class="col-xs-6 col-sm-4 ">
                         <div class="card">
                             <div class="card-body">
-                                <img src="./images/privacy3.webp" width="100%"></img>
+                                <img class="pri-img" src="./images/privacy3.webp" alt="privacy3" />
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingThree">
                                         <button class="accordion-button collapsed" type="button" data-toggle="collapse"
@@ -106,7 +107,7 @@
                     <div class="col-xs-6 col-sm-4 ">
                         <div class="card">
                             <div class="card-body">
-                                <img src="./images/privacy4.webp" width="100%"></img>
+                                <img class="pri-img" src="./images/privacy4.webp" alt="privacy4" />
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingFour">
                                         <button class="accordion-button collapsed" type="button" data-toggle="collapse"
@@ -151,7 +152,7 @@
                     <div class="col-xs-6 col-sm-4 ">
                         <div class="card">
                             <div class="card-body">
-                                <img src="./images/privacy5.png" width="100%"></img>
+                                <img class="pri-img" src="./images/privacy5.png" alt="privacy5" />
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingFive">
                                         <button class="accordion-button collapsed" type="button" data-toggle="collapse"
@@ -175,7 +176,7 @@
                     <div class="col-xs-6 col-sm-4 mb-4">
                         <div class="card">
                             <div class="card-body">
-                                <img src="./images/privacy6.svg" width="100%"></img>
+                                <img class="pri-img" src="./images/privacy6.svg" alt="privacy6" />
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingSix">
                                         <button class="accordion-button collapsed" type="button" data-toggle="collapse"
