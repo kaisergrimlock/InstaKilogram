@@ -16,8 +16,7 @@
     <section>
         <div id="alert-validation"></div>
         <div class="container">
-            <form action="" method="post" enctype="multipart/form-data" class="form-group row"
-                onsubmit="validateForm()">
+            <form method="post" enctype="multipart/form-data" class="form-group row" onsubmit="validateForm()">
                 <h1 class="text-center">Create an Account...</h1>
                 <div class="">
                 </div>
@@ -47,16 +46,16 @@
                 </div>
                 <div class="buttons">
                     <input type="submit" name="btn_signup" value="Submit" class="btn btn-danger">
-                    <input type="reset" value="Clear" class="btn btn-danger" id="reset" required>
+                    <input type="reset" value="Clear" class="btn btn-danger" id="reset">
                 </div>
                 <div class="signin-button">
                     <small class="form-text text-muted">Already have an account? <a href="./signin.php">Login
                             here</a></small>
                 </div>
-
             </form>
         </div>
-        <?php include_once("../footer.php")?>
+    </section>
+    <?php include_once("../footer.php")?>
 </body>
 
 </html>
