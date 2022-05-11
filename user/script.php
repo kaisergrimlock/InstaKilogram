@@ -17,6 +17,15 @@ if(isset($_POST["btn_signup"])){
     $lowercase = preg_match('@[a-z]@', $password);
     $specialChars = preg_match('@[^\w]@', $password);
 
+    //fname, lname validation
+    if(strlen($lname) < 2  || strlen($lname) > 20){
+         echo '<div class="alert alert-dismissible alert-danger">
+                     <button type="button" class="btn-close" data-dismiss="alert"></button>
+                     <strong> Name must be more than 2 characters and less than 20 characters.</strong>
+                     </div>';
+                     return false;
+    }
+
     if(strlen($password) < 8 || !$number || !$uppercase || !$lowercase || !$specialChars) {
       $msg = "Password must be at least 8 characters in length and must contain at least one number, one upper case letter, one lower case letter and one special character.";
       return false;
