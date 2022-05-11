@@ -14,7 +14,6 @@ if(!isset($_SESSION['admin'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>List of Users</title>
 </head>
-
 <body>
     <!-- DISPLAY USERS -->
     <main>
