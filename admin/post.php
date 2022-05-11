@@ -35,9 +35,8 @@ if(!isset($_SESSION['admin'])){
             </tbody>
         </table>
 
-        <?php
-}?>
     </main>
 </body>
-
 </html>
+<?php
+}?>
