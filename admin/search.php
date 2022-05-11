@@ -28,20 +28,20 @@ if(!isset($_SESSION['admin'])){
     </form>
     <br>
     <div>
-        <table class="table table-hover text-center">
-            <tr class="table-dark">
-                <thead>
+        <table class="table table-hover text-center ">
+            <thead>
+                <tr class="table-dark">
                     <th scope="col">No</th>
                     <th scope="col">Email</th>
                     <th scope="col">First Name</th>
                     <th scope="col">Last Name</th>
                     <th scope="col">RegisterDate</th>
                     <th scope="col">Details</th>
-                </thead>
-                <tbody>
-                    <?php search_user()?>
-                </tbody>
-            </tr>
+                </tr>
+            </thead>
+            <tbody>
+                <?php search_user()?>
+            </tbody>
         </table>
     </div>
 </body>
