@@ -1,16 +1,15 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <title>Privacy</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body class="bg">
-    <?php include("bootstrap.php");?>
+    <?php include("header.php");?>
     <section>
         <h1 class="heading text-center mt-4 mb-4"> InstaKilogram Data Policy </h1>
         <div class="content">
@@ -20,8 +19,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="accordion" id="accordionExample">
-                                    <img src="https://canopylab.com/wp-content/uploads/2020/11/the-lab_hero_700px-1.png"
-                                        width="100%">
+                                    <img src="./images/privacy1.webp" width="100%">
                                     </img>
                                     <div class="accordion-item">
                                         <h2 class="accordion-header" id="headingOne">
@@ -56,8 +54,7 @@
                     <div class="col-xs-12 col-sm-4">
                         <div class="card">
                             <div class="card-body">
-                                <img src="https://canopylab.com/wp-content/uploads/2020/11/terms-and-conditions_hero_700px.png"
-                                    width="100%"> </img>
+                                <img src="./images/privacy2.webp" width="100%"> </img>
 
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingTwo">
@@ -83,8 +80,7 @@
                     <div class="col-xs-6 col-sm-4 ">
                         <div class="card">
                             <div class="card-body">
-                                <img src="https://canopylab.com/wp-content/uploads/2020/11/Platform_hero_700px.png"
-                                    width="100%">
+                                <img src="./images/privacy3.webp" width="100%">
                                 </img>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingThree">
@@ -113,8 +109,7 @@
                     <div class="col-xs-6 col-sm-4 ">
                         <div class="card">
                             <div class="card-body">
-                                <img src="https://canopylab.com/wp-content/uploads/2020/11/about-canopylab_hero_700px.png"
-                                    width="100%">
+                                <img src="./images/privacy4.webp" width="100%">
                                 </img>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingFour">
@@ -160,8 +155,7 @@
                     <div class="col-xs-6 col-sm-4 ">
                         <div class="card">
                             <div class="card-body">
-                                <img src="https://www.theconstructsim.com/wp-content/uploads/2020/05/Path-Machine-Learning-TCS-2020.png"
-                                    width="100%">
+                                <img src="./images/privacy5.png" width="100%">
                                 </img>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingFive">
@@ -186,8 +180,7 @@
                     <div class="col-xs-6 col-sm-4 mb-4">
                         <div class="card">
                             <div class="card-body">
-                                <img src="https://static.vecteezy.com/system/resources/previews/001/993/370/original/student-studying-with-laptop-for-online-school-education-vector.jpg"
-                                    width="100%">
+                                <img src="./images/privacy6.svg" width="100%">
                                 </img>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingSix">

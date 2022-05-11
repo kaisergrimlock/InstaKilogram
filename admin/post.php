@@ -1,8 +1,11 @@
-<?php include "sidebar.php";
+<?php 
+session_start();
+include "sidebar.php";
 require "admin_script.php";
+if(!isset($_SESSION['admin'])){
+    header('location: signin.php');
+}else{
 ?>
-
-
 <br>
 <div>
     <table class="table table-hover text-center">
@@ -22,10 +25,9 @@ require "admin_script.php";
         </tbody>
     </table>
 </div>
-
-
+<?php
+}?>
 </section>
-
 </body>
 
 </html>

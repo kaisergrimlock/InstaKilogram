@@ -19,7 +19,7 @@ if (!isset($_SESSION['email'])) {
 
 <body>
     <section>
-        <?php include ('../bootstrap.php')?>
+        <?php include ('../header.php')?>
         <br>
         <div class="container bootstrap snippets bootdey">
             <div class="row">
@@ -27,7 +27,7 @@ if (!isset($_SESSION['email'])) {
                     <div class="panel">
                         <div class="user-heading round">
                             <a href="#">
-                                <img src="./profile_img/<?=$_SESSION['img-upload'] ?>" alt="profile picture">
+                                <img src="./profile_img/<?=$_SESSION['img-upload']?>" alt="profile picture">
                             </a>
                             <h1 class="fname"><?=$_SESSION['fname'] ?></h1>
                             <p class="email"><?=$_SESSION['email']  ?></p>

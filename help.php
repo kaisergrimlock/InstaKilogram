@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -6,8 +7,9 @@
     <link rel="stylesheet" href="index.css">
     <title>Help Links</title>
 </head>
+
 <body class="bg">
-    <?php include("bootstrap.php");?>
+    <?php include("header.php");?>
     <section class="contact-help">
         <div class="content-help">
             <h2>Contact Us</h2>
@@ -59,6 +61,7 @@
             </div>
         </div>
     </section>
-    
+
 </body>
+
 </html>

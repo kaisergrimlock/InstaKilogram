@@ -7,7 +7,7 @@ if(!isset($_SESSION['admin'])){
 }else{
 ?>
 
-<!-- SEARCH USERS -->
+<!-- DISPLAY USERS -->
 <br>
 <div>
     <table class="table table-hover text-center">
@@ -26,10 +26,7 @@ if(!isset($_SESSION['admin'])){
         </tbody>
     </table>
 </div>
-
-
 </section>
-
 </body>
 
 </html>

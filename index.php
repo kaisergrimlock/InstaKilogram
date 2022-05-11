@@ -1,36 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>InstaKilogram</title>
     <link rel="stylesheet" href="index.css">
     <script defer src="./cookies.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  </head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
 
-  <body class="bg">
+<body class="bg">
     <?php 
-    include("bootstrap.php");
+    include("header.php");
     include("cookies.php")?>
-    <main>  
-      <div class="text-center">
-        <img class="img-index"src="./images/logo.jpeg">
-      </div>
-      <div class="box-index"> <h1> New to the website?</h1> </div>
-      <div class="box-index">
-        <a href="/InstaKilogram/user/register.php">
-          <button class="btn btn-outline-danger btn-lg">Register</button>
-         </a> 
-         <a href="/InstaKilogram/user/signin.php">
-          <button class="btn btn-outline-danger btn-lg">Sign in</button> <br>
-         </a> 
-      </div>
+    <main>
+        <div class="text-center">
+            <img class="img-index" src="./images/logo.jpeg">
+        </div>
+        <div class="box-index">
+            <h1> New to the website?</h1>
+        </div>
+        <div class="box-index">
+            <a href="/InstaKilogram/user/register.php">
+                <button class="btn btn-outline-danger btn-lg">Register</button>
+            </a>
+            <a href="/InstaKilogram/user/signin.php">
+                <button class="btn btn-outline-danger btn-lg">Sign in</button> <br>
+            </a>
+        </div>
     </main>
     <?php
 ?>
-<?php include_once("footer.php")?>
-  </body>
-  
+    <?php include_once("footer.php")?>
+</body>
+
 </html>

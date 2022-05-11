@@ -15,7 +15,7 @@ require('script.php');
 
 <body>
     <section>
-        <?php include ('../bootstrap.php')?>
+        <?php include ('../header.php')?>
         <br>
         <div class="container bootstrap snippets bootdey">
             <div class="row">
