@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign In Page</title>
     <script defer src="register.js"></script>
-    <link rel="stylesheet" href="user.css">
+    <link rel="stylesheet" type="text/css" href="user.css">
 </head>
 
 <body>

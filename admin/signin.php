@@ -6,7 +6,7 @@
     <meta http-epuiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Login</title>
-    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" type="text/css" href="admin.css">
     <script defer src="../header.js"></script>
     <?php include('admin_script.php')?>
 </head>

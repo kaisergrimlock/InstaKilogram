@@ -18,7 +18,7 @@ if(isset($_POST["btn_signup"])){
     $specialChars = preg_match('@[^\w]@', $password);
 
     //fname, lname validation
-    if(strlen($lname) < 2  || strlen($lname) > 20){
+    if((strlen($lname) < 2  || strlen($lname)>20) || (strlen($fname) < 2  || strlen($fname) > 20)){
          echo '<div class="alert alert-dismissible alert-danger">
                      <button type="button" class="btn-close" data-dismiss="alert"></button>
                      <strong> Name must be more than 2 characters and less than 20 characters.</strong>
