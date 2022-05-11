@@ -34,6 +34,7 @@
 				<img src="./images/logo.jpeg">
 			</div>
 		</div>
+		<?php include("footer.php")?>
 	</div>
 
 	

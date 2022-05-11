@@ -1,15 +1,4 @@
 <?php
-#Count
-function count_member(){
-    $row = 0;
-    if (($handle = fopen('../user/post.csv','r'))!== FALSE){
-        while (($data =  fgetcsv($handle,1000,",")) !== FALSE){
-            $row++;
-        }
-    }
-    return $row;
-}
-
 #Display Table Function
 function display_table(){
     $array = csvToArray('../user/account.csv');
@@ -65,9 +54,9 @@ function display_detail($data){
     echo '<td scope="row">'.$data[1].'</td>';
     echo '<td scope="row">'.$data[2].'</td>';
     echo '<td scope="row">'.$data[3].'</td>';
-    echo '<td scope="row"><img src="../user/profile_img/'.$data[6].'" width="100%"></img></td>';
+    echo '<td scope="row"><img src="../user/profile_img/'.$data[6].'" width="70%"></img></td>';
     echo '<td scope="row">'.$data[5].'</td>';
-    echo '<td scope="row"> <a href="detail.php?password='.$data[5].'"><button class="btn btn-dark">Reset Password</button></a></td>';
+    echo '<td scope="row"><a href="reset.php?pass='.$data[5].'"><button class="btn btn-dark">Reset Password</button></a></td>';
     echo"</tr>";
 }
 //Display Post
@@ -153,51 +142,39 @@ function search_user(){
     } 
 }
 
-#Rename_Win
-function rename_win($oldfile,$newfile) {
-    if (!rename($oldfile,$newfile)) {
-        if (copy ($oldfile,$newfile)) {
-            unlink($oldfile);
-            return TRUE;
-        }
-        return FALSE;
-    }
-    return TRUE;
-}
 
 #Reset Password
 function reset_pwd(){
-    $reset = '$2y$10$RX/scWl1BPkR0XiaOslMh.gi2G6S8m1r7kRcxZIBedmQXN.rE.nzq';
-    $table = fopen('../user/account.csv','r');
-    $temp_table = fopen('../user/temp_account.csv','w');
-    if(isset($_GET['password'])){
-        $psw_id = $_GET['password'];
-    }else{
-        $psw_id = '';
-    }
-    while (($data = fgetcsv($table, 1000)) !== FALSE){
-        if($data[5] == $psw_id){
-            $data[5] = $reset;
+     if(isset($_POST['btn_reset'])){
+        $psw_raw = $_POST['reset-psw'] ;
+        $psw_val = password_hash($psw_raw, PASSWORD_DEFAULT);
+        $table = fopen('../user/account.csv','r');
+        $temp_table = fopen('../user/temp_account.csv','w');
+        while (($data = fgetcsv($table, 1000)) !== FALSE){
+            if($data[5] == $_GET['pass']){
+                 $data[5] = $psw_val;
+            }
+            fputcsv($temp_table,$data);
         }
-        fputcsv($temp_table,$data);
+        fclose($table);
+        fclose($temp_table);
+        // rename_win('../user/temp_account.csv','../user/account.csv');
+        rename('../user/temp_account.csv','../user/account.csv');
+        header('location: crud.php');
     }
-    fclose($table);
-    fclose($temp_table);
-    rename_win('../user/temp_account.csv','../user/account.csv');
 }
 
 
-#Sign-in
+
+#Sign-in Admin
 if(isset($_POST["btn_signin"])){
     $user = ($_POST['admin-name']);
     $pass = ($_POST['admin-password']);
     $state = false;
     if($user == 'admin' && $pass == 'password'){
-        $state = true;
-    }
-    if($state){
-        $_SESSION['admin'] = 'admin';
-        header('location: ../admin/dashboard.php');
+        session_start();
+        $_SESSION['admin'] = true;
+        header('location: ../admin/crud.php');
     }
 }
 ?>

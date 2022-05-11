@@ -24,7 +24,8 @@ require "admin_script.php";
 </div>
 
 
-</section> 
+</section>
 
 </body>
-</html> 
+
+</html>

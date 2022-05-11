@@ -1,19 +1,16 @@
-
-@import url('https://cdn.jsdelivr.net/npm/bootswatch@5.1.3/dist/litera/bootstrap.min.css');
-
- @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+@import url("https://cdn.jsdelivr.net/npm/bootswatch@5.1.3/dist/litera/bootstrap.min.css");
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     background: #fafafa;
 }
 
 p {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 1.1em;
     font-weight: 300;
     line-height: 1.7em;
     color: #999;
-} 
+}
 
 a,
 a:hover,
@@ -45,6 +42,7 @@ a:focus {
     margin: 40px 0;
 }
 
+
 /* ---------------------------------------------------
     SIDEBAR STYLE
 ----------------------------------------------------- */
@@ -58,7 +56,7 @@ a:focus {
 #sidebar {
     min-width: 250px;
     max-width: 250px;
-    background: #F2A89F;
+    background: #f2a89f;
     color: #fff;
     transition: all 0.3s;
 }
@@ -69,7 +67,7 @@ a:focus {
 
 #sidebar .sidebar-header {
     padding: 20px;
-    background: #F2A89F;
+    background: #f2a89f;
 }
 
 #sidebar ul.components {
@@ -89,14 +87,14 @@ a:focus {
 }
 
 #sidebar ul li a:hover {
-    color: #F2A89F;
+    color: #f2a89f;
     background: #fff;
 }
 
 #sidebar ul li.active>a,
 a[aria-expanded="true"] {
     color: #fff;
-    background: #F2A89F;
+    background: #f2a89f;
 }
 
 a[data-toggle="collapse"] {
@@ -114,7 +112,7 @@ a[data-toggle="collapse"] {
 ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
-    background: #F2A89F;
+    background: #f2a89f;
 }
 
 ul.CTAs {
@@ -131,14 +129,15 @@ ul.CTAs a {
 
 a.download {
     background: #fff;
-    color: #F2A89F;
+    color: #f2a89f;
 }
 
 a.article,
 a.article:hover {
-    background: #F2A89F !important;
+    background: #f2a89f !important;
     color: #fff !important;
 }
+
 
 /* ---------------------------------------------------
     CONTENT STYLE
@@ -150,10 +149,12 @@ a.article:hover {
     min-height: 100vh;
     transition: all 0.3s;
 }
-.card{
+
+.card {
     max-width: 20rem;
     margin: 20px;
 }
+
 
 /* ---------------------------------------------------
     MEDIAQUERIES
@@ -169,4 +170,4 @@ a.article:hover {
     #sidebarCollapse span {
         display: none;
     }
-} 
+}

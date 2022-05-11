@@ -9,7 +9,7 @@ if(isset($_POST['submit'])){
 
 ?>
 <form action='' method='POST' enctype='multipart/form-data'>
-<input type='file' name='upload'><br>
-<input type='submit' name='submit'>
+    <input type='file' name='upload'><br>
+    <input type='submit' name='submit'>
 
 </form>
