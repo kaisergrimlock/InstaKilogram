@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <title> Navagation Bar </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -25,7 +26,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <img src="/InstaKilogram/images/logo1.jpeg" style="width:100px">
+            <img src="/InstaKilogram/images/logo1.jpeg" style="width:100px" alt="logo">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02"
                 aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

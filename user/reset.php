@@ -21,13 +21,14 @@
                 <h1 class="text-center">Reset Password</h1>
                 <div class="form-group">
                     <label for="rstpswd" class="form-label mt-4">New Password:</label>
-                    <input type="password" name="rstpswd" id="password" placeholder="Enter new password"
+                    <input type="password" name="rstpswd" id="rstpswd" placeholder="Enter new password"
                         class="form-control" required>
                 </div>
                 <div class="form-group">
-                    <label for="reptpassword" class="form-label mt-4">Confirm Password</label>
-                    <input type="password" name="conreset" id="reptpassword" placeholder="Confirm password"
-                        class="form-control" required> <br>
+                    <label for="conreset" class="form-label mt-4">Confirm Password</label>
+                    <input type="password" name="conreset" id="conreset" placeholder="Confirm password"
+                        class="form-control" required>
+                    <br>
                 </div>
                 <div class="buttons">
                     <input type="submit" value="Reset" class="btn btn-danger" name="btn_reset">

@@ -18,7 +18,7 @@ require "admin_script.php";
         <form enctype="multipart/form-data" method="post">
             <div class="form-group">
                 <label for="resetpsw">Password:</label>
-                <input type=text name='reset-psw' id="resetpsw" class="form-control" placeholder="Enter password"> <br></input>
+                <input type=text name='reset-psw' id="resetpsw" class="form-control" placeholder="Enter password"><br>
             </div>
             <input type="submit" class="btn btn-danger" name="btn_reset">
             <?php reset_pwd();?>
