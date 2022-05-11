@@ -29,7 +29,7 @@
                                             </button>
                                         </h2>
                                         <div id="collapseOne" class="accordion-collapse collapse"
-                                            aria-labelledby="headingOne" data-parent="#accordionExample" style="">
+                                            aria-labelledby="headingOne" data-parent="#accordionExample">
                                             <div class="accordion-body">
                                                 <em>Things that you and others do and provide.Information and
                                                     content you provide. We collect the content, communications and
@@ -63,7 +63,7 @@
                                         </button>
                                     </h2>
                                     <div id="collapseTwo" class="accordion-collapse collapse"
-                                        aria-labelledby="headingTwo" data-parent="#accordionExample" style="">
+                                        aria-labelledby="headingTwo" data-parent="#accordionExample">
                                         <div class="accordion-body">
                                             <em>Provide, personalise and improve our Products. Providing
                                                 measurement, analytics and other business services. Promoting safety,
@@ -88,7 +88,7 @@
                                         </button>
                                     </h2>
                                     <div id="collapseThree" class="accordion-collapse collapse"
-                                        aria-labelledby="headingThree" data-parent="#accordionExample" style="">
+                                        aria-labelledby="headingThree" data-parent="#accordionExample">
                                         <div class="accordion-body">
                                             <em>We provide you with the ability to access, rectify, port and delete
                                                 your data. When you delete your account, we delete things that you have
@@ -116,7 +116,7 @@
                                         </button>
                                     </h2>
                                     <div id="collapseFour" class="accordion-collapse collapse"
-                                        aria-labelledby="headingFour" data-parent="#accordionExample" style="">
+                                        aria-labelledby="headingFour" data-parent="#accordionExample">
                                         <div class="accordion-body">
                                             <em>We access, preserve and share your information with regulators, law
                                                 enforcement or others: In response to a legal request (e.g. a search
@@ -161,7 +161,7 @@
                                         </button>
                                     </h2>
                                     <div id="collapseFive" class="accordion-collapse collapse"
-                                        aria-labelledby="headingFive" data-parent="#accordionExample" style="">
+                                        aria-labelledby="headingFive" data-parent="#accordionExample">
                                         <div class="accordion-body">
                                             <em>We'll notify you before we make changes to this Policy and give you
                                                 the opportunity to review the revised Policy before you choose to
@@ -185,7 +185,7 @@
                                         </button>
                                     </h2>
                                     <div id="collapseSix" class="accordion-collapse collapse"
-                                        aria-labelledby="headingSix" data-parent="#accordionExample" style="">
+                                        aria-labelledby="headingSix" data-parent="#accordionExample">
                                         <div class="accordion-body">
                                             <em>You can learn more about how privacy works InstaKilogram. If you
                                                 have questions about this policy, you can contact us as described below.
