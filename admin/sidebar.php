@@ -60,6 +60,7 @@
                 </li>
             </ul>
         </nav>
+        </nav>
         <!-- Page Content  -->
         <div id="content">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -69,3 +70,4 @@
                     </button>
                 </div>
             </nav>
+        </div>
