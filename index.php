@@ -19,17 +19,17 @@
     include("cookies.php")?>
     <main>
         <div class="text-center">
-            <img class="img-index" src="./images/logo.jpeg">
+            <img class="img-index" src="./images/logo.jpeg" alt="logo">
         </div>
         <div class="box-index">
             <h1> New to the website?</h1>
         </div>
         <div class="box-index">
-            <a href="/InstaKilogram/user/register.php">
-                <button class="btn btn-outline-danger btn-lg">Register</button>
+            <a href="/InstaKilogram/user/register.php" class="btn btn-outline-danger btn-lg">
+                Register
             </a>
-            <a href="/InstaKilogram/user/signin.php">
-                <button class="btn btn-outline-danger btn-lg">Sign in</button> <br>
+            <a href="/InstaKilogram/user/signin.php" class="btn btn-outline-danger btn-lg">
+                Sign in
             </a>
         </div>
     </main>
