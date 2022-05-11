@@ -159,7 +159,7 @@ function reset_pwd(){
         fclose($table);
         fclose($temp_table);
         // rename_win('../user/temp_account.csv','../user/account.csv');
-        rename('../user/temp_account.csv','../user/account.csv');
+        rename('../user/temp_account.db.csv','../user/account.csv');
         // header('location: crud.php');
         header('location: crud.php');
     }
