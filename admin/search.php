@@ -1,20 +1,18 @@
 <?php include "sidebar.php";
-require "admin_script.php";
-
-?>
+require "admin_script.php";?>
 
 <!-- SEARCH USERS -->
 <form action="search.php" method="POST">
-    <div class="row mx-3">
-        <div class="col-11">
-            <form action="search.php" method="POST">
-                <input class="form-control me-sm-2" name="search" type="text" placeholder="Search User">
-            </form>
-        </div>
-        <div class="col-1">
+        <div class="row mx-3">
+            <div class="col-11">
+                <form action="search.php" method="POST">
+                    <input class="form-control me-sm-2" name="search" type="text" placeholder="Search User">  
+                </form>
+            </div> 
+             <div class="col-1">
             <button class="btn btn-info" type="submit">Search</button>
-        </div>
-    </div>
+            </div> 
+        </div>      
 </form>
 <br>
 <div>
@@ -29,20 +27,19 @@ require "admin_script.php";
                     <th scope="col">RegisterDate</th>
                     <th scope="col">Details</th>
                 </thead>
-        <tbody>
-            <?php search_user()?>
-        </tbody>
-        </tr>
+                <tbody>
+                    <?php search_user()?>
+                </tbody>
+            </tr>
         </thead>
         <tbody>
-
+            
         </tbody>
     </table>
 </div>
 
 
-</section>
+</section> 
 
 </body>
-
-</html>
+</html> 

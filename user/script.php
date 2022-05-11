@@ -11,6 +11,12 @@ if(isset($_POST["btn_signup"])){
     $lname = $_POST["lname"];
     $password = $_POST["password"];
     $redate = date('d-m-y h:i:s');
+    $row = count(file("account.csv"));
+    if($row > 1)
+    {
+        $row = ($row - 1) + 1;
+    }
+
     // password validation
     $number = preg_match('@[0-9]@', $password);
     $uppercase = preg_match('@[A-Z]@', $password);
@@ -192,8 +198,6 @@ function post_image(){
         echo"Error";
     }
 }
-#Replace Profile Image
-
 
 #Display Posted Image Feed
 function post_image_feed(){
@@ -236,7 +240,7 @@ function display_img($array){
 }
 
 
-#Sort CSV
+#Sort CSV (Failed)
 function mysort($p1, $p2){
     return strtotime($p2[4]) - strtotime($p1[4]);
 }

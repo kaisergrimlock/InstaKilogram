@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,37 +14,39 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+    
     <script type="text/JavaScript">
-        $(document).ready(function () {
+    $(document).ready(function () {
     $('#sidebarCollapse').on('click', function () {
         $('#sidebar').toggleClass('active');
     });
     });
-    </script>
+    </script> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-
 <body>
-    <div class="wrapper">
+     <div class="wrapper">
         <!-- Sidebar  -->
         <nav id="sidebar">
             <div class="sidebar-header">
                 <h3>InstaKilogram</h3>
             </div>
             <ul class="list-unstyled components">
-                <li class="active">
-                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false"
-                        class="dropdown-toggle">Users</a>
-                    <ul class="collapse list-unstyled" id="homeSubmenu">
-                        <li>
-                            <a href="crud.php">Users Management</a>
-                        </li>
-                        <li>
-                            <a href="search.php">Search User</a>
-                        </li>
-                    </ul>
-                </li>
+                <p> Admin Dashboard </p>
+                 <li>
+                        <a href="dashboard.php">Dashboard</a>
+                    </li>
+                <li  class="active" >
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Users</a>
+                <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li>
+                        <a href="crud.php">Users Management</a>
+                    </li>
+                    <li>
+                        <a href="search.php">Search User</a>
+                    </li>
+                </ul>
+                </li >
                 <li>
                     <a href="post.php">Images</a>
                 </li>
@@ -65,9 +66,9 @@
         </nav>
         <!-- Page Content  -->
         <div id="content">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
-                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                     <button type="button" id="sidebarCollapse" class="btn btn-info">
                         <i class="fa fa-align-justify"></i>
                     </button>
                 </div>
