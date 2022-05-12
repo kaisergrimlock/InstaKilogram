@@ -26,7 +26,7 @@ if (!isset($_SESSION['email'])) {
                 <div class="profile-nav col-md-3">
                     <div class="panel">
                         <div class="user-heading round">
-                            <a href="#">
+                            <a href="account.php">
                                 <img src="./profile_img/<?=$_SESSION['img-upload']?>" alt="profile picture">
                             </a>
                             <h1 class="fname"><?=$_SESSION['fname'] ?></h1>
@@ -45,24 +45,25 @@ if (!isset($_SESSION['email'])) {
                                             <button type="button" class="btn-close" data-dismiss="modal"
                                                 aria-label="Close"></button>
                                         </div>
-                                        <!-- Modal body -->
-                                        <div class="modal-body">
-                                            <form enctype="multipart/form-data" method="post" action="account.php">
-                                                <label for="replace_image " class="form-label mt-4 text-muted">
+                                        <form enctype="multipart/form-data" method="post" action="account.php">
+                                            <!-- Modal body -->
+                                            <div class="modal-body">
+                                                <label for="replace_image" class="form-label mt-4 text-muted">
                                                     Upload Here
                                                 </label>
                                                 <input type="file" class="form-control" name="replace_image"
                                                     id="replace_image"
                                                     oninput="pic.src=window.URL.createObjectURL(this.files[0])">
-                                                <img id="pic" style="width:50%" alt="preview" />
-                                        </div>
-                                        <!-- Modal footer -->
-                                        <div class="modal-footer">
-                                            <input type="submit" class="btn btn-danger pull-right" value="Change Image"
-                                                name="replace_submit">
-                                            <button type="button" class="btn btn-danger"
-                                                data-dismiss="modal">Close</button>
-                                        </div>
+                                                <img id="pic" class="preview-pic"
+                                                    src="./profile_img/<?=$_SESSION['img-upload']?>" alt="preview" />
+                                            </div>
+                                            <!-- Modal footer -->
+                                            <div class="modal-footer">
+                                                <input type="submit" class="btn btn-danger pull-right"
+                                                    value="Change Image" name="replace_submit">
+                                                <button type="button" class="btn btn-danger"
+                                                    data-dismiss="modal">Close</button>
+                                            </div>
                                         </form>
                                     </div>
                                 </div>
@@ -72,8 +73,8 @@ if (!isset($_SESSION['email'])) {
                 </div>
 
                 <div class="profile-info col-md-9">
-                    <div class="panel">
-                        <form method="post" enctype="multipart/form-data" class="upload-form">
+                    <form method="post" enctype="multipart/form-data" class="upload-form">
+                        <div class="panel">
                             <textarea placeholder="What's in your mind today?" rows="2"
                                 class="form-control input-lg p-text-area" name="text_post"></textarea>
                             <div class="panel-upload">
@@ -92,43 +93,45 @@ if (!isset($_SESSION['email'])) {
                                     </li>
                                 </ul>
                             </div>
-                    </div>
-                    <!-- The Modal Post Image-->
-                    <div class="modal" id="postImage">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <!-- Modal Header -->
-                                <div class="modal-header">
-                                    <h4 class="modal-title">Post Your Image</h4>
-                                    <button type="button" class="btn-close" data-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <!-- Modal body -->
-                                <div class="modal-body">
-                                    <label for="formFile" class="form-label mt-4">Upload Here</label>
-                                    <input type=file id="formFile" name='post-upload' class="form-control"
-                                        oninput="pic.src=window.URL.createObjectURL(this.files[0])">
-                                    <img id="pic" style="width:50%" />
-                                    <div>
-                                        <input type="radio" class="form-check-input" id="public" name="privacy"
-                                            value="public" checked>
-                                        <label class="form-check-label" for="public">Public</label>
-                                        <input type="radio" class="form-check-input" id="private" name="privacy"
-                                            value="private">
-                                        <label class="form-check-label" for="private">Private</label>
-                                        <input type="radio" class="form-check-input" id="internal" name="privacy"
-                                            value="internal">
-                                        <label class="form-check-label" for="public">Internal Use</label>
+                        </div>
+                        <!-- The Modal Post Image-->
+                        <div class="modal" id="postImage">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Post Your Image</h4>
+                                        <button type="button" class="btn-close" data-dismiss="modal"
+                                            aria-label="Close"></button>
                                     </div>
-                                </div>
-                                <!-- Modal footer -->
-                                <div class="modal-footer">
-                                    <input type="submit" class="btn btn-danger pull-right" name="btn_upload_post">
-                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+                                        <label for="formFile" class="form-label mt-4">Upload Here</label>
+                                        <input type=file id="formFile" name='post-upload' class="form-control"
+                                            oninput="pre.src=window.URL.createObjectURL(this.files[0])">
+                                        <div class="text-center">
+                                            <img id="pre" class="preview-pic" alt="preview" />
+                                        </div>
+                                        <div>
+                                            <input type="radio" class="form-check-input" id="public" name="privacy"
+                                                value="public" checked>
+                                            <label class="form-check-label" for="public">Public</label>
+                                            <input type="radio" class="form-check-input" id="private" name="privacy"
+                                                value="private">
+                                            <label class="form-check-label" for="private">Private</label>
+                                            <input type="radio" class="form-check-input" id="internal" name="privacy"
+                                                value="internal">
+                                            <label class="form-check-label" for="public">Internal Use</label>
+                                        </div>
+                                    </div>
+                                    <!-- Modal footer -->
+                                    <div class="modal-footer">
+                                        <input type="submit" class="btn btn-danger pull-right" name="btn_upload_post">
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
                     </form>
                     <div class="panel">
                         <div class="bio-graph-heading">

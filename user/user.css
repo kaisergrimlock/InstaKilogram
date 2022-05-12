@@ -11,15 +11,16 @@ html {
     box-sizing: border-box;
 }
 
-#pic {
-    width: 50px;
-}
-
 .panel {
     background-color: white;
     border-radius: 5px;
     padding: 0;
     margin: auto;
+}
+
+.preview-pic {
+    margin-top: 15px;
+    width: 50%;
 }
 
 .profile-nav,
