@@ -18,8 +18,6 @@
         <div class="container">
             <form method="post" enctype="multipart/form-data" class="form-group row" onsubmit="validateForm()">
                 <h1 class="text-center">Create an Account...</h1>
-                <div class="">
-                </div>
                 <div class="form-group">
                     <label class="form-label mt-4">Email Address:</label>
                     <input type="email" name="email" id="email" class="form-control" required>
