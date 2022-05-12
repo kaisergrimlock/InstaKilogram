@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="/InstaKilogram/www/index.css">
     <title>Privacy</title>
 </head>
 
 <body class="bg">
-    <?php include("header.php");?>
+    <?php include("../header.php");?>
     <section>
         <h1 class="heading text-center mt-4 mb-4"> InstaKilogram Data Policy </h1>
         <div class="content">
@@ -20,7 +20,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="accordion" id="accordionExample">
-                                    <img class="pri-img" src="./images/privacy1.webp" alt="privacy1" />
+                                    <img class="pri-img" src="../images/privacy1.webp" alt="privacy1" />
                                     <div class="accordion-item">
                                         <h2 class="accordion-header" id="headingOne">
                                             <button class="accordion-button collapsed" type="button"
@@ -54,7 +54,7 @@
                     <div class="col-xs-12 col-sm-4">
                         <div class="card">
                             <div class="card-body">
-                                <img class="pri-img" src="./images/privacy2.webp" alt="privacy2" />
+                                <img class="pri-img" src="../images/privacy2.webp" alt="privacy2" />
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingTwo">
                                         <button class="accordion-button collapsed" type="button" data-toggle="collapse"
@@ -79,7 +79,7 @@
                     <div class="col-xs-6 col-sm-4 ">
                         <div class="card">
                             <div class="card-body">
-                                <img class="pri-img" src="./images/privacy3.webp" alt="privacy3" />
+                                <img class="pri-img" src="../images/privacy3.webp" alt="privacy3" />
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingThree">
                                         <button class="accordion-button collapsed" type="button" data-toggle="collapse"
@@ -107,7 +107,7 @@
                     <div class="col-xs-6 col-sm-4 ">
                         <div class="card">
                             <div class="card-body">
-                                <img class="pri-img" src="./images/privacy4.webp" alt="privacy4" />
+                                <img class="pri-img" src="../images/privacy4.webp" alt="privacy4" />
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingFour">
                                         <button class="accordion-button collapsed" type="button" data-toggle="collapse"
@@ -152,7 +152,7 @@
                     <div class="col-xs-6 col-sm-4 ">
                         <div class="card">
                             <div class="card-body">
-                                <img class="pri-img" src="./images/privacy5.png" alt="privacy5" />
+                                <img class="pri-img" src="../images/privacy5.png" alt="privacy5" />
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingFive">
                                         <button class="accordion-button collapsed" type="button" data-toggle="collapse"
@@ -176,7 +176,7 @@
                     <div class="col-xs-6 col-sm-4 mb-4">
                         <div class="card">
                             <div class="card-body">
-                                <img class="pri-img" src="./images/privacy6.svg" alt="privacy6" />
+                                <img class="pri-img" src="../images/privacy6.svg" alt="privacy6" />
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingSix">
                                         <button class="accordion-button collapsed" type="button" data-toggle="collapse"
@@ -201,10 +201,7 @@
             </div>
         </div>
     </section>
-
     <p class="text-center mt-4">This policy is referenced on Instagram web site</p>
-
-
 
 </body>
 

@@ -34,7 +34,7 @@
             <div class="collapse navbar-collapse" id="navbarColor02">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="/InstaKilogram/index.php">Home
+                        <a class="nav-link active" href="/InstaKilogram/www/index.php">Home
                             <span class="visually-hidden">(current)</span>
                         </a>
                     </li>

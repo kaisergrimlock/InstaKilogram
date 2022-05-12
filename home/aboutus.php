@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <head>
     <title>About Us Section</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
-    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="/InstaKilogram/www/index.css">
 </head>
 
 <body class="bg">
-    <?php include("header.php");?>
+    <?php include("../header.php");?>
     <div class="section-about">
         <div class="container-about">
             <div class="content-section">
@@ -33,12 +33,10 @@
                 </div>
             </div>
             <div class="image-section">
-                <img src="./images/logo.jpeg" alt="logo-about">
+                <img src="../images/logo.jpeg" alt="logo-about">
             </div>
         </div>
     </div>
-
-
 </body>
 
 </html>

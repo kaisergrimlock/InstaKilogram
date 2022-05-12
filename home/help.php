@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="/InstaKilogram/www/index.css">
     <title>Help Links</title>
 </head>
 
 <body class="bg">
-    <?php include("header.php");?>
+    <?php include("../header.php");?>
     <section class="contact-help">
         <div class="content-help">
             <h2>Contact Us</h2>
