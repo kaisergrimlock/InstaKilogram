@@ -18,8 +18,10 @@ https://www.youtube.com/watch?v=g50LgV-ol9U
   - cd htdocs
 - Run the following command to connect with php localhost port 9000
   - php -S localhost:9000
-- To open the index file please enter the following command to the browser:
+- To open the **index file** please enter the following command to the browser:
   - localhost:9000/InstaKilogram/index.php
+- To access to **admin panel**, please enter the following command to the browser:
+  - localhost:9000/InstaKilogram/admin/signin.php
 - Please remember to keep the csv files parallel with htdocs
 - The website is programmed to only access csv files if it is 3 folders higher
 
