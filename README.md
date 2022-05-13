@@ -30,15 +30,15 @@ The accounts are in the following format
 > password
 
 **USER:**
-user1:
+- user1:
 > haoconboha@gmail.com
 > M@gicman1
 
-user2:
+- user2:
 > nguyenthao989@gmail.com
 > Bambu@1212
 
-user3:
+- user3:
 > 8214deviantart@gmail.com
 > Hello@1234
 
