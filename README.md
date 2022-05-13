@@ -14,9 +14,12 @@ https://github.com/kaisergrimlock/InstaKilogram
 https://www.youtube.com/watch?v=g50LgV-ol9U
 
 ## How to start/run the website:
-To access the website please enter the InstaKilogram folder. 
-- The directory of the index page is: http://localhost/InstaKilogram/
-- The url of admin login page is: http://localhost/InstaKilogram/admin/signin.php
+To access the website please enter the htdocs folder:
+- cd htdocs
+To open the index file please enter the InstaKilogram folder:
+- localhost:9000/InstaKilogram/index.php
+Please remember to keep the csv files parallel with htdocs
+The website is programmed to only access csv files if it is 3 folders higher
 
 ## Accounts
 The accounts are in the following format
