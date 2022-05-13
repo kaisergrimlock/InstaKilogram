@@ -2,8 +2,6 @@
 <html lang="en">
 
 <head>
-    <meta charset="UFT-8">
-    <meta http-epuiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Login</title>
     <link rel="stylesheet" type="text/css" href="admin.css">
@@ -16,7 +14,7 @@
         <header id="app-header"></header>
         <div class="container">
             <form method="post" enctype="multipart/form-data" class="form-group row">
-                <h1>Admin Login</h1>
+                <h2>Admin Login</h2>
                 <div class="form-group">
                     <label for="admin-name" class="form-label mt-4">Username</label>
                     <input type="text" placeholder="Admin Username" name="admin-name" class="form-control"
@@ -30,6 +28,7 @@
                 <div class="buttons">
                     <input type="submit" value="Sign In" class="btn btn-danger" id="submit" name="btn_signin">
                 </div>
+            </form>
         </div>
     </section>
 </body>
