@@ -15,11 +15,11 @@
 
 <body class="bg">
     <?php 
-    include("../header.php");
+    include("header.php");
     include("cookies.php")?>
     <main>
         <div class="text-center">
-            <img class="img-index" src="../images/logo.jpeg" alt="logo">
+            <img class="img-index" src="./images/logo.jpeg" alt="logo">
         </div>
         <div class="box-index">
             <h1> New to the website?</h1>
@@ -35,7 +35,7 @@
     </main>
     <?php
 ?>
-    <?php include_once("../footer.php")?>
+    <?php include_once("footer.php")?>
 </body>
 
 </html>

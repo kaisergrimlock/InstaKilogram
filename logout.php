@@ -2,5 +2,5 @@
 	session_start();
 	$_SESSION['email'];
 	session_destroy();
-	header('location:/InstaKilogram/www/index.php');
+	header('location:/InstaKilogram/index.php');
  ?>

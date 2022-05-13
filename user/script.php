@@ -266,7 +266,7 @@ function post_image_feed(){
 
 #Function to display images
 function display_img($array){
-    echo '<div class="card mb-3">';
+    echo '<div class="card mb-3 mt-3 mx-3">';
     echo '<h3 class="card-header">'.$array[0].'</h3>';
     echo '<div class="card-body">';
     echo '<h6 class="card-title text-info">' .$array[3]. '</h6>';
@@ -311,18 +311,7 @@ function array2csv($data, $newdata, $delimiter = ',', $enclosure = '"'){
     fclose($file);
 }
 
-// function array2csv($data, $newdata, $delimiter = ',', $enclosure = '"', $escape_char = "\\")
-// {
-//     $f = fopen($newdata, 'r+');
-//     if($data !== NULL){
-//         foreach ($data as $item) {
-//             fputcsv($f, $item, $delimiter, $enclosure, $escape_char);
-//         }
-//     }
-//     rewind($f);
-//     return stream_get_contents($f);
-//     fclose($newdata);
-// }
+
 
 
 ?>
