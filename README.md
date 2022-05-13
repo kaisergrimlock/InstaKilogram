@@ -11,9 +11,7 @@ https://github.com/kaisergrimlock/InstaKilogram
 
 ## Demonstrate video: 
 ###### Youtube:
-https://www.youtube.com/watch?fbclid=IwAR1y1uFd9h2jk8N1o5o0j7r894gPNZ-n5VBKW7OVmwfmeckLcW0uNSjPnHo&v=okp1PoXvPRg&feature=youtu.be
-###### Onedrive:
-https://rmiteduau-my.sharepoint.com/personal/s3891710_rmit_edu_vn/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fs3891710%5Frmit%5Fedu%5Fvn%2FDocuments%2FVideo%20Web%2Emp4&parent=%2Fpersonal%2Fs3891710%5Frmit%5Fedu%5Fvn%2FDocuments&ga=1
+https://www.youtube.com/watch?v=g50LgV-ol9U
 
 ## How to start/run the website:
 To access the website please enter the InstaKilogram folder. 
