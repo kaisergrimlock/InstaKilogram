@@ -9,8 +9,6 @@ if(isset($_GET['email'])){
 }
 
 ?>
-<!DOCTYPE html>
-<html lang="en">
         <main>
             <table class="table table-hover text-center">
                 <thead>
