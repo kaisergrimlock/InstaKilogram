@@ -131,12 +131,12 @@ function search_user(){
         while (($data =  fgetcsv($handle,1000,",")) !== FALSE) {
             if(preg_match($regular_expression,$data[1]) || preg_match($regular_expression,$data[2]) || preg_match($regular_expression,$data[3])){
                 echo "<tr>";
-                echo '<td scope="row">'.$row++.'</td>';
-                echo '<td scope="row">'.$data[1].'</td>';
-                echo '<td scope="row">'.$data[2].'</td>';
-                echo '<td scope="row">'.$data[3].'</td>';
-                echo '<td scope="row">'.$data[4].'</td>';
-                echo '<td scope="row"> <a href="detail.php?email='.$data[1].'" class="btn btn-dark">Details</a></td>';
+                echo '<td>'.$row++.'</td>';
+                echo '<td>'.$data[1].'</td>';
+                echo '<td>'.$data[2].'</td>';
+                echo '<td>'.$data[3].'</td>';
+                echo '<td>'.$data[4].'</td>';
+                echo '<td> <a href="detail.php?email='.$data[1].'" class="btn btn-dark">Details</a></td>';
                 echo"</tr>";
             }
         }
