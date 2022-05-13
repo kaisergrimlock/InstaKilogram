@@ -129,7 +129,7 @@ if(isset($_POST["btn_signup"])){
             $_SESSION['redate']=$data[4];
             $_SESSION['img-upload']=$data[6];
             $_SESSION['post-upload']=$data[7];
-            header('location:account.php');
+            echo("<script>location.href = 'account.php';</script>");
         } else {
             echo '<div class="alert alert-dismissible alert-danger">
             <button type="button" class="btn-close" data-dismiss="alert"></button>
@@ -212,9 +212,9 @@ return $stmt;
 
 #Display Posted Image Account
 function post_image(){
-    $array = csvToArray('../../post.csv');
+    $array = csvToArray('../../../post.csv');
     usort($array, 'mysort');
-    array2csv($array, '../../post.csv');
+    array2csv($array, '../../../post.csv');
     $email_current = $_SESSION['email'];
     if (($handle = fopen('../../../post.csv','r'))!== FALSE) {
         while (($data =  fgetcsv($handle,1000,",")) !== FALSE) {
@@ -234,7 +234,7 @@ function post_image(){
 
 #Display Posted Image Feed
 function post_image_feed(){
-    $array = csvToArray('../../post.csv');
+    $array = csvToArray('../../../post.csv');
     usort($array, 'mysort');
     if(isset( $_SESSION['email'])){
         $email_current = $_SESSION['email'];

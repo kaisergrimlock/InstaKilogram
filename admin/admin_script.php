@@ -164,7 +164,8 @@ function reset_pwd(){
         // rename_win('../user/temp_account.csv','../user/account.csv');
         rename('../../temp_account.db.csv','../../account.db.csv');
         // header('location: crud.php');
-        header('location: crud.php');
+        echo("<script>location.href = 'crud.php';</script>");
+        //header('location: crud.php');
     }
 }
 
@@ -178,7 +179,8 @@ if(isset($_POST["btn_signin"])){
     if($user == 'admin' && $pass == 'password'){
         session_start();
         $_SESSION['admin'] = true;
-        header('location: ../admin/crud.php');
+        echo("<script>location.href = 'crud.php';</script>");
+        //header('location: ../admin/crud.php');
     }
 }
 ?>
