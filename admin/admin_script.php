@@ -13,7 +13,7 @@ function display_table(){
             echo '<td>'.$data[2].'</td>';
             echo '<td>'.$data[3].'</td>';
             echo '<td>'.$data[4].'</td>';
-            echo '<td> <a href="detail.php?email='.$data[1].'"><button class="btn btn-dark">Details</button></a></td>';
+            echo '<td> <a href="detail.php?email='.$data[1].'" class="btn btn-dark">Details</a></td>';
             echo"</tr>";
         }
     }else{
