@@ -30,6 +30,7 @@ require('script.php');
                     </div>
                 </div>
             </div>
+        </div>
 
 
     </main>

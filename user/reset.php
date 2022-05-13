@@ -18,7 +18,7 @@
     <div class="container">
         <div class="form-container">
             <form method="post" enctype="multipart/form-data" class="form-group row">
-                <h1 class="text-center">Reset Password</h1>
+                <h2 class="text-center">Reset Password</h2>
                 <div class="form-group">
                     <label for="rstpswd" class="form-label mt-4">New Password:</label>
                     <input type="password" name="rstpswd" id="rstpswd" placeholder="Enter new password"

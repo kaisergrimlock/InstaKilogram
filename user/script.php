@@ -267,15 +267,19 @@ function post_image_feed(){
 #Function to display images
 function display_img($array){
     echo '<div class="card mb-3 mt-3 mx-3">';
-    echo '<h3 class="card-header">'.$array[0].'</h3>';
+    if($array[0] != NULL){
+        echo '<h3 class="card-header">'.$array[0].'</h3>';
+    }else{
+        '<h3 class="card-header">No description</h3>';
+    }
     echo '<div class="card-body">';
     echo '<h6 class="card-title text-info">' .$array[3]. '</h6>';
-    echo '<p class="card-subtitle text-muted"> '.$array[4].'</>';
+    echo '<p class="card-subtitle text-muted"> '.$array[4].'</p>';
     echo '<h6> <em>'.$array[2].'</em> </h6>';
     echo '</div>';
-    echo '<img src="./img_post/'.$array[1].'" width="40%"></img>';
+    echo '<img class="sharedImages" src="./img_post/'.$array[1].'" width="500" alt="sharedimages"/>';
     echo '</div> ';
-}
+} 
 
 
 #Sort CSV

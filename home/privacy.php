@@ -1,15 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../index.css">
-    <title>Privacy</title>
-</head>
-
-<body class="bg">
+<link rel="stylesheet" type="text/css" href="../index.css">
+<main class="bg">
     <?php include("../header.php");?>
     <section>
         <h1 class="heading text-center mt-4 mb-4"> InstaKilogram Data Policy </h1>
@@ -203,6 +193,4 @@
     </section>
     <p class="text-center mt-4">This policy is referenced on Instagram web site</p>
 
-</body>
-
-</html>
+</main>

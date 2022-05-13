@@ -8,12 +8,12 @@ function display_table(){
         $row = 1;
         while (($data =  fgetcsv($handle,1000,",")) !== FALSE) {
             echo "<tr>";
-            echo '<td scope="row">'.$row++.'</td>';
-            echo '<td scope="row">'.$data[1].'</td>';
-            echo '<td scope="row">'.$data[2].'</td>';
-            echo '<td scope="row">'.$data[3].'</td>';
-            echo '<td scope="row">'.$data[4].'</td>';
-            echo '<td scope="row"> <a href="detail.php?email='.$data[1].'"><button class="btn btn-dark">Details</button></a></td>';
+            echo '<td>'.$row++.'</td>';
+            echo '<td>'.$data[1].'</td>';
+            echo '<td>'.$data[2].'</td>';
+            echo '<td>'.$data[3].'</td>';
+            echo '<td>'.$data[4].'</td>';
+            echo '<td> <a href="detail.php?email='.$data[1].'" class="btn btn-dark">Details</a></td>';
             echo"</tr>";
         }
     }else{
@@ -54,12 +54,12 @@ function array2csv($data, $newdata, $delimiter = ',', $enclosure = '"'){
 //Display Detail
 function display_detail($data){
     echo "<tr>";
-    echo '<td scope="row">'.$data[1].'</td>';
-    echo '<td scope="row">'.$data[2].'</td>';
-    echo '<td scope="row">'.$data[3].'</td>';
-    echo '<td scope="row"><img src="../user/profile_img/'.$data[6].'" width="70%"></img></td>';
-    echo '<td scope="row">'.$data[5].'</td>';
-    echo '<td scope="row"><a href="reset.php?pass='.$data[5].'" class="btn btn-dark">Reset Password</a></td>';
+    echo '<td>'.$data[1].'</td>';
+    echo '<td>'.$data[2].'</td>';
+    echo '<td>'.$data[3].'</td>';
+    echo '<td><img src="../user/profile_img/'.$data[6].'" width="200" alt="profile picture"/></td>';
+    echo '<td>'.$data[5].'</td>';
+    echo '<td><a href="reset.php?pass='.$data[5].'" class="btn btn-dark">Reset Password</a></td>';
     echo"</tr>";
 }
 //Display Post
@@ -83,14 +83,14 @@ function post_image_feed(){
 //Delete Image
 function display_img($data){
     echo "<tr>";
-    echo '<td scope="row">'.$data[0].'</td>';
-    echo '<td scope="row">'.$data[3].'</td>';
+    echo '<td>'.$data[0].'</td>';
+    echo '<td>'.$data[3].'</td>';
     if(isset($data[1])){
-        echo '<td scope="row"><img src="../user/img_post/'.$data[1].'" width="30%"></img></td>';
-        echo '<td scope="row"> <a href="post.php?img='.$data[1].'" class="btn btn-dark" id="deleteBtn">Delele</a></td>';
+        echo '<td><img src="../user/img_post/'.$data[1].'" width="188" alt="posted image"/></td>';
+        echo '<td> <a href="post.php?img='.$data[1].'" class="btn btn-dark">Delele</a></td>';
     }else{
-        echo '<td scope="row">Deleted</td>';
-        echo '<td scope="row">No Operation</td>';
+        echo '<td>Deleted</td>';
+        echo '<td>No Operation</td>';
     }
     echo"</tr>";
 }
@@ -131,12 +131,12 @@ function search_user(){
         while (($data =  fgetcsv($handle,1000,",")) !== FALSE) {
             if(preg_match($regular_expression,$data[1]) || preg_match($regular_expression,$data[2]) || preg_match($regular_expression,$data[3])){
                 echo "<tr>";
-                echo '<td scope="row">'.$row++.'</td>';
-                echo '<td scope="row">'.$data[1].'</td>';
-                echo '<td scope="row">'.$data[2].'</td>';
-                echo '<td scope="row">'.$data[3].'</td>';
-                echo '<td scope="row">'.$data[4].'</td>';
-                echo '<td scope="row"> <a href="detail.php?email='.$data[1].'" class="btn btn-dark">Details</a></td>';
+                echo '<td>'.$row++.'</td>';
+                echo '<td>'.$data[1].'</td>';
+                echo '<td>'.$data[2].'</td>';
+                echo '<td>'.$data[3].'</td>';
+                echo '<td>'.$data[4].'</td>';
+                echo '<td> <a href="detail.php?email='.$data[1].'" class="btn btn-dark">Details</a></td>';
                 echo"</tr>";
             }
         }
@@ -162,7 +162,7 @@ function reset_pwd(){
         fclose($table);
         fclose($temp_table);
         // rename_win('../user/temp_account.csv','../user/account.csv');
-        rename('../user/temp_account.db.csv','../user/account.csv');
+        rename('../user/temp_account.db.csv','../user/account.db.csv');
         // header('location: crud.php');
         header('location: crud.php');
     }

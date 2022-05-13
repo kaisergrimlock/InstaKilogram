@@ -17,7 +17,7 @@
     <div class="container">
         <div class="form-container">
             <form method="post" enctype="multipart/form-data" class="form-group row">
-                <h1 class="text-center">Sign In</h1>
+                <h2 class="text-center">Sign In</h2>
                 <div class="form-group">
                     <label for="email" class="form-label mt-4">Email Address:</label>
                     <input type="email" name="email" id="email" placeholder="Enter email address" class="form-control"
