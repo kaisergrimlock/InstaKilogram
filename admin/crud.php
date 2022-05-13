@@ -8,25 +8,25 @@ if(!isset($_SESSION['admin'])){
 ?>
 <!-- DISPLAY USERS -->
 
-        <section>
-            <table class="table table-hover text-center">
-                <thead>
-                    <tr class="table-dark">
-                        <th scope="col">No</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">First Name</th>
-                        <th scope="col">Last Name</th>
-                        <th scope="col">RegisterDate</th>
-                        <th scope="col">Details</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php display_table()?>
-                </tbody>
-            </table>
-        </section>
-    </div>
+<table class="table table-hover text-center">
+    <thead>
+        <tr class="table-dark">
+            <th scope="col">No</th>
+            <th scope="col">Email</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">RegisterDate</th>
+            <th scope="col">Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php display_table()?>
+    </tbody>
+</table>
+
 </div>
+</div>
+
 </html>
 <?php
 }?>
