@@ -2,5 +2,6 @@
 session_start();
 $_SESSION['admin'];
 session_destroy();
-header('location:/InstaKilogram/index.php');
+echo("<script>location.href = '/InstaKilogram/index.php';</script>");
+//header('location:/InstaKilogram/index.php');
     ?>

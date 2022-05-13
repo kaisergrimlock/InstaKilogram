@@ -3,7 +3,8 @@ session_start();
 include "sidebar.php";
 require "admin_script.php";
 if(!isset($_SESSION['admin'])){
-    header('location: signin.php');
+    //header('location: signin.php');
+    echo("<script>location.href = 'signin.php';</script>");
 }else{
 ?>
 <!-- SEARCH USERS -->
