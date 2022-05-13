@@ -1,5 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Icon Import -->
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
 <link rel="stylesheet" type="text/css" href="../index.css">
-<main class="bg">
+
+<body class="bg">
     <?php include("../header.php");?>
     <div class="section-about">
         <div class="container-about">
@@ -27,4 +33,6 @@
             </div>
         </div>
     </div>
-</main>
+</body>
+
+</html>
