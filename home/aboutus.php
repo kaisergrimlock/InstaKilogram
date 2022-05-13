@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Icon Import -->
-<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
-<link rel="stylesheet" type="text/css" href="../index.css">
+<head>
+    <title> About Us Page</title>
+    <!-- Icon Import -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" type="text/css" href="../index.css">
+</head>
 
 <body class="bg">
     <?php include("../header.php");?>

@@ -1,4 +1,11 @@
-<link rel="stylesheet" type="text/css" href="../index.css">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> Help Page</title>
+    <link rel="stylesheet" type="text/css" href="../index.css">
+</head>
+
 <main class="bg">
     <?php include("../header.php");?>
     <section class="contact-help">

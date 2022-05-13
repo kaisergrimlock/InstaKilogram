@@ -109,7 +109,8 @@ if (!isset($_SESSION['email'])) {
                                     <input type=file id="formFile" name='post-upload' class="form-control"
                                         oninput="pre.src=window.URL.createObjectURL(this.files[0])">
                                     <div class="text-center">
-                                        <img id="pre" class="preview-pic" alt="preview" />
+                                        <img id="pre" class="preview-pic" alt="preview"
+                                            src="../images/placeholder-image.png" />
                                     </div>
                                     <div>
                                         <input type="radio" class="form-check-input" id="public" name="privacy"
