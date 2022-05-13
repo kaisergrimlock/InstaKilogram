@@ -64,9 +64,9 @@ if(isset($_POST["btn_signup"])){
     $folder='profile_img/';
 	move_uploaded_file($tmp_img_name,$folder.$img_name);
     
-    $fp = fopen('account.db.csv','a+');
+    $fp = fopen('../../account.db.csv','a+');
         //Add row
-    $row = count(file("account.db.csv"));
+    $row = count(file("../../account.db.csv"));
     if($row > 1)
     {
         $row = ($row - 1) + 1;
@@ -81,7 +81,7 @@ if(isset($_POST["btn_signup"])){
         'Profilemage' => $img_name );
     
     //  checking duplicate email
-    $csv = array_map('str_getcsv', file('account.db.csv'));
+    $csv = array_map('str_getcsv', file('../../account.db.csv'));
     $lower_email = strtolower($email);
     
     foreach($csv as $line){
@@ -113,7 +113,7 @@ if(isset($_POST["btn_signup"])){
             die ("Incorrect email or password");
         }
         $state= false;
-        $handle = fopen("account.db.csv", "r");
+        $handle = fopen("../../account.db.csv", "r");
         while (($data = fgetcsv($handle)) !==false){
             if ($data[1] ==$user && password_verify($pass, $data[5])){
                 $state = true;
@@ -142,7 +142,7 @@ if(isset($_POST["btn_signup"])){
  if(isset($_POST["replace_submit"])){
     $img = " ";
     $email = $_SESSION['email'];
-    if (($handle = fopen('../user/account.db.csv','r'))!== FALSE){
+    if (($handle = fopen('../../account.db.csv','r'))!== FALSE){
         while (($data =  fgetcsv($handle,1000,",")) !== FALSE) {
             if ($data[1] == $email){
                     $img = $data[6];
@@ -185,7 +185,7 @@ if(isset($_POST["btn_upload_post"])){
     }
     move_uploaded_file($tmp_img_name, $folder.$post_img_name);
     $arrayPostData = array($text_post,$post_img_name,$privacy, $email_post, $date);
-    $fp = fopen('post.csv','a+');
+    $fp = fopen('../../post.csv','a+');
     $input = fputcsv($fp, $arrayPostData);
     header("Refresh:0");
 }
@@ -212,11 +212,11 @@ return $stmt;
 
 #Display Posted Image Account
 function post_image(){
-    $array = csvToArray('../user/post.csv');
+    $array = csvToArray('../../post.csv');
     usort($array, 'mysort');
-    array2csv($array, '../user/post.csv');
+    array2csv($array, '../../post.csv');
     $email_current = $_SESSION['email'];
-    if (($handle = fopen('../user/post.csv','r'))!== FALSE) {
+    if (($handle = fopen('../../post.csv','r'))!== FALSE) {
         while (($data =  fgetcsv($handle,1000,",")) !== FALSE) {
             if ($data[3] == $email_current){
                     display_img($data);
@@ -234,7 +234,7 @@ function post_image(){
 
 #Display Posted Image Feed
 function post_image_feed(){
-    $array = csvToArray('../user/post.csv');
+    $array = csvToArray('../../post.csv');
     usort($array, 'mysort');
     if(isset( $_SESSION['email'])){
         $email_current = $_SESSION['email'];
@@ -242,7 +242,7 @@ function post_image_feed(){
     else{
         $email_current = '';
     }
-    if (($handle = fopen('../user/post.csv','r'))!== FALSE){
+    if (($handle = fopen('../../post.csv','r'))!== FALSE){
         
         if(isset($_SESSION['email'])){
             while (($data =  fgetcsv($handle,1000,",")) !== FALSE){

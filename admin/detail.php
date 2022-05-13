@@ -21,7 +21,7 @@ if(isset($_GET['email'])){
     </thead>
     <tbody>
         <?php
-                if (($handle = fopen('../user/account.db.csv','r'))!== FALSE) {
+                if (($handle = fopen('../../account.db.csv','r'))!== FALSE) {
                     while (($data =  fgetcsv($handle,1000,",")) !== FALSE) {
                         if($data[1] == $email){
                             display_detail($data);
