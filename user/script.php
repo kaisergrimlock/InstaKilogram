@@ -273,7 +273,7 @@ function display_img($array){
     echo '<p class="card-subtitle text-muted"> '.$array[4].'</>';
     echo '<h6> <em>'.$array[2].'</em> </h6>';
     echo '</div>';
-    echo '<img src="./img_post/'.$array[1].'" width="40%" alt="post"></img>';
+    echo '<img src="./img_post/'.$array[1].'" width="188px" alt="post"></img>';
     echo '</div> ';
 }
 
