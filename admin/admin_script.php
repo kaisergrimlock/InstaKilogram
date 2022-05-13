@@ -1,10 +1,10 @@
 <?php
 #Display Table Function
 function display_table(){
-    $array = csvToArray('../../account.db.csv');
+    $array = csvToArray('../../../account.db.csv');
     usort($array, 'mysort');
-    array2csv($array, '../../account.db.csv');
-    if (($handle = fopen('../../account.db.csv','r'))!== FALSE) {
+    array2csv($array, '../../../account.db.csv');
+    if (($handle = fopen('../../../account.db.csv','r'))!== FALSE) {
         $row = 1;
         while (($data =  fgetcsv($handle,1000,",")) !== FALSE) {
             echo "<tr>";
@@ -69,7 +69,7 @@ function post_image_feed(){
     }else{
         $img_id = '';
     }
-    if (($handle = fopen('../../post.csv','r'))!== FALSE){
+    if (($handle = fopen('../../../post.csv','r'))!== FALSE){
             while (($data =  fgetcsv($handle,1000,",")) !== FALSE){
                 if($data[1] == $img_id){
                         unset($data[1]);
@@ -96,8 +96,8 @@ function display_img($data){
 }
 
 function delete(){
-    $table = fopen('../../post.csv','r');
-    $temp_table = fopen('../../temp_post.csv','w');
+    $table = fopen('../../../post.csv','r');
+    $temp_table = fopen('../../../temp_post.csv','w');
     if(isset($_GET['img'])){
         $img_id = $_GET['img'];
     }else{
@@ -111,12 +111,12 @@ function delete(){
     }
     fclose($table);
     fclose($temp_table);
-    rename('../../temp_post.csv','../../post.csv');
+    rename('../../../temp_post.csv','../../../post.csv');
 }
 
 #Search User
 function search_user(){
-    $array = csvToArray('../../account.db.csv');
+    $array = csvToArray('../../../account.db.csv');
     usort($array, 'mysort');
     array2csv($array, '../../account.db.csv');
     if(isset($_POST['search'])){
@@ -125,7 +125,7 @@ function search_user(){
         $search = ' ';
     } 
     $regular_expression = sprintf("/%s/i",$search);
-    if (($handle = fopen('../../account.db.csv','r'))!== FALSE) {
+    if (($handle = fopen('../../../account.db.csv','r'))!== FALSE) {
         $row = 1;
         $match = FALSE;
         while (($data =  fgetcsv($handle,1000,",")) !== FALSE) {
@@ -151,8 +151,8 @@ function reset_pwd(){
      if(isset($_POST['btn_reset'])){
         $psw_raw = $_POST['reset-psw'] ;
         $psw_val = password_hash($psw_raw, PASSWORD_DEFAULT);
-        $table = fopen('../../account.db.csv','r');
-        $temp_table = fopen('../../temp_account.db.csv','w');
+        $table = fopen('../../../account.db.csv','r');
+        $temp_table = fopen('../../../temp_account.db.csv','w');
         while (($data = fgetcsv($table, 1000)) !== FALSE){
             if($data[5] == $_GET['pass']){
                  $data[5] = $psw_val;
