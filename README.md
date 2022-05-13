@@ -17,7 +17,8 @@ https://rmiteduau-my.sharepoint.com/personal/s3891710_rmit_edu_vn/_layouts/15/on
 
 How to start/run the website:
 To access the website please make sure that you enter the InstaKilogram folder. 
-The url of the index page is: http://localhost/InstaKilogram/
+The url of the index page is: http://localhost/InstaKilogram
+The url of admin login page is: http://localhost/InstaKilogram/admin/signin.php
 
 Accounts
 the accounts are in the following format
