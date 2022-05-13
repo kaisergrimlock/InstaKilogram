@@ -57,7 +57,7 @@ function display_detail($data){
     echo '<td>'.$data[1].'</td>';
     echo '<td>'.$data[2].'</td>';
     echo '<td>'.$data[3].'</td>';
-    echo '<td><img src="../user/profile_img/'.$data[6].'" width="70%" alt="profile picture"></img></td>';
+    echo '<td><img src="../user/profile_img/'.$data[6].'" width="200" alt="profile picture"/></td>';
     echo '<td>'.$data[5].'</td>';
     echo '<td><a href="reset.php?pass='.$data[5].'" class="btn btn-dark">Reset Password</a></td>';
     echo"</tr>";
@@ -86,8 +86,8 @@ function display_img($data){
     echo '<td>'.$data[0].'</td>';
     echo '<td>'.$data[3].'</td>';
     if(isset($data[1])){
-        echo '<td><img src="../user/img_post/'.$data[1].'" width="30%"></img></td>';
-        echo '<td> <a href="post.php?img='.$data[1].'" class="btn btn-dark" id="deleteBtn">Delele</a></td>';
+        echo '<td><img src="../user/img_post/'.$data[1].'" width="188" alt="posted image"/></td>';
+        echo '<td> <a href="post.php?img='.$data[1].'" class="btn btn-dark">Delele</a></td>';
     }else{
         echo '<td>Deleted</td>';
         echo '<td>No Operation</td>';
