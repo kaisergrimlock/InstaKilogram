@@ -270,10 +270,10 @@ function display_img($array){
     echo '<h3 class="card-header">'.$array[0].'</h3>';
     echo '<div class="card-body">';
     echo '<h6 class="card-title text-info">' .$array[3]. '</h6>';
-    echo '<p class="card-subtitle text-muted"> '.$array[4].'</>';
+    echo '<p class="card-subtitle text-muted"> '.$array[4].'</p>';
     echo '<h6> <em>'.$array[2].'</em> </h6>';
     echo '</div>';
-    echo '<img src="./img_post/'.$array[1].'" width="188px" alt="post"></img>';
+    echo '<img class="sharedImages" src="./img_post/'.$array[1].'" alt="sharedimages"/>';
     echo '</div> ';
 }
 

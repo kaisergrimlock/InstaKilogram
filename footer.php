@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <title>Footer</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" type="text/css" href="/InstaKilogram/footer.css">
-</head>
-
+<link rel="stylesheet" type="text/css" href="/InstaKilogram/footer.css">
 <footer>
     <div class="bg-dark text-center text-white mt-5">
         <div class="footer_container mx-7 ">

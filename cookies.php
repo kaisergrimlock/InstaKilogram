@@ -1,3 +1,4 @@
+<script src="cookies.js" defer></script>
 
 <div id="cookies">
     <div class="alert alert-dismissible alert-light">

@@ -175,3 +175,7 @@ html {
     width: 100px;
     display: inline-block;
 }
+
+.sharedImages {
+    width: 40%;
+}

@@ -17,22 +17,22 @@
     <?php 
     include("header.php");
     include("cookies.php")?>
-    <main>
-        <div class="text-center">
-            <img class="img-index" src="./images/logo.jpeg" alt="logo">
-        </div>
-        <div class="box-index">
-            <h1> New to the website?</h1>
-        </div>
-        <div class="box-index">
-            <a href="/InstaKilogram/user/register.php" class="btn btn-outline-danger btn-lg">
-                Register
-            </a>
-            <a href="/InstaKilogram/user/signin.php" class="btn btn-outline-danger btn-lg">
-                Sign in
-            </a>
-        </div>
-    </main>
+
+    <div class="text-center">
+        <img class="img-index" src="./images/logo.jpeg" alt="logo">
+    </div>
+    <div class="box-index">
+        <h1> New to the website?</h1>
+    </div>
+    <div class="box-index">
+        <a href="/InstaKilogram/user/register.php" class="btn btn-outline-danger btn-lg">
+            Register
+        </a>
+        <a href="/InstaKilogram/user/signin.php" class="btn btn-outline-danger btn-lg">
+            Sign in
+        </a>
+    </div>
+
     <?php
 ?>
     <?php include_once("footer.php")?>
