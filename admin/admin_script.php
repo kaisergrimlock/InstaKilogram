@@ -177,7 +177,6 @@ if(isset($_POST["btn_signin"])){
     $pass = ($_POST['admin-password']);
     $state = false;
     if($user == 'admin' && $pass == 'password'){
-        session_start();
         $_SESSION['admin'] = true;
         echo("<script>location.href = 'crud.php';</script>");
         //header('location: ../admin/crud.php');
