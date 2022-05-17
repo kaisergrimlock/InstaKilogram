@@ -1,30 +1,38 @@
 <?php
 #Display Table Function
 function display_table(){
+    $maxpage = ceil(count_row()/5);
+    if(isset($_GET['from'])){
+        $page = $_GET['from'];
+    }else{
+        $page = 1;
+    }
+
     $array = csvToArray('../../../account.db.csv');
     usort($array, 'mysort');
-    array2csv($array, '../../../account.db.csv');
-    if (($handle = fopen('../../../account.db.csv','r'))!== FALSE) {
-        $row = 1;
-        while (($data =  fgetcsv($handle,1000,",")) !== FALSE) {
+    $row = 1;
+    if($page > 1){
+        $start = ($page - 1)*5;
+    }else{
+        $start = 0;
+    }
+    foreach(array_slice($array, $start) as $data){
+        if($row <= 5){
             echo "<tr>";
-            echo '<td>'.$row++.'</td>';
             echo '<td>'.$data[1].'</td>';
             echo '<td>'.$data[2].'</td>';
             echo '<td>'.$data[3].'</td>';
             echo '<td>'.$data[4].'</td>';
             echo '<td> <a href="detail.php?email='.$data[1].'" class="btn btn-dark">Details</a></td>';
             echo"</tr>";
+            $row++;
         }
-    }else{
-        echo"Error";
-    } 
+    }
 }
 
 //Display Pagination
 function pagination(){
-    $maxpage = count_row()/5;
-    $page = 1;
+    $maxpage = ceil(count_row()/5);
     echo '<nav aria-label="Page navigation example">';
     echo '<ul class="pagination">';
     for($i = 1; $i <= $maxpage; $i++){
@@ -189,7 +197,7 @@ function reset_pwd(){
         fclose($table);
         fclose($temp_table);
         // rename_win('../user/temp_account.csv','../user/account.csv');
-        rename('../../temp_account.db.csv','../../account.db.csv');
+        rename('../../../temp_account.db.csv','../../../account.db.csv');
         // header('location: crud.php');
         echo("<script>location.href = 'crud.php';</script>");
         //header('location: crud.php');
