@@ -14,7 +14,7 @@ https://github.com/kaisergrimlock/InstaKilogram
 https://www.youtube.com/watch?v=g50LgV-ol9U
 
 ## How to start/run the website:
-- To access the website please direct to the htdocs folder:
+- To access the website please direct to the htdocs folder in the zip file:
   - cd htdocs
 - Run the following command to connect with php localhost port 9000
   - php -S localhost:9000
