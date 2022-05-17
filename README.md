@@ -14,8 +14,7 @@ https://github.com/kaisergrimlock/InstaKilogram
 ## Demonstrate video:
 
 ###### Youtube:
-
-https://www.youtube.com/watch?v=g50LgV-ol9U
+https://youtu.be/kvT9bDrKCdA
 
 ## How to start/run the website:
 
