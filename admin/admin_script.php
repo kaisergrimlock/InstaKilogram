@@ -11,7 +11,7 @@ function display_table(){
     }
     if (($handle = fopen('../../../account.db.csv','r'))!== FALSE) {
         if($page != 1){
-            for($i = $page - 1; $i < $maxpage; $i++){
+            for($i = $page; $i < $maxpage; $i++){
                 for($j = 0; $j < 5; $j++){
                     fgetcsv($handle, 1000,);
                 }
@@ -21,13 +21,13 @@ function display_table(){
         while (($data =  fgetcsv($handle,1000,",")) !== FALSE) {
             if($row <= 5){
                 echo "<tr>";
-                echo '<td>'.$row++.'</td>';
                 echo '<td>'.$data[1].'</td>';
                 echo '<td>'.$data[2].'</td>';
                 echo '<td>'.$data[3].'</td>';
                 echo '<td>'.$data[4].'</td>';
                 echo '<td> <a href="detail.php?email='.$data[1].'" class="btn btn-dark">Details</a></td>';
                 echo"</tr>";
+                $row++;
             }
         }
     }else{

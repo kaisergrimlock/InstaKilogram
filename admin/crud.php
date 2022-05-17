@@ -12,7 +12,6 @@ if(!isset($_SESSION['admin'])){
 <table class="table table-hover text-center">
     <thead>
         <tr class="table-dark">
-            <th scope="col">No</th>
             <th scope="col">Email</th>
             <th scope="col">First Name</th>
             <th scope="col">Last Name</th>
