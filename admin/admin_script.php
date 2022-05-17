@@ -4,7 +4,7 @@ function display_table(){
     $array = csvToArray('../../../account.db.csv');
     usort($array, 'mysort');
     array2csv($array, '../../../account.db.csv');
-    $maxpage = count_row()%5;
+    $maxpage = count_row()/5;
     $page = 1;
     if(isset($_GET['from'])){
         $page = $_GET['from'];
