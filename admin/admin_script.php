@@ -1,7 +1,6 @@
 <?php
 #Display Table Function
 function display_table(){
-    $maxpage = ceil(count_row()/5);
     if(isset($_GET['from'])){
         $page = $_GET['from'];
     }else{
@@ -10,6 +9,7 @@ function display_table(){
 
     $array = csvToArray('../../../account.db.csv');
     usort($array, 'mysort');
+    array2csv($array, '../../../account.db.csv');
     $row = 1;
     if($page > 1){
         $start = ($page - 1)*5;
@@ -153,7 +153,7 @@ function delete(){
 function search_user(){
     $array = csvToArray('../../../account.db.csv');
     usort($array, 'mysort');
-    array2csv($array, '../../account.db.csv');
+    array2csv($array, '../../../account.db.csv');
     if(isset($_POST['search'])){
         $search = $_POST['search'];
     }else{
