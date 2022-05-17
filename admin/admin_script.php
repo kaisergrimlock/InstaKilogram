@@ -4,7 +4,7 @@ function display_table(){
     $array = csvToArray('../../../account.db.csv');
     usort($array, 'mysort');
     array2csv($array, '../../../account.db.csv');
-    $maxpage = count_row();
+    $maxpage = count_row()%5;
     $page = 1;
     if(isset($_GET['from'])){
         $page = $_GET['from'];
@@ -13,13 +13,13 @@ function display_table(){
         if($page != 1){
             for($i = $page - 1; $i < $maxpage; $i++){
                 for($j = 0; $j < 5; $j++){
-                    fgetcsv($handle, 1000, ",");
+                    fgetcsv($handle, 1000,);
                 }
             }
         }
         $row = 1;
-        if($row < 5){
-            while (($data =  fgetcsv($handle,1000,",")) !== FALSE) {
+        while (($data =  fgetcsv($handle,1000,",")) !== FALSE) {
+            if($row <= 5){
                 echo "<tr>";
                 echo '<td>'.$row++.'</td>';
                 echo '<td>'.$data[1].'</td>';
@@ -33,6 +33,19 @@ function display_table(){
     }else{
         echo"Error";
     } 
+}
+
+//Display Pagination
+function pagination(){
+    $maxpage = count_row()/5;
+    $page = 1;
+    echo '<nav aria-label="Page navigation example">';
+    echo '<ul class="pagination">';
+    for($i = 1; $i <= $maxpage; $i++){
+        echo'<li class="page-item"><a class="page-link" href="crud.php?from='.$i.'">'.$i.'</a></li>';
+    }
+    echo '</ul>';
+    echo '</nav>';
 }
 
 //Count Row

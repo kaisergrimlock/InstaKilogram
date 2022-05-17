@@ -24,7 +24,8 @@ if(!isset($_SESSION['admin'])){
         <?php display_table()?>
     </tbody>
 </table>
-
+<?php count_row()?>
+    <?php pagination()?>
 </div>
 </div>
 
