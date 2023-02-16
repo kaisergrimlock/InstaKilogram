@@ -25,10 +25,10 @@
         <h1> New to the website?</h1>
     </div>
     <div class="box-index">
-        <a href="/InstaKilogram/user/register.php" class="btn btn-outline-danger btn-lg">
+        <a href="/user/register.php" class="btn btn-outline-danger btn-lg">
             Register
         </a>
-        <a href="/InstaKilogram/user/signin.php" class="btn btn-outline-danger btn-lg">
+        <a href="/user/signin.php" class="btn btn-outline-danger btn-lg">
             Sign in
         </a>
     </div>
